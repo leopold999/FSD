@@ -30,7 +30,7 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     }, {
-      test: /\.(png|jpg|gif|svg)$/,
+      test: /\.(png|jpg|gif|svg|ttf)$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]'
@@ -80,10 +80,16 @@ module.exports = {
       template: `${PATHS.src}/index.pug`,
       filename: './index.html'
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/page/components-page1.pug`,
+      filename: './components-page1.html'
+    }),
     new HtmlWebpackPugPlugin(),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/static`, to: '' }
+      
     ])
   ],
 }

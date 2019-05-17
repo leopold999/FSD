@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/src/fonts/fonts-files/Quicksand-Regular.ttf') format('truetype');
+    // font-weight: normal;
+    // font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/src/fonts/fonts-files/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(https://example.com/MaterialIcons-Regular.ttf) format('truetype')
+}
+
+
+
+
+@mixin fontH1($font-size: 24px, $line-height: 30px) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $dark100;
+    letter-spacing: 0.045em;
+}
+@mixin fontH2($font-size: 19px, $line-height: 24px) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $dark100;
+}
+@mixin fontH3($font-size: 12px, $line-height: 15px) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $dark100;
+    text-transform: uppercase;
+}
+@mixin fontBody($font-size: 14px, $line-height: 24px) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $dark75;
+    font-stretch: ultra-expanded;
+ 
+}
