@@ -1,5 +1,4 @@
 /*Colors*/
-
 $dark100: #1F2041;
 $dark75: rgba(31, 32, 65, 0.75);
 $dark50: rgba(31, 32, 65, 0.5);
@@ -8,7 +7,12 @@ $dark5: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
 
-$borderFormCard: 1px solid rgba(0, 0, 0, 0.12);
+
+/*border*/
+$borderCard: 1px solid rgba(0, 0, 0, 0.12);
+$borderInputDefault: 1px solid $dark25;
+$borderInputHover: 1px solid $dark50;
+$borderRadiusInput: 4px;
 
 /*fonts*/
 

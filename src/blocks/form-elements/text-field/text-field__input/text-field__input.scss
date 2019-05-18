@@ -1,0 +1,19 @@
+@import "./_type/text-field__input_type_default";
+@import "./_type/text-field__input_type_hover";
+@import "./_type/text-field__input_type_masked";
+@import "./_type/text-field__input_type_subscription";
+@import "../../../../vars/vars.scss";
+@import "../../../../fonts/fonts.scss";
+
+.text-field__input {
+    margin-top: 5px;
+    border-radius: $borderRadiusInput;
+    @include fontBody();
+    
+
+
+}
+.text-field__input::placeholder {
+    @include fontBody(14px, 18px);
+    color: rgba(31, 32, 65, 0.25);
+}

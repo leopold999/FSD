@@ -1,3 +1,5 @@
+include ../blocks/form-elements/form-elements.pug
+
 doctype html
 html
   head
@@ -6,6 +8,9 @@ html
     script(src="../../dist/app.js", type="text/javascript")
     link(rel="stylesheet", href="../dist/app.css")
   body
-   
-  include ../blocks/template/text-field/text-field.pug
-   
+    H1 Элементы форм
+    +text-field({
+      title: "Text field",
+      typeModifier: "text-field__input_type_default",
+      placeholder: "Email"
+    })

@@ -1,0 +1,11 @@
+mixin text-field(options)
+    
+    - var title = options.title || "Text field"
+    - var typeModifier = options.typeModifier || "text-field__input_type_default"
+    - var placeholder = options.placeholder || "placeholder"
+        
+    div(class="text-field")
+        span(class="text-field__title")= title 
+        input(class="text-field__input" + " " + typeModifier, type="text", placeholder=placeholder)
+     
+
