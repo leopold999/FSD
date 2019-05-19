@@ -55,6 +55,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "vue": "^2.5.21"
   },
   "homepage": "https://github.com/vedees/webpack-template#readme"

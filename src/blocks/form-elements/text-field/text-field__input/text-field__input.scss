@@ -7,13 +7,18 @@
 
 .text-field__input {
     margin-top: 5px;
+    border: $borderInputDefault;
     border-radius: $borderRadiusInput;
     @include fontBody();
-    
-
-
+    padding-left: 13px;
+    box-sizing: border-box;
 }
 .text-field__input::placeholder {
-    @include fontBody(14px, 18px);
     color: rgba(31, 32, 65, 0.25);
+}
+
+.text-field__input:hover, .text-field__input:focus {
+    border: $borderInputDefault;
+    border: $borderInputHover;
+
 }
