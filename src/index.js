@@ -3,6 +3,8 @@
 import './js/index.js'
 // SCSS
 import './scss/main.scss'
+import $ from 'jquery';
+
 // CSS (example)
 // import './css/main.css'
 
@@ -13,4 +15,6 @@ import './scss/main.scss'
 // import 'vue'
 // import Vue from 'vue'
 window.Vue = require('vue')
+// window.$ = require('jquery')
+
 
