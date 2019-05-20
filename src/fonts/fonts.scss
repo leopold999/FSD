@@ -7,26 +7,43 @@
     // font-style: normal;
 }
 
-// @font-face {
-//     font-family: 'Montserrat';
-//     src: url('../fonts/font-files/Montserrat-Bold.ttf') format('truetype');
-// }
 
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/font-files/Montserrat-Regular.ttf') format('truetype');
 }
 
-// @font-face {
-//     font-family: 'Material Icons';
-//     font-style: normal;
-//     font-weight: 400;
-//     src: local('Material Icons'),
-//         local('MaterialIcons-Regular'),
-//         url(https://example.com/MaterialIcons-Regular.ttf) format('truetype')
-// }
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/font-files/MaterialIcons-Regular.ttf) format('truetype')
+}
 
+.material-icon {
+    font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
 
 
 @mixin fontH1($font-size: 24px, $line-height: 30px) {
@@ -55,13 +72,13 @@
     color: $dark100;
     text-transform: uppercase;
 }
-@mixin fontBody($font-size: 14px, $line-height: 24px) {
+@mixin fontBody($font-size: 14px, $line-height: 24px, $color: $dark75) {
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     font-style: normal;
     font-size: $font-size;
     line-height: $line-height;
-    color: $dark75;
+    color: $color;
     font-stretch: ultra-expanded;
  
 }

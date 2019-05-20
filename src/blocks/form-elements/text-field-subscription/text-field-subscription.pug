@@ -1,0 +1,13 @@
+mixin text-field-subscription(options)
+   
+    
+    - var placeholder = options.placeholder || "Email"
+    - var pattern = options.pattern
+           
+    div(class="text-field-subscription")
+        form
+            input(class="text-field-subscription__input", type="text", placeholder=placeholder pattern=pattern)
+            button(class="text-field-subscription__button", type="submit")
+                span.material-icon arrow_forward
+                
+

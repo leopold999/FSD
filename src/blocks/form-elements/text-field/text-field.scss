@@ -1,13 +1,7 @@
-@import "./text-field__title/text-field__title.scss";
-@import "./text-field__input/text-field__input.scss";
+@import "./__title/text-field__title.scss";
+@import "./__input/text-field__input.scss";
 
 
-// .text-field {
-    
-    
-    
-
-// }
-
-
-
+.text-field {
+    width: 320px;
+}

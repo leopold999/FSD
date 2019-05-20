@@ -1,0 +1,11 @@
+@import "./_type/text-field__input_type_default.scss";
+@import "./_type/text-field__input_type_hover.scss";
+@import "./_type/text-field__input_type_masked.scss";
+@import "../../../../vars/vars.scss";
+@import "../../../../fonts/fonts.scss";
+@import "../../../template/template.scss";
+
+.text-field__input {
+    margin-top: 5px;
+    @include textFieldInput(100%, 44px);
+}

@@ -1,0 +1,7 @@
+@import "../../../template/template.scss";
+
+.text-field-subscription__input {
+    @include textFieldInput(100%, 44px);
+    padding-right: 50px;
+    
+}

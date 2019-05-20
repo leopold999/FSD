@@ -1,0 +1,17 @@
+@import "../../vars/vars.scss";
+
+@mixin textFieldInput($width, $height) {
+    width: $width;
+    height: $height;
+    border: $borderInputDefault;
+    border-radius: $borderRadiusInput;
+    @include fontBody();
+    padding-left: 13px;
+    box-sizing: border-box;
+    &::placeholder {
+        @include fontBody($color: $dark25);
+    }
+    &:hover, &:focus {
+        border: $borderInputHover;
+    }
+}
