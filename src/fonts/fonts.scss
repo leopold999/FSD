@@ -63,13 +63,13 @@
     line-height: $line-height;
     color: $dark100;
 }
-@mixin fontH3($font-size: 12px, $line-height: 15px) {
+@mixin fontH3($font-size: 12px, $line-height: 15px, $color: $dark100) {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: $font-size;
     line-height: $line-height;
-    color: $dark100;
+    color: $color;
     text-transform: uppercase;
 }
 @mixin fontBody($font-size: 14px, $line-height: 24px, $color: $dark75) {
@@ -80,5 +80,4 @@
     line-height: $line-height;
     color: $color;
     font-stretch: ultra-expanded;
- 
 }

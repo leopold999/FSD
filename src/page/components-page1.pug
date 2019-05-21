@@ -14,18 +14,33 @@ html
       typeModifier: "text-field__input_type_default",
       placeholder: "Email"
     })
+    br
     +text-field({
       title: "Text field",
       typeModifier: "text-field__input_type_hover",
       placeholder: "Email"
     })
+    br
     +text-field({
       title: "Masked text field",
       typeModifier: "text-field__input_type_masked",
-      placeholder: "ДД.ММ.ГГГ"
-      
+      placeholder: "ДД.ММ.ГГГ",
+      value: "25.02.2019"
     })
+    br
+    br
     +text-field-subscription({
-      
-    })
 
+    })
+    br
+    br
+    +dropdown-date({
+      title: "Date dropdown",
+       placeholder: "ДД.ММ.ГГГГ"
+    })
+    br
+    +dropdown-filter-date({
+          title: "Filter date dropdown",
+          
+    })
+    +dropdown-rooms({title: "Dropdown"})

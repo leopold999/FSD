@@ -1,4 +1,5 @@
 @import "../../vars/vars.scss";
+@import "../../fonts/fonts.scss";
 
 @mixin textFieldInput($width, $height) {
     width: $width;
@@ -14,4 +15,73 @@
     &:hover, &:focus {
         border: $borderInputHover;
     }
+}
+
+@mixin justify-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+@mixin justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+@mixin checkboxDropdownInput($color) {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border: none;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0); 
+    color: $color;
+    @include justify-center;
+    cursor: pointer;   
+}
+
+@mixin dropdown-list {
+    position: absolute;
+
+    border: $borderInputHover;
+    border-radius: $borderRadiusInput;
+    box-sizing: border-box;
+    padding: 7px 7px 0 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0;
+}
+
+
+
+@mixin dropdown-list-item {
+    .dropdown-list-item {
+        width: 100%;
+        margin-bottom: 7px;
+        @include justify-space-between;
+    }
+    .dropdown-list-item__title {
+        @include fontH3;
+    }
+    .counter {
+        width: 92px;
+        @include justify-space-between;
+    }
+    .counter__button {
+        border: $borderInputDefault;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        @include fontBody($font-size: 18px, $line-height: 22px, $color: $dark50);
+        @include justify-center;
+
+    }
+    .counter__value {
+        @include fontH3;
+    }
+
 }

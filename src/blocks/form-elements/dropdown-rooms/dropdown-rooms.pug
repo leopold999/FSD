@@ -1,0 +1,20 @@
+include ../../template/template.pug
+
+mixin dropdown-rooms(options)
+    - var title = options.title
+    - var placeholder = options.placeholder
+    
+           
+    div(class="dropdown-rooms")
+        span(class="dropdown-rooms__title")= title 
+        br
+        input(class="dropdown-rooms__input", type="text", value="" placeholder=placeholder readonly)
+        div(class="dropdown-rooms__list-checkbox")
+            span
+                i.material-icon expand_more
+        div(class="dropdown-list dropdown-list_narrow")
+            +dropdown-list-item({title: "Спальни", itemAttribute: "bedrooms"})
+            +dropdown-list-item({title: "Кровати", itemAttribute: "beds"})
+            +dropdown-list-item({title: "Ванные комнаты", itemAttribute: "bathrooms"})
+            
+

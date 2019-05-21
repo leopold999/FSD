@@ -1,0 +1,7 @@
+@import "../../../../vars/vars.scss";
+@import "../../../template/template.scss";
+
+.dropdown-filter-date__list-checkbox {
+    @include checkboxDropdownInput($dark50);
+    
+}

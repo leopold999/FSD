@@ -1,0 +1,8 @@
+@import "./dropdown-list_narrow";
+@import "../../../template/template.scss";
+
+.dropdown-list {
+    @include dropdown-list;
+
+    
+}

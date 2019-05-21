@@ -1,0 +1,11 @@
+mixin dropdown-list-item(options)
+    - var title = options.title
+    - var itemAttribute = options.itemAttribute
+
+    div(class="dropdown-list-item"  data-name=itemAttribute data-value="0") 
+        span(class="dropdown-list-item__title")= title
+        div(class="counter")
+            div(class="counter__button counter__button_minus") -
+            span(class="counter__value") 0
+            div(class="counter__button counter__button_plus") +
+            

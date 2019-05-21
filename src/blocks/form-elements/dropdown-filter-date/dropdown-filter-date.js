@@ -1,0 +1,1 @@
+// $(".dropdown-filter-date__input").mask("99 ааа - 99 ааа");

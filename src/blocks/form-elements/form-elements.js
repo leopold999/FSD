@@ -1,4 +1,5 @@
-import "./text-field/text-field.pug";
-import "./text-field-subscription/text-field-subscription.pug";
+import "./text-field/text-field";
+import "./dropdown-date/dropdown-date";
+import "./dropdown-filter-date/dropdown-filter-date";
 
 
