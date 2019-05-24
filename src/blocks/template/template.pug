@@ -1,3 +1,4 @@
+//-миксин пунктов 
 mixin dropdown-list-item(options)
     - var title = options.title
     - var itemAttribute = options.itemAttribute
@@ -8,4 +9,23 @@ mixin dropdown-list-item(options)
             div(class="counter__button counter__button_minus") -
             span(class="counter__value") 0
             div(class="counter__button counter__button_plus") +
-            
+
+//-Миксин выпадающего блока dropdown
+mixin dropdown-list(options) 
+    - var classModifier = options.classModifier
+    - var itemContents = options.itemContents
+    
+    div(class="dropdown-list" + " " + classModifier)
+        - for (var key in itemContents)
+            +dropdown-list-item({title: itemContents[key], itemAttribute: key })
+        if showDropdownButtons
+            div(class="dropdown-buttons")
+                span(class="dropdown-buttons__clean-button") Очистить
+                span(class="dropdown-buttons__apply-button") Применить
+
+
+
+
+
+
+

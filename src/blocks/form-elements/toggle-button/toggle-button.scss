@@ -1,0 +1,5 @@
+@import "../../template/template.scss";
+
+.toggle-button {
+    @include toggle-button(260px)
+}

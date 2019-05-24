@@ -1,0 +1,10 @@
+
+mixin radio-button(options)
+    - var text = options.text
+    - var name = options.name
+    - var value = options.value
+
+    div(class="radio-button")
+        label(class="radio-button__label")
+            input(class="radio-button__input", type="radio", , name=name, value=value)
+            div(class="radio-button__text")= text

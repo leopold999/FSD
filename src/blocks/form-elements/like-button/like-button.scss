@@ -1,0 +1,5 @@
+@import '../../template/template.scss';
+
+.like-button {
+    @include like-button;
+}

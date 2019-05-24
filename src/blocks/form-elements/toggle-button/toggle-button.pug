@@ -1,0 +1,10 @@
+
+mixin toggle-button(options)
+    - var text = options.text
+    - var name = options.name
+    - var value = options.value
+
+    div(class="toggle-button")
+        label(class="toggle-button__label")
+            input(class="toggle-button__input", type="checkbox", , name=name, value=value)
+            div(class="toggle-button__text")= text

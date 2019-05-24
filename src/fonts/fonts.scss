@@ -21,10 +21,10 @@
 }
 
 .material-icon {
-    font-family: 'Material Icons';
+  font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+//   font-size: 24px;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -80,4 +80,14 @@
     line-height: $line-height;
     color: $color;
     font-stretch: ultra-expanded;
+}
+
+ 
+@mixin font-gradient($font-size) {
+    font-size: $font-size;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Material Icons';
+    cursor: pointer;
 }

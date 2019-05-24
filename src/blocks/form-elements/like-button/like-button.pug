@@ -1,0 +1,12 @@
+
+mixin like-button(options)
+    - var name = options.name
+    - var value = options.value
+
+    div(class="like-button")
+        label(class="like-button__label")
+            input(class="like-button__input", type="checkbox", , name=name, value=value)
+            div(class="like-button__wrapper")
+                div(class="like-button__text") 12
+            div(class="like-button__icon like-button__icon_not-checked material-icon") favorite_border
+            div(class="like-button__icon like-button__icon_checked material-icon") favorite

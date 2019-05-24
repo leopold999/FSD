@@ -38,15 +38,29 @@
     border: none;
     width: 44px;
     height: 44px;
-    background-color: rgba(255, 255, 255, 0); 
+    background-color: #FFF 0%; 
     color: $color;
     @include justify-center;
     cursor: pointer;   
+    font-size: 24px;
+
+    .dropdown__checkbox-input {
+        z-index: -1;
+        position: absolute;
+        opacity: 0;
+        margin: 0 40px 0 0 ;
+        
+    }
+
+    &:checked {
+        display: block;
+       
+    }
 }
 
 @mixin dropdown-list {
     position: absolute;
-
+    
     border: $borderInputHover;
     border-radius: $borderRadiusInput;
     box-sizing: border-box;
@@ -55,8 +69,6 @@
     border-top-right-radius: 0;
     border-top: 0;
 }
-
-
 
 @mixin dropdown-list-item {
     .dropdown-list-item {
@@ -78,10 +90,250 @@
         height: 30px;
         @include fontBody($font-size: 18px, $line-height: 22px, $color: $dark50);
         @include justify-center;
-
     }
     .counter__value {
         @include fontH3;
     }
+}
 
+@mixin checkbox-button ($width: 100%) {
+    width: $width;
+    margin-top: 10px;
+    
+    .checkbox-button__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin: 10px 0 0 20px;
+        &:checked + .checkbox-button__text:before {
+            border: 1px solid $purple;
+        }
+        &:checked + .checkbox-button__text:after {
+            opacity: 1;
+        }
+    }
+    .checkbox-button__text {
+        position: relative;
+        padding: 0 0 0 30px;
+        @include fontBody($font-size: 14px, $line-height: 18px, $color: $dark50);
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            border-radius: $borderRadiusInput;
+            border: 1px solid $dark25;
+            top: 0px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            box-sizing: border-box;
+            width: 6px;
+            height: 8px;
+            border: {
+                right: 2px solid transparent;
+                bottom: 2px solid transparent;
+            }
+            border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            left: 7px;
+            top: 5px;
+            border-image-slice: 1;
+            opacity: 0;
+            transform: rotate(45deg);
+        }
+    }  
+}
+
+@mixin radio-button ($width: 100%) {
+    width: $width;
+    margin-top: 10px;
+    
+    .radio-button__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin: 10px 0 0 20px;
+        &:checked + .radio-button__text:before {
+            border: 1px solid $purple;
+        }
+        &:checked + .radio-button__text:after {
+            opacity: 1;
+        }
+        &:checked + .radio-button__text {
+            @include fontBody($font-size: 14px, $line-height: 18px, $color: $dark75);
+        }
+    }
+    .radio-button__text {
+        position: relative;
+        padding: 0 0 0 30px;
+        @include fontBody($font-size: 14px, $line-height: 18px, $color: $dark50);
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            border-radius: 50%;
+            border: 1px solid $dark25;
+            top: 0px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            box-sizing: border-box;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            left: 4px;
+            top: 4px;
+            border-image-slice: 1;
+            opacity: 0;
+        }
+    }  
+}
+
+
+
+@mixin toggle-button($width: 100%) {
+    width: $width;
+    margin-top: 10px;
+
+    .toggle-button__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        // margin: 10px 0 0 10px;
+      
+        &:checked + .toggle-button__text:after {
+            left: 25px;
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
+        &:checked + .toggle-button__text:before{
+            border: 1px solid $purple;
+        }
+    }
+    .toggle-button__text {
+        position: relative;
+        padding: 0 0 0 50px;
+        @include fontBody($font-size: 14px, $line-height: 18px, $color: $dark75);
+        cursor: pointer;
+        &::after, &::before {
+            position: absolute;
+            box-sizing: border-box;
+        }
+        &::before {
+            content: '';
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid $dark25;   
+        }
+        &::after {
+            content: '';
+            top: 4px;
+            left: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: $dark25;
+        }
+    }  
+}
+
+@mixin like-button {
+    margin-top: 10px;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    box-sizing: border-box;
+    
+    .like-button__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;        
+  
+        &:checked ~ .like-button__wrapper {
+            background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
+        &:checked ~ .like-button__icon_checked {
+            opacity: 1;
+        }
+        &:checked ~ .like-button__wrapper .like-button__text {
+            color: $purple;
+        }
+    }
+
+    .like-button__wrapper {
+        position: relative;
+        box-sizing: border-box;
+        height: 20px;
+        width: 40px;
+        border-radius: 10px;
+        background: $dark25;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        
+    }
+    .like-button__text {
+        position: absolute;
+        box-sizing: border-box;
+        padding: 0 0 0 10px;
+        @include justify-center();
+        @include fontBody($font-size: 10px, $line-height: 12px, $color: $dark25);
+        cursor: pointer;
+        background-color: #FFF;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        background-clip: padding-box;
+        height: 20px;
+        width: 40px;
+    }
+    .like-button__icon {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include justify-center();
+        font-size: 10px;
+        line-height: 9px;
+    }
+    .like-button__icon_not-checked {
+        opacity: 1;
+        color: $dark25;
+    }
+    .like-button__icon_checked {
+        opacity: 0;
+        color: $purple;
+    }
+}
+
+
+
+
+
+body {
+    padding-left: 200px;
+}
+
+
+.letter {
+    font-size: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: 'Material Icons';
+    cursor: pointer;
 }

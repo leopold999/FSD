@@ -1,0 +1,29 @@
+include ../../template/template.pug
+
+mixin dropdown(options)
+    - var title = options.title
+    - var placeholder = options.placeholder
+    - var classModifier = options.classModifier
+    - var itemContents = options.itemContents
+    - var classTypeDropdown = options.classTypeDropdown
+           
+    div(class="dropdown" + " " + classModifier + " "  + classTypeDropdown)
+        span(class="dropdown__title")= title 
+        br
+        input(class="dropdown__input ", type="text", value=options.value placeholder=placeholder readonly)
+        label(class="dropdown__list-checkbox")
+            input(class="dropdown__checkbox-input", type="checkbox", , name=name, value=value)
+            span
+                i.material-icon expand_more
+        +dropdown-list({
+            itemContents: itemContents,
+            classModifier: classModifier
+        })
+
+
+
+    
+
+
+            
+

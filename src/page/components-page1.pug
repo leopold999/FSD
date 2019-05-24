@@ -8,6 +8,8 @@ html
     script(src="../../dist/app.js", type="text/javascript")
     link(rel="stylesheet", href="../dist/app.css")
   body
+    
+
     H1 Элементы форм
     +text-field({
       title: "Text field",
@@ -41,6 +43,61 @@ html
     br
     +dropdown-filter-date({
           title: "Filter date dropdown",
-          
     })
-    +dropdown-rooms({title: "Dropdown"})
+    br
+    +dropdown({
+      title: "Dropdown", 
+      classModifier: "dropdown_size_medium", 
+      itemContents: {
+        "bedrooms": "Спальни",
+        "beds": "Кровати",
+        "bathrooms": "Ванные комнаты"
+      },
+      classTypeDropdown: "dropdown-rooms"
+    })
+  
+    div(style="height:120px")
+    
+    +dropdown({
+      title: "Dropdown", 
+      classModifier: "dropdown_size_wide", 
+      itemContents: {
+        "adults": "Взрослые",
+        "kids": "Дети",
+        "babies": "Младенцы"
+      },
+      classTypeDropdown: "dropdown-guests",
+      value: "Сколько гостей"
+    })
+    div(style="height:150px")
+    
+    +checkbox-button({text: "Можно пригласить гостей (до 10 человек)", name: "name", value: "value"})
+    form
+      +radio-button({text: "Мужчина", name: "gender", value: "male"})
+      +radio-button({text: "Женщина", name: "gender", value: "female"})
+
+    +toggle-button({text: "Получать спецпредложения", name: "name", value: "value"})
+    br
+    +like-button({name: "name", value: "value"})
+
+    +rate-button({name: "aaa"})
+    br
+    +rate-button({name: "bbb"})
+    br
+
+    +rate-show({name: "ccc", value: "3"})
+    br
+
+    +rate-show({name: "ddd", value: "4"})
+    br
+
+
+    
+
+    div(style="height:300px")
+
+    i(class="letter material-icon") insert_emoticon
+    p(class="letter material-icon") location_city
+    i(class="letter material-icon") arrow_forward
+
+    div(class="qqq")

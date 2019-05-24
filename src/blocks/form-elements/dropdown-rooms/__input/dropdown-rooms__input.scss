@@ -1,8 +1,0 @@
-@import "../../../template/template.scss";
-
-.dropdown-rooms__input {
-    margin-top: 5px;
-    @include textFieldInput(100%, 44px);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
