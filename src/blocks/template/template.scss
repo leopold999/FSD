@@ -98,7 +98,7 @@
 
 @mixin checkbox-button ($width: 100%) {
     width: $width;
-    margin-top: 10px;
+    margin-bottom: 12px;
     
     .checkbox-button__input {
         position: absolute;
@@ -319,6 +319,8 @@
         color: $purple;
     }
 }
+
+
 
 
 

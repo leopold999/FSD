@@ -1,0 +1,12 @@
+@import '../../../template/template.scss';
+
+.expandable-checkbox__label {
+    width: 44px;
+    width: 44px;
+    @include justify-center;
+    font-size: 24px;
+    color: $dark50;
+    cursor: pointer;
+    
+    
+}

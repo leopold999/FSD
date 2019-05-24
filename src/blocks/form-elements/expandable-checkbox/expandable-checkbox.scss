@@ -1,0 +1,17 @@
+@import "../../template/template.scss";
+@import "./__label/expandable-checkbox__label.scss";
+@import "./__title/expandable-checkbox__title.scss";
+@import "./__input/expandable-checkbox__button.scss";
+@import "./expandable-checkbox-list/expandable-checkbox-list.scss";
+@import "./expandable-checkbox-list/expandable-checkbox-list_hide.scss";
+
+.expandable-checkbox {
+    position: relative;
+    @include justify-space-between;
+    width: 266px;
+    height: 44px;
+
+    
+   
+}
+

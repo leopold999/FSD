@@ -46,14 +46,13 @@
 
                     
                 }
-            )
-            // .hover(
-            //     function (e) {
-            //         obj.showRating($(this).data('rating'), true);          
-            //     }, function () {
-            //         obj.showRating(settings.tempRating, true);
-            //     }
-            // );
+            ).hover(
+                function (e) {
+                    obj.showRating($(this).data('rating'), true);          
+                }, function () {
+                    obj.showRating(settings.tempRating, true);
+                }
+            );
 
         }
         
@@ -75,22 +74,18 @@
     }
 
     $.fn.showRating = function(numRating, force)  {
-
-        // console.log(addRating.obj)
         var obj = this;
-        if ($('#' + obj.settings.fieldId).val() == '' || force) {
-            $(obj).find('span').each(function () {
-                var icon = obj.settings.icon + '_border';
-                $(this).removeClass('selected');
-
-                if ($(this).data('rating') <= numRating) {
-                    icon = obj.settings.icon;
-                    $(this).addClass('selected');
-                }
-                $(this).html(icon);
-            })
-        }
         
+        $(obj).find('span').each(function () {
+            var icon = obj.settings.icon + '_border';
+            $(this).removeClass('selected');
+
+            if ($(this).data('rating') <= numRating) {
+                icon = obj.settings.icon;
+                $(this).addClass('selected');
+            }
+            $(this).html(icon);
+        })
     }
 
 }(jQuery));
