@@ -83,8 +83,9 @@
 }
 
  
-@mixin font-gradient($font-size) {
+@mixin font-gradient($font-size, $line-height: $font-size) {
     font-size: $font-size;
+    line-height: $line-height;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     background-clip: text;
     color: transparent;

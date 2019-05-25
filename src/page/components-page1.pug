@@ -78,6 +78,8 @@ html
 
     +toggle-button({text: "Получать спецпредложения", name: "name", value: "value"})
     br
+    +like-button({name: "name", value: "value", checked: true})
+    br
     +like-button({name: "name", value: "value"})
 
     +rate-button({name: "aaa"})
@@ -102,7 +104,31 @@ html
       "shampoo-2": "Шампунь",
     }})
 
-
+    +rich-checkbox-button({
+      title: "Широкий коридор",
+      text: "Ширина коридоров в номере не менее 91см."
+    })
+    +rich-checkbox-button({
+      title: "Помощник для инвалидов",
+      text: "На 1 этаже вас встретит специалист и проводит до номера."
+    })
+    +facility({
+      icon: "insert_emoticon",
+      title: "Комфорт",
+      text: "Шумопоглощающие стены"
+    })
+    +facility({
+      icon: "location_city",
+      title: "Удобство",
+      text: "Окно в каждой из спален"
+    })
+    
+    +review({
+      userName: "Мурад Сарафанов",
+      timeAgo: "5 дней назад",
+      text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+      img: "../img/murad_sarafanov.png"
+    })
     
 
     div(style="height:300px")

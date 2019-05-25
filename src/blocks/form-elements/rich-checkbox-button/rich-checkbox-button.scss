@@ -1,0 +1,12 @@
+@import '../../template/template';
+@import './rich-checkbox-button__text/rich-checkbox-button__text.scss';
+@import './rich-checkbox-button__title/rich-checkbox-button__title.scss';
+@import './rich-checkbox-button__input/rich-checkbox-button__input.scss';
+
+.rich-checkbox-button {
+    position: relative;
+    width: 266px;
+    height: 51px;
+    margin-bottom: 12px;
+    
+}

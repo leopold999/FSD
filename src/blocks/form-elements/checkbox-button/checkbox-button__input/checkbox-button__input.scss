@@ -1,0 +1,12 @@
+.checkbox-button__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+    &:checked + .checkbox-button__text:before {
+        border: 1px solid $purple;
+    }
+    &:checked + .checkbox-button__text:after {
+        opacity: 1;
+    }
+}

@@ -1,9 +1,8 @@
 mixin checkbox-button(options)
     - var text = options.text
     - var name = options.name
-    - var value = options.value
 
     div(class="checkbox-button")
-        label(class="checkbox-button__label")
-            input(class="checkbox-button__input", type="checkbox", name=name, value=value )
+        label
+            input(class="checkbox-button__input", type="checkbox", name=name)
             div(class="checkbox-button__text")= text

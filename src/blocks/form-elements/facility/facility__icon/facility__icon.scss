@@ -1,0 +1,6 @@
+@import '../../../template/template.scss';
+
+.facility__icon {
+    padding-bottom: 23px;
+    @include font-gradient(48px, 41px)
+}

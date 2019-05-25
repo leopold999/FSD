@@ -1,0 +1,17 @@
+include ../like-button/like-button.pug
+mixin review(options)
+    - var userName = options.userName
+    - var timeAgo = options.timeAgo
+    - var text = options.text
+    - var img = options.img
+
+    div(class="review")
+        img(class="review__avatar", src=img, alt="avatar")
+        div(class="review-like")
+            +like-button({value: "12", checked: true})
+        div(class="review-text")
+            div(class="review-text__user-name")= userName
+            div(class="review-text__time-ago")= timeAgo
+            div(class="review-text__text")= text
+
+

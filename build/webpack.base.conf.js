@@ -87,8 +87,8 @@ module.exports = {
     }),
     new HtmlWebpackPugPlugin(),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/static`, to: '' }
+      { from: PATHS.src + '/img', to: `img` },
+      { from: PATHS.src + '/static' },
     ]),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -98,3 +98,6 @@ module.exports = {
 
   ],
 }
+
+// { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+// { from: `${PATHS.src}/static`, to: '' }

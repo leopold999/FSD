@@ -96,58 +96,6 @@
     }
 }
 
-@mixin checkbox-button ($width: 100%) {
-    width: $width;
-    margin-bottom: 12px;
-    
-    .checkbox-button__input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        margin: 10px 0 0 20px;
-        &:checked + .checkbox-button__text:before {
-            border: 1px solid $purple;
-        }
-        &:checked + .checkbox-button__text:after {
-            opacity: 1;
-        }
-    }
-    .checkbox-button__text {
-        position: relative;
-        padding: 0 0 0 30px;
-        @include fontBody($font-size: 14px, $line-height: 18px, $color: $dark50);
-        cursor: pointer;
-        &::before {
-            content: '';
-            position: absolute;
-            box-sizing: border-box;
-            background: #FFFFFF;
-            border-radius: $borderRadiusInput;
-            border: 1px solid $dark25;
-            top: 0px;
-            left: 0;
-            width: 20px;
-            height: 20px;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            box-sizing: border-box;
-            width: 6px;
-            height: 8px;
-            border: {
-                right: 2px solid transparent;
-                bottom: 2px solid transparent;
-            }
-            border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            left: 7px;
-            top: 5px;
-            border-image-slice: 1;
-            opacity: 0;
-            transform: rotate(45deg);
-        }
-    }  
-}
 
 @mixin radio-button ($width: 100%) {
     width: $width;
@@ -252,7 +200,6 @@
 }
 
 @mixin like-button {
-    margin-top: 10px;
     width: 40px;
     height: 20px;
     position: relative;
@@ -326,16 +273,12 @@
 
 
 
-body {
-    padding-left: 200px;
-}
 
-
-.letter {
-    font-size: 24px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    background-clip: text;
-    color: transparent;
-    font-family: 'Material Icons';
-    cursor: pointer;
-}
+// .letter {
+//     font-size: 24px;
+//     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+//     background-clip: text;
+//     color: transparent;
+//     font-family: 'Material Icons';
+//     cursor: pointer;
+// }

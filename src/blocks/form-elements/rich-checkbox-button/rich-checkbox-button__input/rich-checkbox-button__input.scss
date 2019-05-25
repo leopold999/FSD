@@ -1,0 +1,12 @@
+.rich-checkbox-button__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    // margin: 0px 0 0 20px;
+    &:checked + .rich-checkbox-button__title:before {
+        border: 1px solid $purple;
+    }
+    &:checked + .rich-checkbox-button__title:after {
+        opacity: 1;
+    }
+}

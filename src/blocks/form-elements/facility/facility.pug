@@ -1,0 +1,12 @@
+mixin facility(options)
+    - var icon = options.icon
+    - var title = options.title
+    - var text = options.text
+
+    div(class="facility")
+        div(class="facility__icon material-icon")= icon
+        div(class="facility__description")
+            span(class="facility__title")= title
+            br
+            span(class="facility__text")= text
+        div(class="facility__line")

@@ -9,6 +9,6 @@ mixin expandable-checkbox(options)
         label(class="expandable-checkbox__label")
             input(class="expandable-checkbox__button" type="checkbox")
             i(class="aaa material-icon") expand_more
-        div(class="expandable-checkbox-list")
+        div(class="expandable-checkbox-list expandable-checkbox-list_hide")
             - for (var key in list)
                 +checkbox-button({text: list[key], name: key})

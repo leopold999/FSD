@@ -1,0 +1,9 @@
+@import '../../../template/template.scss';
+
+.facility__line {
+    position: absolute;
+    bottom: 0;
+    width: 280px;
+    height: 1px;
+    background: $dark10;
+}

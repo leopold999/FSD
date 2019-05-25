@@ -1,0 +1,14 @@
+
+@import './review-text/__text/review-text__text.scss';
+@import './review-text/__time-ago/review-text__time-ago.scss';
+@import './review-text/__user-name/review-text__user-name';
+@import './review-text/review-text.scss';
+@import './review-like/review-like.scss';
+@import './__avatar/review__avatar.scss';
+
+.review {
+   width: 711px;
+   height: 133px; 
+   position: relative;
+   box-sizing: border-box;
+}

@@ -1,0 +1,11 @@
+mixin rich-checkbox-button(options)
+    - var title = options.title
+    - var text = options.text
+    - var name = options.name
+
+
+    div(class="rich-checkbox-button")
+        label
+            input(class="rich-checkbox-button__input", type="checkbox", name=name)
+            div(class="rich-checkbox-button__title")= title
+            div(class="rich-checkbox-button__text")= text
