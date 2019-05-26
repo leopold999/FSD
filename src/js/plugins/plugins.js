@@ -1,3 +1,7 @@
 import './masked-input/jquery.maskedinput';
 import './star-rating/jquery.star.rating';
 import './RateButton/RateButton';
+import './jquery-ui/jquery-ui.min';
+import './jquery-ui/jquery.ui.touch-punch.min';
+import './digitalMask/jquery.digitalmask';
+

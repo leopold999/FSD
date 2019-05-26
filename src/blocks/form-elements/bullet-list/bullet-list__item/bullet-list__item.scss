@@ -1,0 +1,22 @@
+@import '../../../template/template';
+
+.bullet-list__item {
+    display: block;
+    position: relative;
+    @include fontBody;
+    list-style: none;
+    margin-top: 11px;
+    padding-left: 21px;
+    padding-right: 29px;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: $dark25;
+        border-radius: 50%;
+        top: 7px;
+        left: 0;
+    }
+}

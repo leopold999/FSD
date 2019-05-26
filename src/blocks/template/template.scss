@@ -38,7 +38,7 @@
     border: none;
     width: 44px;
     height: 44px;
-    background-color: #FFF 0%; 
+    background-color: rgba(255, 255, 255, 0); 
     color: $color;
     @include justify-center;
     cursor: pointer;   
