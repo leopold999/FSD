@@ -1,0 +1,9 @@
+@import '../../../template/template.scss';
+
+.button__icon {
+    position: absolute;
+    font-size: 24px;
+    @include justify-center;
+    width: 44px;
+    right: 0;
+}

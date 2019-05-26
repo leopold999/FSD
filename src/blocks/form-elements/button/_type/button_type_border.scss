@@ -1,0 +1,26 @@
+@import "../../../template/template.scss";
+
+.button_type_border {
+    position: relative;
+    width: 99px;
+    height: 44px;
+    background-color: #fff;
+    $border: 2px;
+    border: $border solid rgba(255, 253, 253, 0);
+    @include justify-center;
+    @include fontH3($color: $purple);
+    background-clip: padding-box;
+    &::after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        width: 99px;
+        height: 44px;
+        top: -$border;
+        z-index: -1;
+        border-radius: 22px;
+    }
+    &:active::after {
+        opacity: 0.5;
+    }
+}

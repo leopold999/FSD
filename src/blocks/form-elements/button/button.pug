@@ -1,0 +1,12 @@
+mixin button(options)
+    - var title = options.title
+    - var type = options.type     
+
+    button(class="button button_type_" + type)= title
+        if options.type == "wide"
+            span(class="button__icon material-icon") arrow_forward
+                
+    
+    
+    
+    

@@ -1,0 +1,12 @@
+@import "./_type/button_type_background.scss";
+@import "./_type/button_type_border.scss";
+@import "./_type/button_type_clean.scss";
+@import "./_type/button_type_wide.scss";
+@import "../../template/template.scss";
+@import "./button__icon/button__icon.scss";
+@import "./_type/button_type_clean-gray.scss";
+
+.button {
+    border-radius: 22px;
+    cursor: pointer;   
+}

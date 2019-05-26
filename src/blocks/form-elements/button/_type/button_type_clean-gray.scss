@@ -1,0 +1,10 @@
+@import "../../../template/template.scss";
+
+.button_type_clean-gray {
+    @include fontH3($color: $dark50);
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    height: 15px;
+}

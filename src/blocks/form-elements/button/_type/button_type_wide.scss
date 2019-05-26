@@ -1,0 +1,12 @@
+@import "../../../template/template.scss";
+
+.button_type_wide {
+    position: relative;
+    width: 320px;
+    height: 44px;
+    background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    @include justify-center;
+    @include fontH3($color: #FFF);
+    border: none;
+    
+}
