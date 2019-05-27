@@ -1,0 +1,46 @@
+@import "../../../template/template.scss";
+
+.pagination-container {
+    
+}
+
+.paginationjs-pages ul {
+    padding: 0;
+    margin: 0;
+}
+
+.J-paginationjs-page a, .paginationjs-prev a, .paginationjs-next a   {  
+    text-decoration: none;
+}
+.J-paginationjs-page a, .paginationjs-ellipsis a {
+    @include fontH3($color: $dark50);
+    font-weight: normal;
+}
+
+.J-paginationjs-page, .paginationjs-prev, .paginationjs-pages .active, .paginationjs-ellipsis, .paginationjs-next  {
+    float: left;
+    width: 40px;
+    height: 40px;
+    list-style: none;
+    box-sizing: border-box;
+    @include justify-center;
+}
+.paginationjs-pages .active {
+    border-radius: 50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);    
+}
+.paginationjs-pages .active a {
+    color: #fff;
+    font-weight: bold;
+}
+.paginationjs-next, .paginationjs-prev  {
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.paginationjs-next a, .paginationjs-prev a {
+    font-size: 24px;
+    color: #fff;
+    @include justify-center;
+    width: 40px;
+    height: 40px;
+}

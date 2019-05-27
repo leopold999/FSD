@@ -5,4 +5,5 @@ import './rate-button/rate-button';
 import './rate-show/rate-show';
 import './expandable-checkbox/__input/expandable-checkbox__button';
 import './range-slider/range-slider';
-
+import './pagination/pagination';
+import './datapicker/datapicker';

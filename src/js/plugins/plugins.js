@@ -4,4 +4,6 @@ import './RateButton/RateButton';
 import './jquery-ui/jquery-ui.min';
 import './jquery-ui/jquery.ui.touch-punch.min';
 import './digitalMask/jquery.digitalmask';
+import './pagination/pagination';
+import './jquery.air-datapicker/datepicker';
 
