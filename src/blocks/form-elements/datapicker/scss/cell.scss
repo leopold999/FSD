@@ -7,6 +7,7 @@
 .datepicker--cells {
   display: flex;
   flex-wrap: wrap;
+  
   justify-content: center;
 }
 
@@ -25,20 +26,22 @@
 
   &.-focus- {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    
+    color: #fff;
   }
 
   &.-current- {
     color: #fff;
     font-weight: bold;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+   
 
     &.-focus- {
       color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
 
     &.-in-range- {
-      color: red;
+      color:#fff;
+      border-radius: 50%;
     }
   }
 
@@ -57,10 +60,13 @@
       left: 0;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       opacity: 0.25;
+      
     }
 
     &.-focus- {
       background-color: green;
+      border-radius: 50%;
+      color: #fff;
     }
   }
 
@@ -115,6 +121,9 @@
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       opacity: 0.25;
     }
+    &.-focus- {
+      color: #fff;
+    }
     
   }
 
@@ -122,6 +131,7 @@
 
   &.-selected- {
     color: #fff;
+    font-weight: bold;
     border: none;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
@@ -148,6 +158,9 @@
   flex-wrap: wrap;
   margin: 8px 0 3px;
   justify-content: center;
+  @include fontBody(12px, 15px);
+
+
 }
 
 .datepicker--day-name {
@@ -170,9 +183,13 @@
 
 .datepicker--cell-day {
   width: 40px;
-
+  color: $dark50;
   &.-other-month- {
-    @extend %otherMonth;
+    color: $dark25;
+    &.-focus- {
+      color: #fff;
+    }
+
   }
 }
 
@@ -188,15 +205,15 @@
 .datepicker--months {}
 
 .datepicker--cells-months {
-  height: $datepickerMinBodyHeight;
+  height: 200px;
 }
 
 //  Month cell
 // -------------------------
 
 .datepicker--cell-month {
-  width: 33.33%;
-  height: 25%;
+  width: 60px;
+  height: 60px;
 }
 
 //  Years
@@ -213,8 +230,8 @@
 // -------------------------
 
 .datepicker--cell-year {
-  width: 100% / $datepickerYearsPerRow;
-  height: 33.33%;
+  width: 60px;
+  height: 60px;
 
   &.-other-decade- {
     @extend %otherMonth;

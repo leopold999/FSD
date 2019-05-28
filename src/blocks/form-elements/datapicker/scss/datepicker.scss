@@ -1,4 +1,5 @@
 @import "datepicker-config";
+@import "../../../template/template.scss";
 
 /* -------------------------------------------------
     Datepicker
@@ -16,16 +17,16 @@
 
 .datepicker {
   background: #fff;
-  border: 1px solid map_get($datepickerBorderColor, default);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-  border-radius: $datepickerBorderRadius;
-  box-sizing: content-box;
-  font-family: $datepickerFontFamily, sans-serif;
-  font-size: $datepickerFontSize;
-  color: map_get($datepickerTextColor, common);
-  width: $datepickerWidth;
-  position: absolute;
-  left: -100000px;
+  border: 1px solid $dark25;
+  
+  border-radius: $borderRadiusInput;
+  box-sizing: border-box;
+  padding: 20px;
+  // color: map_get($datepickerTextColor, common);
+  width: 320px;
+  height: 369px;
+  // left: -100000px;
+  // display: none;
   opacity: 0;
   transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;
   z-index: $datepickerZIndex;
@@ -52,14 +53,16 @@
 }
 
 .datepicker-inline {
+  display: inline-flex;
   .datepicker {
-    border-color: map-get($datepickerBorderColor, inline);
-    box-shadow: none;
-    position: static;
+    // border-color: map-get($datepickerBorderColor, inline);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    position: relative;
     left: auto;
     right: auto;
     opacity: 1;
     transform: none;
+    
   }
 
   .datepicker--pointer {
@@ -68,8 +71,11 @@
 }
 
 .datepicker--content {
-  box-sizing: content-box;
-  padding: $datepickerPadding;
+  box-sizing: border-box;
+  padding: 0;
+  width: 280px;
+  height: auto;
+  margin: auto;
 
   .-only-timepicker- & {
     display: none;
@@ -141,6 +147,7 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
 // -------------------------------------------------
 
 .datepicker--body {
+  
   display: none;
 
   &.active {

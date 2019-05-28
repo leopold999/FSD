@@ -1,4 +1,4 @@
-$('.datapicker').datepicker({
+$('.calendar').datepicker({
     inline: true,
     range: true,
     multipleDates: true,
@@ -10,7 +10,7 @@ $('.datapicker').datepicker({
 })
 
 // Доступ к экземпляру объекта
-var myDatepicker = $('.datapicker').datepicker().data('datepicker');
+var myDatepicker = $('.calendar').datepicker().data('datepicker');
 // myDatepicker.hide();
 
 // let but = document.querySelector('.but');

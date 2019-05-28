@@ -47,16 +47,19 @@
 
             todayButton: false,
             clearButton: false,
+            applyButton: true,
 
             showEvent: 'focus',
             autoClose: false,
 
             // navigation
             monthsField: 'monthsShort',
-            prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',
-            nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',
+            prevHtml: '<span class="material-icon">arrow_back</span>',
+            nextHtml: '<span class="material-icon">arrow_forward</span>',
+            // prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',
+            // nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',
             navTitles: {
-                days: 'MM, <i>yyyy</i>',
+                days: 'MM <i>yyyy</i>',
                 months: 'yyyy',
                 years: 'yyyy1 - yyyy2'
             },
@@ -597,6 +600,13 @@
             if (this.opts.onSelect) {
                 this._triggerOnChange()
             }
+            
+        },
+
+        apply: function() {
+           
+
+           this.hide();
         },
 
         /**
@@ -723,12 +733,14 @@
 
         _getDimensions: function ($el) {
             var offset = $el.offset();
+            
 
             return {
                 width: $el.outerWidth(),
                 height: $el.outerHeight(),
                 left: offset.left,
-                top: offset.top
+                top: offset.top,
+                none: $el.addClass().css( "display", 'none') ////////////////////////
             }
         },
 
@@ -826,7 +838,9 @@
             this.$datepicker
                 .removeClass('active')
                 .css({
-                    left: '-100000px'
+                    // left: '-100000px'
+                    'display': 'none'
+                    
                 });
 
             this.focused = '';
@@ -1480,6 +1494,7 @@
             monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             today: 'Сегодня',
             clear: 'Очистить',
+            apply: 'Применить', //added
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
             firstDay: 1
@@ -1810,7 +1825,7 @@
         '<div class="datepicker--nav-title">#{title}</div>' +
         '<div class="datepicker--nav-action" data-action="next">#{nextHtml}</div>',
         buttonsContainerTemplate = '<div class="datepicker--buttons"></div>',
-        button = '<span class="datepicker--button" data-action="#{action}">#{label}</span>',
+        button = '<span class="datepicker--button button-#{action}" data-action="#{action}">#{label}</span>',
         datepicker = $.fn.datepicker,
         dp = datepicker.Constructor;
 
@@ -1844,10 +1859,13 @@
 
         _addButtonsIfNeed: function () {
             if (this.opts.todayButton) {
-                this._addButton('today')
+                this._addButton('today')/////////////////////////////////
             }
             if (this.opts.clearButton) {
                 this._addButton('clear')
+            }
+            if (this.opts.applyButton) {
+                this._addButton('apply')
             }
         },
 
@@ -1881,7 +1899,7 @@
         },
 
         _addButtonsContainer: function () {
-            this.d.$datepicker.append(buttonsContainerTemplate);
+            this.d.$datepicker.append(buttonsContainerTemplate); 
             this.$buttonsContainer = $('.datepicker--buttons', this.d.$datepicker);
         },
 
@@ -1933,8 +1951,9 @@
         _onClickNavButton: function (e) {
             var $el = $(e.target).closest('[data-action]'),
                 action = $el.data('action');
-
+                
             this.d[action]();
+            
         },
 
         _onClickNavTitle: function (e) {

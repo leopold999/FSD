@@ -1,4 +1,5 @@
 @import "datepicker-config";
+@import '../../../template/template';
 
 /* -------------------------------------------------
     Navigation
@@ -7,9 +8,8 @@
 .datepicker--nav {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid map_get($datepickerBorderColor, nav);
-  min-height: $datepickerNavigationHeight;
-  padding: $datepickerPadding;
+  padding: 0;
+  margin-bottom: 30px;
 
   .-only-timepicker- & {
     display: none;
@@ -28,6 +28,11 @@
   width: $datepickerDayCellSize;
   border-radius: $datepickerBorderRadius;
   user-select: none;
+  color: $purple;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+
 
   &:hover {
     background: map_get($datepickerBG, hover);
@@ -50,12 +55,10 @@
 }
 
 .datepicker--nav-title {
-  border-radius: $datepickerBorderRadius;
-  padding: 0 8px;
+  @include fontH2;
 
   i {
     font-style: normal;
-    color: map_get($datepickerTextColor, navArrows);
     margin-left: 5px;
   }
 
@@ -74,22 +77,34 @@
 
 .datepicker--buttons {
   display: flex;
-  padding: $datepickerPadding;
-  border-top: 1px solid map_get($datepickerBorderColor, nav);
+  justify-content: space-between;
+  bottom: 20px;
 }
 
 .datepicker--button {
-  color: map_get($datepickerTextColor, currentDate);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 20px;
   cursor: pointer;
-  border-radius: $datepickerBorderRadius;
-  flex: 1;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 32px;
 
   &:hover {
-    color: map_get($datepickerTextColor, common);
-    background: map_get($datepickerBG, hover);
+
   }
+}
+
+
+
+.button-clear {
+  @include fontH3($color: $dark50);
+  box-sizing: border-box;
+  left: 20px;
+}
+
+.button-apply {
+  @include fontH3($color: $purple); 
+  border: none;
+  right: 20px;
+
+
 }
