@@ -1,2 +1,13 @@
-include ../dropdown-list/dropdown-list.pug
+include ../dropdown-list-item/dropdown-list-item.pug
 
+mixin dropdown-list(options) 
+    - var classModifier = options.classModifier
+    - var itemContents = options.itemContents
+    
+    div(class="dropdown-list" + " " + classModifier)
+        - for (var key in itemContents)
+            +dropdown-list-item({title: itemContents[key], itemAttribute: key })
+        if showDropdownButtons
+            div(class="dropdown-buttons")
+                span(class="dropdown-buttons__clean-button") Очистить
+                span(class="dropdown-buttons__apply-button") Применить

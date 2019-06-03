@@ -6,6 +6,7 @@ mixin dropdown(options)
     - var classModifier = options.classModifier
     - var itemContents = options.itemContents
     - var classTypeDropdown = options.classTypeDropdown
+    - var value = options.value
            
     div(class="dropdown" + " " + classModifier + " "  + classTypeDropdown)
         span(class="dropdown__title")= title 
@@ -15,10 +16,10 @@ mixin dropdown(options)
             input(class="dropdown__checkbox-input", type="checkbox", , name=name, value=value)
             span
                 i.material-icon expand_more
-        +dropdown-list({
-            itemContents: itemContents,
-            classModifier: classModifier
-        })
+        //- +dropdown-list({
+        //-     itemContents: itemContents,
+        //-     classModifier: classModifier
+        //- })
 
 
 

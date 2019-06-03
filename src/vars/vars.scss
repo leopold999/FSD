@@ -7,7 +7,9 @@ $dark10: rgba(31, 32, 65, 0.1);
 $dark5: rgba(31, 32, 65, 0.05);
 $purple: #BC9CFF;
 $green: #6FCF97;
-
+$azureBlue: #66D2EA;
+$blue: #8BA4F9;
+$colorGradientPurple: linear-gradient(180deg, $purple 0%, $blue 100%);
 
 /*border*/
 $borderCard: 1px solid rgba(0, 0, 0, 0.12);

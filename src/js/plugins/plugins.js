@@ -6,4 +6,5 @@ import './jquery-ui/jquery.ui.touch-punch.min';
 import './digitalMask/jquery.digitalmask';
 import './pagination/pagination';
 import './jquery.air-datapicker/datepicker';
+import './dropDownList/dropDownList';
 

@@ -1,7 +1,14 @@
-mixin logo
+mixin logo(type)
 
     .logo
-        svg(xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 406 406" xmlns:xlink="http://www.w3.org/1999/xlink")
+        svg( class="logo-svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 406 406" xmlns:xlink="http://www.w3.org/1999/xlink")
+            defs 
+                linearGradient(id="grad1" x1="0" x2="0" y1="0" y2="1")
+                    stop(class="stop1" offset="0%")
+                    stop(class="stop2" offset="100%")
+                linearGradient(id="grad2" x1="0" x2="0" y1="0" y2="1")
+                    stop(class="stop3" offset="0%")
+                    stop(class="stop4" offset="100%")
             g(id="Слой_x0020_1")
                 metadata(id="CorelCorpID_0Corel-Layer")
                 g(id="_624741936")

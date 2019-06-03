@@ -1,3 +1,31 @@
 @import "../../template/template.scss";
 
-@include dropdown-list-item;
+
+.dropdown-list-item {
+    width: 100%;
+    margin-bottom: 7px;
+    @include justify-space-between;
+}
+.dropdown-list-item__title {
+    @include fontH3;
+}
+.counter {
+    width: 92px;
+    @include justify-space-between;
+}
+.counter__button {
+    border: $borderInputDefault;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    @include fontBody($font-size: 18px, $line-height: 22px, $color: $dark50);
+    @include justify-center;
+}
+
+.counter__button_transparent {
+    opacity: 0.5;
+}
+.counter__value {
+    @include fontH3;
+}

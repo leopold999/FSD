@@ -87,6 +87,7 @@
         border-radius: 50%;
         width: 30px;
         height: 30px;
+        cursor: pointer;
         @include fontBody($font-size: 18px, $line-height: 22px, $color: $dark50);
         @include justify-center;
     }

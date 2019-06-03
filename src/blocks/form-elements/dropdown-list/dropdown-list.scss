@@ -1,5 +1,6 @@
 
 @import "../../template/template.scss";
+@import "./dropdown-list_hide.scss";
 
 .dropdown-list {
     @include dropdown-list;
