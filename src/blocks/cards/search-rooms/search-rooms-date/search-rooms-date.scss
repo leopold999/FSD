@@ -1,0 +1,7 @@
+@import "../../../template/template.scss";
+
+.search-rooms-date {
+    @include justify-space-between;
+ 
+    margin-bottom: 18px;
+}

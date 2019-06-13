@@ -1,5 +1,7 @@
 import dropDownList from '../../../js/plugins/dropDownList/dropDownList';
 
+
+
 let dropDownListRooms = new dropDownList({
     elem: document.querySelector('.dropdown-rooms'),
     itemsNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
@@ -7,6 +9,7 @@ let dropDownListRooms = new dropDownList({
     alternateNames: [['спальня', 'спальни'], ['кровать', 'кровати'], ['ванная комната', 'ванные комнаты']], 
     classModifier: 'dropdown_size_medium',
     defaultValue: '',
+    showDropdownButtons: false,
     inputCallback: (itemsNames, values, alternateNames) => {
         let textInputArr = [];
         for (let i = 0; i <= itemsNames.length; i++) {

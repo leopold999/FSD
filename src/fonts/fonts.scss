@@ -3,21 +3,28 @@
 @font-face {
     font-family: 'Quicksand';
     src: url('/src/fonts/fonts-files/Quicksand-Regular.ttf') format('truetype');
-    // font-weight: normal;
-    // font-style: normal;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/src/fonts/font-files/Quicksand-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/font-files/Montserrat-Bold.ttf') format('truetype');
+    src: url('../fonts/font-files/Montserrat-Bold2.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/font-files/Montserrat-Regular.ttf') format('truetype');
+    src: url('../fonts/font-files/Montserrat-Regular2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -56,21 +63,25 @@
 
 
 @mixin fontH1($font-size: 24px, $line-height: 30px) {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: $font-size;
     line-height: $line-height;
     color: $dark100;
+    font-stretch: extra-expanded;
+    
+    // transform: scaleX(0.95)
+    // text-transform: lowercase
     letter-spacing: 0.045em;
 }
-@mixin fontH2($font-size: 19px, $line-height: 24px) {
+@mixin fontH2($font-size: 19px, $line-height: 24px, $color: $dark100) {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: $font-size;
     line-height: $line-height;
-    color: $dark100;
+    color: $color;
 }
 @mixin fontH3($font-size: 12px, $line-height: 15px, $color: $dark100) {
     font-family: 'Montserrat', sans-serif;

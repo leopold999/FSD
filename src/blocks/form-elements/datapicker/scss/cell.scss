@@ -72,7 +72,7 @@
 
   &.-disabled- {
     cursor: default;
-    color: red;
+     @include fontBody(12px, 15px, $dark50);
 
     &.-focus- {
       // color: map_get($datepickerTextColor, disabled);

@@ -1,5 +1,5 @@
 @import "../../../template/template.scss";
 
 .dropdown__list-checkbox {
-    @include checkboxDropdownInput($dark75);
+    @include checkboxDropdownInput($dark50);
 }

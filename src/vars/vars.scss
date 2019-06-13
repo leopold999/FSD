@@ -10,13 +10,21 @@ $green: #6FCF97;
 $azureBlue: #66D2EA;
 $blue: #8BA4F9;
 $colorGradientPurple: linear-gradient(180deg, $purple 0%, $blue 100%);
+$cardBackgroundColor: #FFFFFF;
 
 /*border*/
 $borderCard: 1px solid rgba(0, 0, 0, 0.12);
 $borderInputDefault: 1px solid $dark25;
 $borderInputHover: 1px solid $dark50;
 $borderRadiusInput: 4px;
+$borderRadiusCard: 4px;
+
 
 /*fonts*/
+
+/*shadow*/
+
+$cadrShadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
 
 

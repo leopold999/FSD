@@ -1,0 +1,10 @@
+@import '../../../template/template.scss';
+.booking-form__rooms-number_de-luxe {
+ 
+    &::after {
+        content: 'Люкс';
+        @include fontH3($font-size: 10px, $color: $purple);
+        margin-left: 5px;
+    }
+
+}

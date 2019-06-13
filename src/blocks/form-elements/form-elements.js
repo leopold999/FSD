@@ -9,3 +9,4 @@ import './pagination/pagination';
 import './datapicker/datapicker';
 import './dropdown-rooms/dropdown-rooms';
 import './dropdown-guests/dropdown-guests';
+import '../cards/booking-form/booking-form-calendar/booking-form-calendar';

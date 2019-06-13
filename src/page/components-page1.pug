@@ -58,7 +58,7 @@ html
       title: "Dropdown", 
       classModifier: "dropdown_size_wide", 
       classTypeDropdown: "dropdown-guests",
-      value: "Сколько гостей"
+      placeholder: "Сколько гостей"
     })
     div(style="height:150px")
     
@@ -162,10 +162,16 @@ html
 
     +pagination
 
-    +datapicker
+    //- +datapicker
 
     +logo
 
+    +search-rooms
+    br
+    br
+    +booking-form
+
+ 
 
 
 
@@ -176,10 +182,4 @@ html
 
     
 
-    div(style="height:300px")
-
-    i(class="letter material-icon") insert_emoticon
-    p(class="letter material-icon") location_city
-    i(class="letter material-icon") arrow_forward
-
-    div(class="qqq")
+    

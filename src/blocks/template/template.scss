@@ -1,7 +1,7 @@
 @import "../../vars/vars.scss";
 @import "../../fonts/fonts.scss";
 
-@mixin textFieldInput($width, $height) {
+@mixin textFieldInput($width, $height, $colorPlaceholder: $dark25) {
     width: $width;
     height: $height;
     border: $borderInputDefault;
@@ -10,11 +10,20 @@
     padding-left: 13px;
     box-sizing: border-box;
     &::placeholder {
-        @include fontBody($color: $dark25);
+        @include fontBody($color: $colorPlaceholder);
     }
     &:hover, &:focus {
         border: $borderInputHover;
     }
+}
+
+@mixin cardBorder {
+    border: $borderCard;
+    border-radius: $borderRadiusCard;
+    box-shadow: $cadrShadow;
+    background-color: $cardBackgroundColor;
+    box-sizing: border-box;  
+    padding: 40px 30px 30px 30px;
 }
 
 @mixin justify-space-between {
@@ -31,15 +40,15 @@
     box-sizing: border-box;
 }
 
-@mixin checkboxDropdownInput($color) {
+@mixin checkboxDropdownInput($colorDefault) {
     position: absolute;
     right: 0px;
     bottom: 0px;
     border: none;
-    width: 44px;
-    height: 44px;
+    width: 43px;
+    height: 40px;
     background-color: transparent; 
-    color: $color;
+    color: $colorDefault;
     @include justify-center;
     cursor: pointer;   
     font-size: 24px;
@@ -53,47 +62,26 @@
 
     &:checked {
         display: block;
+    
        
     }
 }
 
 @mixin dropdown-list {
     position: absolute;
-    
+    z-index: 100;
     border: $borderInputHover;
     border-radius: $borderRadiusInput;
     box-sizing: border-box;
-    padding: 7px 7px 0 15px;
+    padding: 7px 7px 7px 15px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top: 0;
+    background-color: #FFFFFF;
 }
 
 @mixin dropdown-list-item {
-    .dropdown-list-item {
-        width: 100%;
-        margin-bottom: 7px;
-        @include justify-space-between;
-    }
-    .dropdown-list-item__title {
-        @include fontH3;
-    }
-    .counter {
-        width: 92px;
-        @include justify-space-between;
-    }
-    .counter__button {
-        border: $borderInputDefault;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        @include fontBody($font-size: 18px, $line-height: 22px, $color: $dark50);
-        @include justify-center;
-    }
-    .counter__value {
-        @include fontH3;
-    }
+    
 }
 
 

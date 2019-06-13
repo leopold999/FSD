@@ -3,6 +3,7 @@ include ../dropdown-list-item/dropdown-list-item.pug
 mixin dropdown-list(options) 
     - var classModifier = options.classModifier
     - var itemContents = options.itemContents
+    - var showDropdownButtons = options.showDropdownButtons || false
     
     div(class="dropdown-list" + " " + classModifier)
         - for (var key in itemContents)

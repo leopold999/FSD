@@ -1,0 +1,17 @@
+@import "../../template/template.scss";
+@import "./__title/search-rooms__title.scss";
+
+@import "./search-rooms-guests/search-rooms-guests.scss";
+@import "./search-rooms-button/search-rooms-button.scss";
+@import "./search-rooms-date/search-rooms-date.scss";
+
+.search-rooms {
+    position: relative;
+    width: 380px;
+    height: 374px;
+    @include cardBorder;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    
+}

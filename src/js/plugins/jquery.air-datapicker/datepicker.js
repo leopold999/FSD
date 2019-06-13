@@ -738,9 +738,9 @@
             return {
                 width: $el.outerWidth(),
                 height: $el.outerHeight(),
-                left: offset.left,
-                top: offset.top,
-                none: $el.addClass().css( "display", 'none') ////////////////////////
+                // left: offset.left,
+                // top: offset.top,
+                none: $el.addClass().css( "display", 'block') ////////////////////////
             }
         },
 
@@ -834,6 +834,7 @@
 
         hide: function () {
             var onHide = this.opts.onHide;
+      
 
             this.$datepicker
                 .removeClass('active')

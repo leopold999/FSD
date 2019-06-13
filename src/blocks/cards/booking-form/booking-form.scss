@@ -1,0 +1,19 @@
+@import '../../template/template.scss';
+@import './__rent-price/booking-form__rent-price.scss';
+@import './__rooms-number/booking-form__rooms-number.scss';
+@import './booking-form-button/booking-form-button.scss';
+@import './booking-form-date/booking-form-date.scss';
+@import './booking-form-guests/booking-form-guests.scss';
+@import './booking-form-total/booking-form-total';
+@import './calculation/calculation.scss';
+@import './__rooms-number/booking-form__rooms-number_de-luxe.scss';
+
+
+
+
+.booking-form {
+    position: relative;
+    width: 380px;
+    height: 511px;
+    @include cardBorder;
+}

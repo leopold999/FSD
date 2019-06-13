@@ -1,0 +1,31 @@
+mixin search-rooms
+    div(class="search-rooms")
+        div(class="search-rooms__title") Найдём номера под ваши пожелания
+        div(class="search-rooms-date")
+            +dropdown-date({
+                title: "Прибытие",
+                placeholder: "ДД.ММ.ГГГГ",
+                classInput: 'arrival-date',
+                value: '25.08.2020',
+                })
+            +dropdown-date({
+                title: "Выезд",
+                placeholder: "ДД.ММ.ГГГГ",
+                classInput: 'departure-date',
+                value: ''
+            })
+        div(class="search-rooms-guests")
+            +dropdown({
+                title: 'Гости',
+                placeholder: '',
+                classModifier: 'dropdown_size_wide',
+                classTypeDropdown: 'dropdown-guests',
+                value: '3 гостя',
+            })
+        div(class="search-rooms-button")
+            +button({
+                title: "Подобрать Номер",
+                type: "wide"
+            })
+        +calendar
+        

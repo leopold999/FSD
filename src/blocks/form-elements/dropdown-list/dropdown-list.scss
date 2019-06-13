@@ -1,8 +1,11 @@
 
 @import "../../template/template.scss";
 @import "./dropdown-list_hide.scss";
+@import "./dropdown-list-buttons/dropdown-list-buttons.scss";
+@import "./dropdown-list-buttons/dropdown-list-buttons_hide";
 
 .dropdown-list {
     @include dropdown-list;
+    
     // display: none;   
 }
