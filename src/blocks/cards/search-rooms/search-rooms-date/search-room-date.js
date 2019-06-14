@@ -1,14 +1,14 @@
 
-let elem = document.querySelector('.booking-form');////
-let elemsDropdownDate = elem.querySelectorAll('.dropdown-date');
-let elemCalendar = elem.querySelector('.booking-form-calendar');////
+let elemSearchRoomDate = document.querySelector('.search-rooms');
+let elemsDropdownDate = elemSearchRoomDate.querySelectorAll('.dropdown-date');
+let elemCalendar = elemSearchRoomDate.querySelector('.search-rooms-calendar');
 
 for (let elem of elemsDropdownDate) {
     let checkbox = elem.querySelector('.dropdown-date__list-checkbox');
 
     if (checkbox) {
         checkbox.addEventListener('click', e => {
-            let datepicker = elem.querySelector('.datepicker');
+            let datepicker = elemSearchRoomDate.querySelector('.datepicker');
             if (datepicker.style.display == 'none') {
                 $(elemCalendar).datepicker().data('datepicker').show();
             } else if (datepicker.style.display == 'block') {
@@ -24,7 +24,7 @@ $(elemCalendar).datepicker({
     multipleDates: true,
     onSelect: function(formattedDate, date, inst) {
         let dateArr = formattedDate.split(',');
-        let cardsElem = document.querySelector('.booking-form');////
+        let cardsElem = document.querySelector('.search-rooms');
         let inputArrivalDate = cardsElem.querySelector('.arrival-date');
         let inpuDepartureDate = cardsElem.querySelector('.departure-date');
         

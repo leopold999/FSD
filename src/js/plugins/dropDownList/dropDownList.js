@@ -39,14 +39,17 @@ export default class dropDounList {
         this._showDropdownlistButtons();
 
         this._elemCleanButton = this._dropDownButtons.querySelector('.dropdown-list-buttons__clean-button');
+        
         this._elemCleanButton.addEventListener('click', () => {
             this._dropDownListClean();
-        })
+        });
 
         this._elemApplyButton = this._dropDownButtons.querySelector('.dropdown-list-buttons__apply-button');
         this._elemApplyButton.addEventListener('click', () => {
             this._elemDropdownList.classList.add('dropdown-list_hide');
-        })
+        });
+
+        this._showCleanButton();
     }
 
     _render() {
@@ -76,6 +79,8 @@ export default class dropDounList {
                 this._elemInput.setAttribute('value',  this._inputCallback(this._itemsNames, this._values, this._alternateNames));
             }
         }
+
+        
     }
 
     _changeValue() {
@@ -117,7 +122,9 @@ export default class dropDounList {
                 if (this._values[0] === 0) {
                     this._dropDownListClean();
                 }
-                this._dataInput();   
+                this._dataInput();  
+                
+                this._showCleanButton();
                 
             }
         })      
@@ -133,6 +140,8 @@ export default class dropDounList {
         }    
 
         this._dataInput();
+
+        this._showCleanButton();
     }
 
     _dropDownListHide() {
@@ -165,6 +174,14 @@ export default class dropDounList {
         }
 
 
+    }
+
+    _showCleanButton() {
+        if (this._values[0] === 0) {
+            this._elemCleanButton.style.display = 'none';
+        } else {
+            this._elemCleanButton.style.display = 'block';
+        }
     }
 
 

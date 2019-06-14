@@ -3,7 +3,8 @@
 @import "./dropdown-list_hide.scss";
 @import "./dropdown-list-buttons/dropdown-list-buttons.scss";
 @import "./dropdown-list-buttons/dropdown-list-buttons_hide";
-
+@import "./dropdown-list-buttons/__apply-button/dropdown-list-buttons__apply-button.scss";
+@import "./dropdown-list-buttons/__clean-button/dropdown-list-buttons__clean-button.scss";
 .dropdown-list {
     @include dropdown-list;
     

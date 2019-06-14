@@ -1,7 +1,8 @@
 @import '../../../template/template.scss';
 
 .dropdown-list-buttons {
-    @include justify-space-between;
-    margin-top: 19px;
+    // @include justify-space-between;
+    margin-top: 18px;
     margin-bottom: 6px;
+    height: 15px;
 }
