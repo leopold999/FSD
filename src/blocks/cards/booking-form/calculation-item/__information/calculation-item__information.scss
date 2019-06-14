@@ -1,0 +1,19 @@
+@import '../../../../template/template.scss';
+
+.calculation-item__information {
+    position: absolute;
+    left: 219px;
+    @include justify-center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark25;
+    border-radius: 50%;
+    align-self: flex-start;
+   
+    &:after {
+        content: "i";
+        @include fontBody($font-size: 12px, $line-height: 20px, $color: $dark25);
+        font-weight: bold;
+    }
+
+}
