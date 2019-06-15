@@ -1,0 +1,15 @@
+@import "../../template/template.scss";
+
+@import "./__creat-accaunt-button/login-form__creat-accaunt-button.scss";
+@import "./__email__field/login-form__email-field.scss";
+@import "./__login-button/login-form__login-button.scss";
+@import "./__password-field/login-form__password-field.scss";
+@import "./__title/login-form__title.scss";
+@import "./__text/login-form__text";
+.login-form {
+    position: relative;
+    width: 380px;
+    height: 358px;
+    @include cardBorder;
+
+}

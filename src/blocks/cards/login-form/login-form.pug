@@ -1,0 +1,27 @@
+mixin login-form
+    div(class="login-form")
+        form(action="")
+            div(class="login-form__title") Войти
+            div(class="login-form__email-field")
+                +text-field({
+                    typeModifier: "text-field__input_type_default",
+                    placeholder: "Email"
+                })
+            div(class="login-form__password-field")
+                +text-field({
+                    title: "",
+                    typeModifier: "text-field__input_type_default ",
+                    placeholder: "Пароль",
+                    type: "password"
+                })
+            div(class="login-form__login-button")
+                +button({
+                    title: "Войти",
+                    type: "wide"
+                })
+            div(class="login-form__creat-accaunt-button")
+                span(class="login-form__text") Нет аккаунта на Toxin?
+                +button({
+                    title: "Создать",
+                    type: "border"
+                })

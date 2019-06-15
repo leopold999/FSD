@@ -29,7 +29,7 @@
   // display: none;
   opacity: 0;
   transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;
-  z-index: $datepickerZIndex;
+  z-index: 1000;
 
   &.-from-top- {
     transform: translateY(-$datepickerTransitionOffset);

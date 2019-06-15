@@ -1,0 +1,7 @@
+@import "../../../template/template.scss";
+
+.login-form__title {
+    @include fontH1;
+    margin-bottom: 19px;
+    // text-indent: -1px;
+}

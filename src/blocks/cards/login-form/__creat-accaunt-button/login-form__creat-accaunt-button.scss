@@ -1,0 +1,5 @@
+@import "../../../template/template.scss";
+
+.login-form__creat-accaunt-button {
+    @include justify-space-between;
+}
