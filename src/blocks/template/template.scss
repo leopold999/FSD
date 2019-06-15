@@ -24,6 +24,8 @@
     background-color: $cardBackgroundColor;
     box-sizing: border-box;  
     padding: 40px 30px 30px 30px;
+    z-index: 100;
+
 }
 
 @mixin justify-space-between {
@@ -86,8 +88,10 @@
 
 
 @mixin radio-button ($width: 100%) {
-    width: $width;
-    margin-top: 10px;
+    // width: $width;
+    // margin-top: 10px;
+    display: inline-block;
+    margin-right: 20px;
     
     .radio-button__input {
         position: absolute;
@@ -141,7 +145,7 @@
 
 @mixin toggle-button($width: 100%) {
     width: $width;
-    margin-top: 10px;
+    // margin-top: 10px;
 
     .toggle-button__input {
         position: absolute;

@@ -1,0 +1,7 @@
+@import "../../../template/template.scss";
+
+.registration-form__title {
+    @include fontH1;
+    margin-bottom: 20px;
+
+}

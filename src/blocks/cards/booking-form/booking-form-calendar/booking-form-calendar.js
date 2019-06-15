@@ -1,22 +1,7 @@
+let elemBookingForm = document.querySelector('.booking-form');////
+let elemsDropdownDate = elemBookingForm.querySelectorAll('.dropdown-date');
+let elemCalendar = elemBookingForm.querySelector('.booking-form-calendar');////
 
-let elem = document.querySelector('.booking-form');////
-let elemsDropdownDate = elem.querySelectorAll('.dropdown-date');
-let elemCalendar = elem.querySelector('.booking-form-calendar');////
-
-for (let elem of elemsDropdownDate) {
-    let checkbox = elem.querySelector('.dropdown-date__list-checkbox');
-
-    if (checkbox) {
-        checkbox.addEventListener('click', e => {
-            let datepicker = elem.querySelector('.datepicker');
-            if (datepicker.style.display == 'none') {
-                $(elemCalendar).datepicker().data('datepicker').show();
-            } else if (datepicker.style.display == 'block') {
-                $(elemCalendar).datepicker().data('datepicker').hide();
-            }
-        })  
-    }
-}
 
 $(elemCalendar).datepicker({
     inline: true,
@@ -44,9 +29,27 @@ $(elemCalendar).datepicker({
     clearButton: true
 })
 
-
-
 $(elemCalendar).datepicker().data('datepicker').hide();
+
+
+
+
+for (let elem of elemsDropdownDate) {
+    let checkbox = elem.querySelector('.dropdown-date__list-checkbox');
+  
+
+    if (checkbox) {
+        checkbox.addEventListener('click', e => {
+            let datepicker = elemBookingForm.querySelector('.datepicker');
+            
+            if (datepicker.style.display == 'none') {
+                $(elemCalendar).datepicker().data('datepicker').show();
+            } else if (datepicker.style.display == 'block') {
+                $(elemCalendar).datepicker().data('datepicker').hide();
+            }
+        })  
+    }
+}
 
 
 

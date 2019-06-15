@@ -6,6 +6,6 @@
 @import "../../../template/template.scss";
 
 .text-field__input {
-    margin-top: 5px;
+    // margin-top: 5px;
     @include textFieldInput(100%, 44px);
 }

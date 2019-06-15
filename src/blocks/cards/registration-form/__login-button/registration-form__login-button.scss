@@ -1,0 +1,6 @@
+@import "../../../template/template.scss";
+
+.registration-form__login-button {
+    @include justify-space-between;
+    
+}

@@ -1,14 +1,15 @@
 mixin text-field(options)
     
-    - var title = options.title || "Text field"
+    - var title = options.title || ""
     - var typeModifier = options.typeModifier || ""
-    - var placeholder = options.placeholder || "placeholder"
+    - var placeholder = options.placeholder || ""
     - var pattern = options.pattern || false
     - var value = options.value
+    - var type = options.type || "text"
            
     div(class="text-field")
-        span(class="text-field__title")= title 
-        br
-        input(class="text-field__input" + " " + typeModifier, type="text", value=value, placeholder=placeholder pattern=pattern)
+        if (title !== "")
+            div(class="text-field__title")= title 
+        input(class="text-field__input" + " " + typeModifier, type=type, value=value, placeholder=placeholder pattern=pattern)
      
 

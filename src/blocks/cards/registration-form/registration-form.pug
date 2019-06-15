@@ -1,0 +1,57 @@
+mixin registration-form
+    
+    div(class="registration-form")
+        form
+            div(class="registration-form__title") Регистрация аккаунта
+            div(class="registration-form__first-name-field")
+                +text-field({
+                    typeModifier: "text-field__input_type_default",
+                    placeholder: "Имя"
+                })
+            div(class="registration-form__last-name-field")
+                +text-field({
+                    typeModifier: "text-field__input_type_default",
+                    placeholder: "Фамилия"
+                })
+            div(class="registration-form__sex-selection-buttons")
+                +radio-button({text: "Мужчина", name: "gender", value: "male"})
+                +radio-button({text: "Женщина", name: "gender", value: "female"})
+            div(class="registration-form__date-of-birth-field")
+                +text-field({
+                    title: "Дата рождения",
+                    typeModifier: "text-field__input_type_default text-field__input_type_masked",
+                    placeholder: "ДД.ММ.ГГГГ"
+                })
+            div(class="registration-form__email-field")
+                +text-field({
+                    title: "Данные для входа в сервис",
+                    typeModifier: "text-field__input_type_default ",
+                    placeholder: "Email"
+                })
+            div(class="registration-form__password-field")
+                +text-field({
+                    title: "",
+                    typeModifier: "text-field__input_type_default ",
+                    placeholder: "Пароль",
+                    type: "password"
+
+                })
+            div(class="registration-form__subscription-checkbox")
+                +toggle-button({text: "Получать спецпредложения", name: "subscription", value: "true"})
+            div(class="registration-form__payment-button")
+                +button({
+                    title: "Перейти к оплате",
+                    type: "wide"
+                })
+            div(class="registration-form__login-button")
+                span(class="registration-form__text") Уже есть аккаунт на Toxin
+                +button({
+                    title: "Войти",
+                    type: "border"
+                })
+                
+            
+
+        
+
+        

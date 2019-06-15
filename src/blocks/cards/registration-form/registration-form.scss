@@ -1,0 +1,20 @@
+@import "../../template/template.scss";
+@import "./__date-of-birth-field/registration-form__date-of-birth-field.scss";
+@import "./__email-field/registration-form__email-field.scss";
+@import "./__first-name-field/registration-form__first-name-field.scss";
+@import "./__last-name-field/registration-form__last-name-field.scss";
+@import "./__login-button/registration-form__login-button.scss";
+@import "./__password-field/registration-form__password-field.scss";
+@import "./__payment-button/registration-form__payment-button.scss";
+@import "./__sex-selection-buttons/registration-form__sex-selection-buttons.scss";
+@import "./__subscription-checkbox/registration-form__subscription-checkbox.scss";
+@import "./__title/registration-form__title.scss";
+@import "./__text/registration-form__text";
+
+.registration-form {
+    position: relative;
+    width: 380px;
+    height: 646px;
+    @include cardBorder;
+
+}
