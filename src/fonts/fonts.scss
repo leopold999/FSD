@@ -73,10 +73,10 @@
     
     // transform: scaleX(0.95)
     // text-transform: lowercase
-    letter-spacing: 0.045em;
+    letter-spacing: 1.1px;
 }
 @mixin fontH2($font-size: 19px, $line-height: 24px, $color: $dark100) {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: $font-size;
@@ -84,7 +84,7 @@
     color: $color;
 }
 @mixin fontH3($font-size: 12px, $line-height: 15px, $color: $dark100) {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: $font-size;
@@ -106,9 +106,9 @@
 @mixin font-gradient($font-size, $line-height: $font-size) {
     font-size: $font-size;
     line-height: $line-height;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-image: $colorGradientPurple;
     background-clip: text;
     color: transparent;
     font-family: 'Material Icons';
-    cursor: pointer;
+
 }

@@ -2,4 +2,5 @@
 
 .rate-button {
     @include font-gradient(24px);
+    cursor: pointer;
 }

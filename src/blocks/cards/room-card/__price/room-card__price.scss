@@ -1,0 +1,10 @@
+.room-card__price {
+    @include fontBody($font-size: 14px, $line-height: 28px, $color: $dark50);
+    font-weight: bold;
+
+    &::after {
+        content: "в сутки";
+        margin-left: 4px;
+        @include fontBody($font-size: 12px, $line-height: 14px, $color: $dark50);
+    }
+}

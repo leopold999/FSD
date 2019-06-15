@@ -1,0 +1,8 @@
+.room-card__room-number_de-luxe {
+    &::after {
+        content: 'Люкс';
+        @include fontH3($font-size: 12px, $line-height: 15px, $color: $purple);
+        font-weight: bold;
+        margin-left: 5px;
+    }
+}

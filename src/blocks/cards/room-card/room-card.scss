@@ -1,0 +1,31 @@
+@import "./__image/room-card__image.scss";
+@import "./__information/room-card__information.scss";
+@import "./__number-reviews/room-card__number-reviews.scss";
+@import "./__price/room-card__price.scss";
+@import "./__rating/room-card__rating.scss";
+@import "./__room-number/room-card__room-number.scss";
+@import "./__room-number/room-card__room-number_de-luxe.scss";
+@import "./__line/room-card__line.scss";
+@import "./room-card-slider/room-card-slider.scss";
+@import "./__point/room-card__point.scss";
+@import "./__point/room-card__point_shaded.scss";
+@import "./__points/room-card__points.scss";
+
+
+.room-card {
+    position: relative;
+    width: 270px;
+    height: 257px;
+    @include cardBorder;
+    padding: 0;
+    border: 0;
+    overflow:hidden;
+    
+    &:hover .room-card-slider  {
+ 
+        visibility: visible;
+    }
+
+    
+    
+}

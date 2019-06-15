@@ -1,0 +1,14 @@
+@import "./__arrow/room-card-slider__arrow.scss";
+@import "./__button-left/room-card-slider__button-left.scss";
+@import "./__button-right/room-card-slider__button-right.scss";
+@import "./__button/room-card-slider__button.scss";
+
+
+
+.room-card-slider {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    @include justify-space-between;
+    visibility: hidden;
+}

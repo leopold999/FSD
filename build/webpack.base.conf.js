@@ -88,6 +88,7 @@ module.exports = {
     new HtmlWebpackPugPlugin(),
     new CopyWebpackPlugin([
       { from: PATHS.src + '/img', to: `img` },
+      { from: PATHS.src + '/img/rooms', to: `img/rooms` },
       { from: PATHS.src + '/static' },
     ]),
     new webpack.ProvidePlugin({

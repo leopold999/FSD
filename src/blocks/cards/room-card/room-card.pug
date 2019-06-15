@@ -1,0 +1,37 @@
+mixin room-card(options)
+    - var pathToImg = options.pathToImg 
+    - var roomNumber = options.roomNumber
+    - var deLuxe = options.deLuxe || false
+    - var price = options.price
+    - var rating = options.rating
+    - var numberReviews = options.numberReviews
+    - var deLuxeClass = ""
+
+    if (deLuxe == true)
+        - deLuxeClass = " room-card__room-number_de-luxe"
+
+    div(class="room-card")
+        img(src=pathToImg , alt="", class="room-card__image")
+        div(class="room-card-slider")
+            div(class="room-card-slider__button room-card-slider__button-left")
+                span(class="room-card-slider__arrow material-icon") chevron_left
+            div(class="room-card-slider__button room-card-slider__button-right")
+                span(class="room-card-slider__arrow material-icon") chevron_left
+        ul(class="room-card__points")
+            li(class="room-card__point room-card__point_shaded")
+            li(class="room-card__point")
+            li(class="room-card__point")
+            li(class="room-card__point")
+
+
+        div(class="room-card__information")
+            div(class="room-card__room-number" + deLuxeClass)= roomNumber
+            div(class="room-card__price")= price
+            div(class="room-card__line")
+            div(class="room-card__rating")
+                +rate-show({value: rating})
+                div(class="room-card__number-reviews")= numberReviews
+
+        
+    
+    
