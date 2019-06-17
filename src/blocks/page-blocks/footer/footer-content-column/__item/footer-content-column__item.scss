@@ -1,0 +1,13 @@
+.footer-content-column__item {
+    list-style: none;
+    margin-bottom: 20px;
+
+
+
+    & a {
+        text-decoration: none;
+        @include fontBody($font-size: 14px, $line-height: 17px, $color: $dark50);
+        white-space: nowrap;
+        
+    }
+}

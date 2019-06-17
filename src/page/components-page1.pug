@@ -1,5 +1,6 @@
 include ../blocks/form-elements/form-elements.pug
 include ../blocks/cards/cards.pug
+include ../blocks/page-blocks/page-blocks.pug
 
 doctype html
 html
@@ -7,7 +8,7 @@ html
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width initial-scale=1")
     script(src="../../dist/app.js", type="text/javascript")
-    link(rel="stylesheet", href="../dist/app.css")
+    link(rel="stylesheet", href="../dist/app.css" type="text/css" )
   body
     
 
@@ -126,7 +127,7 @@ html
       items: [
         "Нельзя с питомцами",
         "Без вечеринок и мероприятий",
-        "Время прибытия - - после 13:00, а выезд до 12:00"
+        "Время прибытия — после 13:00, а выезд до 12:00"
       ]
     })
     br
@@ -136,28 +137,29 @@ html
     br
     +button({
       title: "Click me",
-      type: "background"
+      type: "background",
+      size: "99_44"
     })
     br
     +button({
       title: "Click me",
-      type: "border"
+      type: "border",
+      size: "99_44"
     })
     br
     
-    +button({
-      title: "Войти",
-      type: "border"
-    })
     br
     +button({
       title: "Click me",
       type: "clean"
+     
+
     })
     br
     +button({
       title: "Перейти к оплате",
-      type: "wide"
+      type: "wide",
+      size: "320_44"
     })
     br
     +button({
@@ -209,7 +211,21 @@ html
         rating: 4,
         numberReviews: "65"
       })
-   
+
+    br
+    br
+    +header
+    br
+    br
+    +header("Cosmin Negoita")
+    br
+    br
+    +footer
+
+    br
+    br
+
+
  
 
 

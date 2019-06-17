@@ -1,5 +1,7 @@
 export default class dropDounList {
     constructor({ elem, itemsNames, classModifier, defaultValue, dataNames, alternateNames, showDropdownButtons, inputCallback }) {
+        if (!elem) return;
+        
         this._elem = elem;
         this._itemsNames = itemsNames;
         this._defaultValue = defaultValue || '';

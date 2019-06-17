@@ -1,6 +1,8 @@
+@import './rate-button__item/rate-button__item.scss';
+
 @import '../../template/template.scss';
 
 .rate-button {
-    @include font-gradient(24px);
+    
     cursor: pointer;
 }

@@ -1,0 +1,19 @@
+@import "./footer-container/footer-container";
+@import "./__logo-container/footer__logo-container.scss";
+@import "./__logo-text/footer__logo-text.scss";
+@import "./footer-content-column/footer-content-column.scss";
+@import "./footer-content-column/__item/footer-content-column__item.scss";
+@import "./footer-content-column/__item/footer-content-column__item_title.scss";
+@import "./footer-content-column/__list/footer-content-column__list.scss";
+@import "./footer-content/footer-content.scss";
+@import "./footer-text/footer-text.scss";
+@import "./__img/footer__logo-img.scss";
+@import "./footer-subscription-container/footer-subscription-container.scss";
+
+.footer {
+    width: 100%;
+    background-image: $white;
+    box-shadow: 0px 10px 20px $dark10;
+    box-sizing: border-box; 
+    margin: 0;
+}

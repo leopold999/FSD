@@ -1,0 +1,56 @@
+mixin footer 
+    div(class="footer")
+        div(class="footer-container")
+            div(class="footer__logo-container")
+                .footer__logo-img
+                    +logo
+                .footer__logo-text.footer-text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+
+            ul(class="footer-content")
+                li(class="footer-content-column")
+                    ul.footer-content-column__list
+                        li.footer-content-column__item.footer-content-column__item_title Navigation
+                        li.footer-content-column__item 
+                            a(href="#") About As
+                        li.footer-content-column__item 
+                            a(href="#") News
+                        li.footer-content-column__item
+                            a(href="#") Support
+                        li.footer-content-column__item
+                            a(href="#") Products
+
+                li(class="footer-content-column")
+                    ul.footer-content-column__list
+                        li.footer-content-column__item.footer-content-column__item_title About Us
+                        li.footer-content-column__item
+                            a(href="#") Who we are
+                        li.footer-content-column__item
+                            a(href="#") Our team
+                        li.footer-content-column__item
+                            a(href="#") Careers
+                        li.footer-content-column__item
+                            a(href="#") Investors
+                li(class="footer-content-column")
+                    ul.footer-content-column__list
+                        li.footer-content-column__item.footer-content-column__item_title Support
+                        li.footer-content-column__item
+                            a(href="#") Documentation
+                        li.footer-content-column__item
+                            a(href="#") Community
+                        li.footer-content-column__item
+                            a(href="#") Get in Touch
+            ul.footer-content-column__list.footer-subscription-container
+                li.footer-content-column__item.footer-content-column__item_title Subscribe to our newsletter
+                li.footer-content-column__item.footer-text Receive our latest news and promotions in your inbox!
+                li.footer-content-column__item
+                    +text-field-subscription({placeholder: "Your email address"})
+        
+                
+                
+                
+                
+                
+                
+                
+                
+                

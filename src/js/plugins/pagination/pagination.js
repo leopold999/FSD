@@ -13,6 +13,7 @@
 
   if (typeof $ === 'undefined') {
     throwError('Pagination requires jQuery.');
+    return;
   }
 
   var pluginName = 'pagination';
@@ -983,7 +984,7 @@
 
     !paginationData.hooks && (paginationData.hooks = {});
 
-    //paginationData.hooks[hook] = callback;
+    // paginationData.hooks[hook] = callback;
     paginationData.hooks[hook] = paginationData.hooks[hook] || [];
     paginationData.hooks[hook].push(callback);
 

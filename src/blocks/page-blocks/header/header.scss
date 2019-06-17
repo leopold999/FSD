@@ -1,0 +1,22 @@
+@import "./__logo-container/header__logo-container.scss";
+@import "./menu/menu.scss";
+@import "./menu/__item/menu__item.scss";
+@import "./menu/__item/menu__item_bold.scss";
+@import "./menu/__item/menu__item_dropdown.scss";
+@import "./menu/menu-dropdown-list/menu-dropdown-list.scss";
+@import "./menu/__login/menu__login.scss";
+@import "./header-container/header-container";
+@import "./menu/__button/menu__button_login.scss";
+@import "./menu/__button/menu__button_register.scss";
+
+
+.header {
+    
+
+    width: 100%;
+    background-image: $white;
+    box-shadow: 0px 10px 20px $dark10;
+    box-sizing: border-box; 
+    margin: 0;
+    
+}

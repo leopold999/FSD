@@ -1,28 +1,9 @@
 @import '../../template/template.scss';
+@import "./__img/logo__img.scss";
+@import "./__name/logo__name.scss";
 
 .logo {  
-    width: 40px;
-    height: 40px;
-}
+    display: flex;
+    align-items: center;
 
-.stop1 {
-    stop-color:$purple;
 }
-.stop2 {
-    stop-color: $blue;
-}
-.stop3 {  
-    stop-color: $green;
-}
-.stop4 {
-    stop-color: $blue;
-}
-
-.elem1, .elem2 {
-    fill: url(#grad1);   
-}
-
-.elem3 {
-    fill: url(#grad2)
-}
-

@@ -1,0 +1,39 @@
+mixin header(login)
+    
+    div(class="header")
+        div(class="header-container")
+            div(class="header__logo-container")
+                +logo
+                
+            ul(class="menu")
+                li(class="menu__item menu__item_bold") 
+                    a(href="#") Home
+                li(class="menu__item") 
+                    a(href="#") About Us
+                li(class="menu__item menu__item_dropdown") 
+                    a(href="#") Services
+                    ul(class="menu-dropdown-list")
+                        li(class="menu-dropdown-list__item")
+                            a(href="#") Service 1
+                        li(class="menu-dropdown-list__item")
+                            a(href="#") Service 2
+                li(class="menu__item") 
+                    a(href="#") Careers
+                li(class="menu__item") 
+                    a(href="#") News
+                li(class="menu__item") 
+                    a(href="#") Documentation
+                if (login)
+                    li(class="menu__item menu__login")
+                        a(href="#")= login
+                else
+                    li(class="menu__item") 
+                        .menu__button_login
+                            +button({title: "Login", type: "border", size: "79_34"})
+                    li(class="menu__item") 
+                        .menu__button_register
+                            +button({title: "Register", type: "background", size: "101_34"})
+
+
+
+

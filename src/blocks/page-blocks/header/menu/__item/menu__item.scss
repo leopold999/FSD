@@ -1,0 +1,15 @@
+.menu__item  {
+    margin-right: 20px;
+    position: relative;
+    & a {
+        text-decoration: none;
+        white-space: nowrap;
+        @include fontBody($font-size: 14px, $line-height: 17px, $color: $dark50);
+    }
+    &:last-child {
+        margin-right: 0px;
+    }
+   
+    
+
+}

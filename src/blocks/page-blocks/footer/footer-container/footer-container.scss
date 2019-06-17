@@ -1,0 +1,12 @@
+.footer-container {
+    // display: flex;
+    @include justify-space-between;
+    // flex-wrap: wrap;
+    min-width: 800px;
+    max-width: 1200px;
+    margin: auto;
+    height: 372px;
+    align-items: flex-start;
+    padding-top: 104px;
+    // box-sizing: border-box;
+}

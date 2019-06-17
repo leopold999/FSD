@@ -1,0 +1,20 @@
+.menu__item_dropdown {
+    @include justify-center;
+    display: inline-flex;
+    
+    &:hover .menu-dropdown-list {
+        display: block;
+    }
+    &:after {
+        content: "expand_more";
+        font-family: 'Material Icons';
+        width: 24px;
+        // height: 21px;
+        cursor: pointer;
+        color: $dark50;
+        font-size: 24px;
+        // line-height: 20px;
+        
+
+    }
+}

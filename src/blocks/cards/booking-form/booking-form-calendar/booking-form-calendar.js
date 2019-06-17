@@ -1,6 +1,6 @@
-let elemBookingForm = document.querySelector('.booking-form');////
-let elemsDropdownDate = elemBookingForm.querySelectorAll('.dropdown-date');
-let elemCalendar = elemBookingForm.querySelector('.booking-form-calendar');////
+let elemBookingForm = document.querySelector('.booking-form') ;////
+let elemsDropdownDate = elemBookingForm.querySelectorAll('.dropdown-date') ;
+let elemCalendar = elemBookingForm.querySelector('.booking-form-calendar') ;////
 
 
 $(elemCalendar).datepicker({

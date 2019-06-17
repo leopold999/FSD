@@ -1,8 +1,9 @@
 mixin button(options)
     - var title = options.title
-    - var type = options.type     
+    - var type = options.type 
+    - var size = options.size || ""   
 
-    button(class="button button_type_" + type)= title
+    button(class="button button_type_" + type + " " + "button_size_" + size)= title
         if options.type == "wide"
             span(class="button__icon material-icon") arrow_forward
                 

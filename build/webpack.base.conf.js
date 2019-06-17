@@ -83,7 +83,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/page/components-page1.pug`,
-      filename: './components-page1.html'
+      filename: './components-page1.html',
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/page/components-page2.pug`,
+      filename: './components-page2.html',
     }),
     new HtmlWebpackPugPlugin(),
     new CopyWebpackPlugin([
