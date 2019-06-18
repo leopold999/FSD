@@ -30,7 +30,7 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     }, {
-      test: /\.(png|jpg|gif|svg|ttf)$/,
+      test: /\.(png|jpg|gif|svg|ttf|woff|woff2|eot)$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]'
@@ -87,13 +87,19 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       hash: false,
-      template: `${PATHS.src}/page/components-page2.pug`,
-      filename: './components-page2.html',
+      template: `${PATHS.src}/page/landing-page/landing-page.pug`,
+      filename: './landing-page.html',
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/page/search-room-page/search-room-page.pug`,
+      filename: './search-room-page.html',
     }),
     new HtmlWebpackPugPlugin(),
     new CopyWebpackPlugin([
       { from: PATHS.src + '/img', to: `img` },
       { from: PATHS.src + '/img/rooms', to: `img/rooms` },
+      { from: PATHS.src + '/img/backgrounds', to: `img/backgrounds` },
       { from: PATHS.src + '/static' },
     ]),
     new webpack.ProvidePlugin({

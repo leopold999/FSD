@@ -1,0 +1,12 @@
+@import "./footer-clean-container/__logo/footer-clean-container__logo.scss";
+@import "./footer-clean-container/__social/footer-clean-container__social.scss";
+@import "./footer-clean-container/__text/footer-clean-container__text.scss";
+@import "./footer-clean-container/footer-clean-container.scss";
+
+.footer-clean {
+    width: 100%;
+    background-image: $white;
+    box-shadow: 0px 10px 20px $dark10;
+    box-sizing: border-box; 
+    margin: 0;
+}

@@ -1,0 +1,8 @@
+.copyright-container {
+    height: 70px;
+    @include justify-space-between;
+    // flex-wrap: wrap;
+    min-width: 800px;
+    max-width: 1200px;
+    margin: auto;
+}

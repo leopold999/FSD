@@ -1,39 +1,38 @@
 mixin header(login)
     
-    div(class="header")
+    header(class="header")
         div(class="header-container")
             div(class="header__logo-container")
                 +logo
                 
             ul(class="menu")
-                li(class="menu__item menu__item_bold") 
-                    a(href="#") Home
                 li(class="menu__item") 
-                    a(href="#") About Us
+                    a(href="#") О нас
                 li(class="menu__item menu__item_dropdown") 
-                    a(href="#") Services
+                    a(href="#") Услуги
                     ul(class="menu-dropdown-list")
                         li(class="menu-dropdown-list__item")
-                            a(href="#") Service 1
+                            a(href="#") Услуга 1
                         li(class="menu-dropdown-list__item")
-                            a(href="#") Service 2
+                            a(href="#") Услуга 2
                 li(class="menu__item") 
-                    a(href="#") Careers
+                    a(href="#") Вакансии
                 li(class="menu__item") 
-                    a(href="#") News
-                li(class="menu__item") 
-                    a(href="#") Documentation
+                    a(href="#") Новости
+                li(class="menu__item menu__item_dropdown") 
+                    a(href="#") Соглашения
+                    ul(class="menu-dropdown-list")
+                        li(class="menu-dropdown-list__item")
+                            a(href="#") Соглашение 1
+                        li(class="menu-dropdown-list__item")
+                            a(href="#") Соглашение 2
                 if (login)
                     li(class="menu__item menu__login")
                         a(href="#")= login
                 else
                     li(class="menu__item") 
                         .menu__button_login
-                            +button({title: "Login", type: "border", size: "79_34"})
+                            +button({title: "Войти", type: "border", size: "87_34"})
                     li(class="menu__item") 
                         .menu__button_register
-                            +button({title: "Register", type: "background", size: "101_34"})
-
-
-
-
+                            +button({title: "Зарегистрироваться", type: "background", size: "196_34"})

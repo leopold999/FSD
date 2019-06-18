@@ -1,4 +1,9 @@
 @import "../vars/vars";
+// @import "../fonts/font-files/font-awesome/scss/fontawesome.scss";
+// @import "../fonts/font-files/font-awesome/scss/brands.scss";
+// @import "../fonts/font-files/font-awesome/scss/solid.scss";
+
+
 
 @font-face {
     font-family: 'Quicksand';
@@ -56,6 +61,20 @@
     font-feature-settings: 'liga';
 }
 
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: normal;
+    font-display: auto;
+    src: url(../fonts/font-files/fa-brands-400.ttf) format('truetype'),
+    url(../fonts/font-files/fa-brands-400.svg) format('svg');
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+
 .material-icon {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -96,7 +115,7 @@
     letter-spacing: 1.1px;
 }
 @mixin fontH2($font-size: 19px, $line-height: 24px, $color: $dark100) {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: $font-size;
@@ -104,7 +123,7 @@
     color: $color;
 }
 @mixin fontH3($font-size: 12px, $line-height: 15px, $color: $dark100) {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: $font-size;

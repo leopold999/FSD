@@ -1,0 +1,11 @@
+.content__text {
+    position: absolute;
+    right: 0;
+    bottom: 18px;
+    width: 297px;
+    height: 48px;
+    @include fontBody;
+    text-align: right;
+
+
+}

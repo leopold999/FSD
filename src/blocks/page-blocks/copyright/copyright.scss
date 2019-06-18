@@ -1,0 +1,11 @@
+@import "./copyright-container/copyright-container.scss";
+@import "./copyright-container/__social/copyright-container__social";
+@import "./copyright-container/__text/copyright-container__text.scss";
+
+.copyright {
+    width: 100%;
+    background-image: $white;
+    box-shadow: 0px 10px 20px $dark10;
+    box-sizing: border-box; 
+    margin: 0;
+}

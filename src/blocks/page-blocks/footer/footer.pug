@@ -1,49 +1,49 @@
 mixin footer 
-    div(class="footer")
+    footer(class="footer")
         div(class="footer-container")
             div(class="footer__logo-container")
                 .footer__logo-img
                     +logo
-                .footer__logo-text.footer-text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                .footer__logo-text.footer-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
             ul(class="footer-content")
                 li(class="footer-content-column")
                     ul.footer-content-column__list
-                        li.footer-content-column__item.footer-content-column__item_title Navigation
+                        li.footer-content-column__item.footer-content-column__item_title Навигация
                         li.footer-content-column__item 
-                            a(href="#") About As
+                            a(href="#") О нас
                         li.footer-content-column__item 
-                            a(href="#") News
+                            a(href="#") Новости
                         li.footer-content-column__item
-                            a(href="#") Support
+                            a(href="#") Служба поддержки
                         li.footer-content-column__item
-                            a(href="#") Products
+                            a(href="#") Услуги
 
                 li(class="footer-content-column")
                     ul.footer-content-column__list
-                        li.footer-content-column__item.footer-content-column__item_title About Us
+                        li.footer-content-column__item.footer-content-column__item_title О нас
                         li.footer-content-column__item
-                            a(href="#") Who we are
+                            a(href="#") О сервисе
                         li.footer-content-column__item
-                            a(href="#") Our team
+                            a(href="#") Наша команда
                         li.footer-content-column__item
-                            a(href="#") Careers
+                            a(href="#") Вакансии
                         li.footer-content-column__item
-                            a(href="#") Investors
+                            a(href="#") Инвесторы
                 li(class="footer-content-column")
                     ul.footer-content-column__list
-                        li.footer-content-column__item.footer-content-column__item_title Support
+                        li.footer-content-column__item.footer-content-column__item_title Служба поддержки
                         li.footer-content-column__item
-                            a(href="#") Documentation
+                            a(href="#") Соглашения
                         li.footer-content-column__item
-                            a(href="#") Community
+                            a(href="#") Сообщества
                         li.footer-content-column__item
-                            a(href="#") Get in Touch
+                            a(href="#") Связь с нами
             ul.footer-content-column__list.footer-subscription-container
-                li.footer-content-column__item.footer-content-column__item_title Subscribe to our newsletter
-                li.footer-content-column__item.footer-text Receive our latest news and promotions in your inbox!
+                li.footer-content-column__item.footer-content-column__item_title Подписка
+                li.footer-content-column__item.footer-text Получайте специальные предложения и новости сервиса
                 li.footer-content-column__item
-                    +text-field-subscription({placeholder: "Your email address"})
+                    +text-field-subscription({placeholder: "Email"})
         
                 
                 

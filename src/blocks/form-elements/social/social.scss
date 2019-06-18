@@ -1,0 +1,11 @@
+@import "./__icon/social__icon.scss";
+@import "./__icon/social__icon_fb.scss";
+@import "./__icon/social__icon_inst.scss";
+@import "./__icon/social__icon_tw.scss";
+
+.social {
+    width: 111px;
+    @include justify-space-between;
+    // display: flex;
+}
+
