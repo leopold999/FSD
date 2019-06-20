@@ -8,7 +8,7 @@ for (let elem of dropdownGuestsElements) {
         itemsNames: ['Взрослые', 'Дети', 'Младенцы'],
         dataNames: ['Ages', 'Kids', 'babyes' ],
         alternateNames: [['гость', 'гостя', 'гостей'], ['гость', 'гостя', 'гостей'], ['младенец', 'младенца']], 
-        classModifier: 'dropdown_size_wide',
+        // classModifier: 'dropdown_size_medium',
         defaultValue: 'Сколько гостей',
         showDropdownButtons: true,
         inputCallback: (itemsNames, values, alternateNames) => {

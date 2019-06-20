@@ -1,14 +1,14 @@
-include ../dropdown-list-item/dropdown-list-item.pug
+//- include ../dropdown-list-item/dropdown-list-item.pug
 
-mixin dropdown-list(options) 
-    - var classModifier = options.classModifier
-    - var itemContents = options.itemContents
-    - var showDropdownButtons = options.showDropdownButtons || false
+//- mixin dropdown-list(options) 
+//-     - var classModifier = options.classModifier
+//-     - var itemContents = options.itemContents
+//-     - var showDropdownButtons = options.showDropdownButtons || false
     
-    div(class="dropdown-list" + " " + classModifier)
-        - for (var key in itemContents)
-            +dropdown-list-item({title: itemContents[key], itemAttribute: key })
-        if showDropdownButtons
-            div(class="dropdown-buttons")
-                span(class="dropdown-buttons__clean-button") Очистить
-                span(class="dropdown-buttons__apply-button") Применить
+//-     div(class="dropdown-list" + " " + classModifier)
+//-         - for (var key in itemContents)
+//-             +dropdown-list-item({title: itemContents[key], itemAttribute: key })
+//-         if showDropdownButtons
+//-             div(class="dropdown-buttons")
+//-                 span(class="dropdown-buttons__clean-button") Очистить
+//-                 span(class="dropdown-buttons__apply-button") Применить

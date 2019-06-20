@@ -3,7 +3,13 @@
     min-width: 800px;
     max-width: 1200px;
     margin: auto;
-    height: 100%;
+    min-height: 900px;
+    // display: flex;
+    // @include justify-space-between;
+    display: grid;
+    grid-column-gap: 60px;
+    padding: 28px 0 70px 0;
+    grid-template-columns: 266px 1fr;
 
     
 }

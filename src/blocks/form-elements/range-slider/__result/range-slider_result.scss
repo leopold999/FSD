@@ -1,7 +1,7 @@
 @import '../../../template/template.scss';
 .range-slider_result {
     position: absolute;
-    top: -38px;
+    top: 0;
     right: 0;
     @include fontH3($color: $dark50);
     font-weight: 100;    

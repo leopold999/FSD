@@ -2,13 +2,15 @@ mixin dropdown-filter-date(options)
     - var title = options.title
     - var placeholder = options.placeholder
     - var pattern = options.pattern
+    - var value = options.value
            
     div(class="dropdown-filter-date")
-            span(class="dropdown-filter-date__title")= title 
-            br
-            input(class="dropdown-filter-date__input", type="text", value="19 авг - 23 авг" placeholder=placeholder pattern=pattern readonly)
-            div(class="dropdown-filter-date__list-checkbox")
-                span
-                    i.material-icon expand_more
+        span(class="dropdown-filter-date__title")= title 
+        br
+        input(class="dropdown-filter-date__input", type="text", value=value placeholder=placeholder pattern=pattern readonly)
+        div(class="dropdown-filter-date__list-checkbox")
+            span
+                i.material-icon expand_more
+        .dropdown-filter-date__calendar
                 
 

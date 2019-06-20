@@ -1,8 +1,10 @@
 mixin range-slider(options)
     - var title = options.title
+    - var text = options.text || ""
 
-    div(class="range-slider")
-        span(class="range-slider__title")= title
-        div(class="slider-wrapper")
-            div(class="ui-slider")
+    .range-slider
+        .range-slider__title= title
+        .slider-wrapper
+            .ui-slider
             output(class="range-slider_result")
+        .range-slider__text= text

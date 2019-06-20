@@ -1,0 +1,167 @@
+include ../../blocks/form-elements/form-elements.pug
+include ../../blocks/cards/cards.pug
+include ../../blocks/page-blocks/page-blocks.pug
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width initial-scale=1")
+    script(src="../../dist/app.js", type="text/javascript")
+    link(rel="stylesheet", href="../dist/app.css" type="text/css" )
+  body 
+
+    +header
+    .content-wrapper
+        .content.search-room-page-content
+            section.search-form
+                +dropdown-filter-date({
+                    title: "Даты пребывания в отеле",
+                    value: "19 авг - 23 авг"
+                })
+                +dropdown({
+                    title: "Гости", 
+                    classModifier: "dropdown_size_medium", 
+                    classTypeDropdown: "dropdown-guests",
+                    placeholder: "Сколько гостей"
+                })
+
+                +range-slider({title: "Диапазон цены", text: "Стоимость за сутки пребывания в номере"})
+                .checkbox-buttons
+                    .search-form__title Checkbox buttons
+                    +checkbox-button({text: "Можно курить", name: "name"})
+                    +checkbox-button({text: "Можно с питомцами", name: "name"})
+                    +checkbox-button({text: "Можно пригласить гостей (до 10 человек)", name: "name"})
+                .rich-checkbox-buttons
+                    .search-form__title Доступность
+                    +rich-checkbox-button({
+                        title: "Широкий коридор",
+                        text: "Ширина коридоров в номере не менее 91см."
+                    })
+                    +rich-checkbox-button({
+                        title: "Помощник для инвалидов",
+                        text: "На 1 этаже вас встретит специалист и проводит до номера."
+                    })
+                +dropdown({
+                    title: "Удобства номера", 
+                    classModifier: "dropdown_size_medium", 
+                    classTypeDropdown: "dropdown-rooms"
+                })
+                +expandable-checkbox({title: "Дополнительные удобства", list: {
+                    "breakfast": "Завтрак",
+                    "desk": "Письменный стол",
+                    "feeding_chair": "Стул для компления",
+                    "crib": "Кроватка",
+                    "TV": "Телевизор",
+                    "shampoo": "Шампунь",
+                    "TV-2": "Телевизор",
+                    "shampoo-2": "Шампунь",
+                }})
+            section.search-result
+                .search-result__text Номера, которые мы для вас подобрали
+                .search-result-list
+                    +room-card({
+                        pathToImg: "../img/rooms/room_888.png",
+                        roomNumber: "888",
+                        deLuxe: true,
+                        price: "9 990\u20bd",
+                        rating: 5,
+                        numberReviews: "145"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_840.png",
+                        roomNumber: "840",
+                        deLuxe: false,
+                        price: "9 900\u20bd",
+                        rating: 4,
+                        numberReviews: "65"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_980.png",
+                        roomNumber: "980",
+                        deLuxe: true,
+                        price: "8 500\u20bd",
+                        rating: 3,
+                        numberReviews: "35"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_856.png",
+                        roomNumber: "856",
+                        deLuxe: false,
+                        price: "7 300\u20bd",
+                        rating: 5,
+                        numberReviews: "19"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_740.png",
+                        roomNumber: "740",
+                        deLuxe: false,
+                        price: "6 000\u20bd",
+                        rating: 4,
+                        numberReviews: "44"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_982.png",
+                        roomNumber: "982",
+                        deLuxe: false,
+                        price: "5 800\u20bd",
+                        rating: 3,
+                        numberReviews: "56"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_678.png",
+                        roomNumber: "678",
+                        deLuxe: false,
+                        price: "5 500\u20bd",
+                        rating: 5,
+                        numberReviews: "45"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_450.png",
+                        roomNumber: "450",
+                        deLuxe: false,
+                        price: "5 300\u20bd",
+                        rating: 4,
+                        numberReviews: "39"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_350.png",
+                        roomNumber: "350",
+                        deLuxe: false,
+                        price: "5 000\u20bd",
+                        rating: 3,
+                        numberReviews: "77"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_666.png",
+                        roomNumber: "666",
+                        deLuxe: false,
+                        price: "5 000\u20bd",
+                        rating: 5,
+                        numberReviews: "25"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_444.png",
+                        roomNumber: "444",
+                        deLuxe: false,
+                        price: "5 000\u20bd",
+                        rating: 3,
+                        numberReviews: "15"
+                    })
+                    +room-card({
+                        pathToImg: "../img/rooms/room_352.png",
+                        roomNumber: "352",
+                        deLuxe: false,
+                        price: "5 000\u20bd",
+                        rating: 3,
+                        numberReviews: "55"
+                    })
+                .search-result__pagination
+                    +pagination
+               
+    .line
+    +footer
+    +copyright
+    a(href="")
+
+    

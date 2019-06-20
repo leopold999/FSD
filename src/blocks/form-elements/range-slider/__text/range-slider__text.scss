@@ -1,0 +1,4 @@
+.range-slider__text {
+    text-align: center;
+    @include fontBody($font-size: 12px, $line-height: 14px, $color: $dark50);
+}

@@ -1,7 +1,7 @@
 @import "../../../template/template.scss";
 
 .dropdown-filter-date__input {
-    margin-top: 5px;
+    margin-top: 4px;
     @include textFieldInput(100%, 44px);
     &::placeholder {
         @include fontBody($color: $dark75);

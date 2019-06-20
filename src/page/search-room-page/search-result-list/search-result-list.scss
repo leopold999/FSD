@@ -1,0 +1,22 @@
+.search-result-list {
+    position: relative;
+    display: grid;
+
+    grid-row-gap: 20.5px;
+    grid-column-gap: 12px;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-between;
+
+    margin-bottom: 40.5px;
+    
+    
+
+   
+    
+   
+    // @include justify-space-between;
+    // flex-wrap: wrap;
+    // flex-basis: 800px;
+    // flex-grow: 0.5;
+
+}

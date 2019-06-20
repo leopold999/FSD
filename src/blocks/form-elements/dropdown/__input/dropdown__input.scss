@@ -1,7 +1,7 @@
 @import "../../../template/template.scss";
 
 .dropdown__input {
-    margin-top: 5px;
+    margin-top: 3px;
     padding-right: 44px;
     @include textFieldInput(100%, 44px);
    

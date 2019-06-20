@@ -2,11 +2,12 @@
 @import './__result/range-slider_result.scss';
 @import './slider-wrapper/slider-wrapper.scss';
 @import './ui-slider/ui-slider.scss';
+@import './__text/range-slider__text';
 
 
 .range-slider {
     width: 266px; 
-    height: 48px;  
+    // height: 48px;  
     position: relative;
 }
 

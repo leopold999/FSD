@@ -8,8 +8,9 @@ export default class dropDounList {
         this._values = new Array(this._itemsNames.length).fill(0);
         this._dataNames = dataNames;
         this._alternateNames = alternateNames;
-        this._classModifier = classModifier;
-        this._classModifier;
+        // this._classModifier = classModifier;
+        // this._classModifier;
+        this._elemWidth =  this._elem.offsetWidth;
         this._inputCallback = inputCallback;
         this._showDropdownButtons = showDropdownButtons || false;
         this._elemCheckboxLabel = this._elem.querySelector('.dropdown__list-checkbox');
@@ -20,8 +21,9 @@ export default class dropDounList {
         this._elemDropdownList = document.createElement('div');
         this._elemDropdownList.classList.add('dropdown-list');
         this._elemDropdownList.classList.add('dropdown-list_hide');
-        this._elemDropdownList.classList.add(this._classModifier);
-        this._elem.after(this._elemDropdownList)
+        // this._elemDropdownList.classList.add(this._classModifier);
+        this._elemDropdownList.style.width = this._elemWidth + 'px';
+        this._elem.append(this._elemDropdownList)
 
         this._elemInput = this._elem.querySelector('.dropdown__input');  
         
