@@ -1,7 +1,5 @@
 .social__icon {
     font-size: 24px;
     line-height: 23px;
-    background-image: $colorGradientPurple;
-    background-clip: text;
-    color: transparent;
+    @include font-gradient($colorGradient: $colorGradientPurple)
 }

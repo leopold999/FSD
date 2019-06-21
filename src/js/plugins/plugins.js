@@ -7,5 +7,6 @@ import './digitalMask/jquery.digitalmask';
 import './pagination/pagination';
 import './jquery.air-datapicker/datepicker';
 import './dropDownList/dropDownList';
-
+import './d3/d3';
+import './donutChart/donutChart';
 

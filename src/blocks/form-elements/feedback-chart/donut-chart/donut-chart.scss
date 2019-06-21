@@ -1,0 +1,54 @@
+.donut-chart {
+    width: 121.5px;
+    height: 122px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.donut-chart-gradient-color-0-1 {
+    stop-color: #FFE39C;
+}
+.donut-chart-gradient-color-0-2 {
+    stop-color: #FFBA9C;
+}
+.donut-chart-gradient-color-1-1 {
+    stop-color: #BC9CFF;
+}
+.donut-chart-gradient-color-1-2 {
+    stop-color: #8BA4F9;
+}
+.donut-chart-gradient-color-2-1 {
+    stop-color: #6FCF97;
+}
+.donut-chart-gradient-color-2-2 {
+    stop-color: #66D2EA;
+}
+.donut-chart-gradient-color-3-1 {
+    stop-color: #919191;
+}
+.donut-chart-gradient-color-3-2 {
+    stop-color: #3D4975;
+}
+
+$gradient-great: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+$gradient-normal: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$gradient-good: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$gradient-bad: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+
+.donut-chart-gradient-text-0 {
+    @include font-gradient($colorGradient: $gradient-great);
+}
+.donut-chart-gradient-text-1 {
+    @include font-gradient($colorGradient: $gradient-normal);
+}
+.donut-chart-gradient-text-2 {
+    @include font-gradient($colorGradient: $gradient-good);
+}
+.donut-chart-gradient-text-3 {
+    @include font-gradient($colorGradient: $gradient-bad);
+}
+

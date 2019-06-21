@@ -1,0 +1,26 @@
+mixin feedback-chart
+    .feedback-chart
+        .donut-chart
+            .donut-chart__text
+                .donut-chart__amount 260
+                .donut-chart__signature голосов
+        svg
+            defs
+                lineargradient(id="lineargradient-0" x1="0" x2="0" y1="1" y2="0")
+                    stop(class="donut-chart-gradient-color-0-1" offset="0%")
+                    stop(class="donut-chart-gradient-color-0-2" offset="100%")
+                lineargradient(id="lineargradient-1" x1="0" x2="0" y1="1" y2="0")
+                    stop(class="donut-chart-gradient-color-1-1" offset="0%")
+                    stop(class="donut-chart-gradient-color-1-2" offset="100%")
+                lineargradient(id="lineargradient-2" x1="0" x2="0" y1="1" y2="0")
+                    stop(class="donut-chart-gradient-color-2-1" offset="0%")
+                    stop(class="donut-chart-gradient-color-2-2" offset="100%")
+                lineargradient(id="lineargradient-3" x1="0" x2="0" y1="1" y2="0")
+                    stop(class="donut-chart-gradient-color-3-1" offset="0%")
+                    stop(class="donut-chart-gradient-color-3-2" offset="100%")
+            
+        ul.feedback-chart-legend
+            li.feedback-chart-legend__item.feedback-chart-legend__great Великолепно
+            li.feedback-chart-legend__item.feedback-chart-legend__good Хорошо
+            li.feedback-chart-legend__item.feedback-chart-legend__normal Удовлетворительно
+            li.feedback-chart-legend__item.feedback-chart-legend__bad Разочарован

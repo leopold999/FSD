@@ -1,0 +1,6 @@
+.feedback-chart-legend__bad {
+    &:before {
+        content: "";
+        background-image: $gradient-bad;
+    }
+}

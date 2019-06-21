@@ -1,24 +1,18 @@
-include ../../blocks/form-elements/form-elements.pug
-include ../../blocks/cards/cards.pug
-include ../../blocks/page-blocks/page-blocks.pug
+extends ../../pug/layout/main.pug
 
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width initial-scale=1")
-    script(src="../../dist/app.js", type="text/javascript")
-    link(rel="stylesheet", href="../dist/app.css" type="text/css" )
-  body 
+block variables 
+  - var title = "Landing page"
+  - var descriptionName = "Landing page"
+  - var descriptionContent = "Landing page"
 
-    +header
-    .content-wrapper.landing-page-background
-      .content
-        .content__search-rooms
-          +search-rooms
-        .content__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-    +footer
-    +copyright
+  - var contentWrapperclass = "landing-page-content-wrapper"
+  - var pageClass = "landing-page"
+  - var contentClass = ""
+block content
+  .search-rooms-wrapper
+    +search-rooms
+  .search-rooms-text Лучшие номера для вашей работы, отдыха и просто вдохновения
+ 
     
     
       

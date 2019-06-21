@@ -1,0 +1,28 @@
+include ../../blocks/cards/cards
+include ../../blocks/form-elements/form-elements
+include ../../blocks/page-blocks/page-blocks
+
+block variables
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        title #{title}
+        meta(name=descriptionName, content=descriptionContent)
+        meta(name="viewport" content="width=device-width initial-scale=1")
+        link(rel="stylesheet", href="../dist/app.css" type="text/css" )
+        block head
+
+    body(class=pageClass)
+        .wrapper
+            +header
+            div(class="content-wrapper" + " " + contentWrapperclass)
+                div(class="content" + " " + contentClass)
+                    block content
+            block line
+            +footer
+            +copyright
+        
+            
+        script(src="../../dist/app.js", type="text/javascript")

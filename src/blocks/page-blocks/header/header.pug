@@ -3,7 +3,8 @@ mixin header(login)
     header(class="header")
         div(class="header-container")
             div(class="header__logo-container")
-                +logo
+                a(href="index.html")
+                    +logo
                 
             menu(class="menu")
                 li(class="menu__item") 
@@ -32,7 +33,9 @@ mixin header(login)
                 else
                     li(class="menu__item") 
                         .menu__button_login
-                            +button({title: "Войти", type: "border", size: "87_34"})
+                            a(href="#")
+                                +button({title: "Войти", type: "border", size: "87_34"})
                     li(class="menu__item") 
                         .menu__button_register
-                            +button({title: "Зарегистрироваться", type: "background", size: "196_34"})
+                            a(href="#")
+                                +button({title: "Зарегистрироваться", type: "background", size: "196_34"})

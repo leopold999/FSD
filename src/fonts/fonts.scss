@@ -142,12 +142,12 @@
 }
 
  
-@mixin font-gradient($font-size, $line-height: $font-size) {
-    font-size: $font-size;
-    line-height: $line-height;
-    background-image: $colorGradientPurple;
+@mixin font-gradient($colorGradient: $colorGradientPurple) {
+    // font-size: $font-size;
+    // line-height: $line-height;
+    background-image: $colorGradient;
     background-clip: text;
     color: transparent;
-    font-family: 'Material Icons';
+    // font-family: 'Material Icons';
 
 }

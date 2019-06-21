@@ -1,0 +1,5 @@
+.donut-chart__signature {
+    @include fontBody($font-size: 15px, $line-height: 15px);
+    font-weight: bold;
+    color: transparent;
+}
