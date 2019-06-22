@@ -1,9 +1,9 @@
 @import '../../../template/template.scss';
 
 .facility__icon {
-    padding-bottom: 23px;
     font-size: 48px;
     line-height: 41px;
     @include font-gradient();
     font-family: 'Material Icons';
+    margin-right: 10px;
 }

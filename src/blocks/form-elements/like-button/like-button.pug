@@ -8,6 +8,6 @@ mixin like-button(options)
         label(class="like-button__label")
             input(class="like-button__input", type="checkbox", name=name, value=value checked=checked)
             div(class="like-button__wrapper")
-                div(class="like-button__text") 12
+                div(class="like-button__text")= value
             div(class="like-button__icon like-button__icon_not-checked material-icon") favorite_border
             div(class="like-button__icon like-button__icon_checked material-icon") favorite

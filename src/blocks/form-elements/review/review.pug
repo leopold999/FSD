@@ -4,11 +4,13 @@ mixin review(options)
     - var timeAgo = options.timeAgo
     - var text = options.text
     - var img = options.img
+    - var likeValue = options.likeValue || ""
+    - var likeActive = options.likeActive || false
 
     div(class="review")
         img(class="review__avatar", src=img, alt="avatar")
         div(class="review-like")
-            +like-button({value: "12", checked: true})
+            +like-button({value: likeValue, checked: likeActive})
         div(class="review-text")
             div(class="review-text__user-name")= userName
             div(class="review-text__time-ago")= timeAgo

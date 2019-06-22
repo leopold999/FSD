@@ -2,11 +2,14 @@ mixin facility(options)
     - var icon = options.icon
     - var title = options.title
     - var text = options.text
+    - var line = options.line
+    - var lineClass = ""
+    if (line)
+        - lineClass = "facility_line"
 
-    div(class="facility")
+    div(class="facility" + " " + lineClass)
         div(class="facility__icon material-icon")= icon
         div(class="facility__description")
             div(class="facility__title")= title
             
             div(class="facility__text")= text
-        div(class="facility__line")

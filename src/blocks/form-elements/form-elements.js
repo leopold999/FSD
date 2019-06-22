@@ -11,6 +11,6 @@ import './dropdown-rooms/dropdown-rooms';
 import './dropdown-guests/dropdown-guests';
 import '../cards/booking-form/booking-form-calendar/booking-form-calendar';
 import '../cards/cards';
-import './feedback-chart/feedback-chart';
+import './reviews-chart/reviews-chart';
 
 

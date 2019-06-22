@@ -100,6 +100,17 @@ module.exports = {
       template: `${PATHS.src}/pug/pages/room-details.pug`,
       filename: './room-details.html',
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/pug/pages/registration.pug`,
+      filename: './registration.html',
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/pug/pages/sign-in.pug`,
+      filename: './sign-in.html',
+    }),
+    
     new HtmlWebpackPugPlugin(),
     new CopyWebpackPlugin([
       { from: PATHS.src + '/img', to: `img` },

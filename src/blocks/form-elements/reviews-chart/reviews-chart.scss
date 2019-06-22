@@ -1,0 +1,18 @@
+@import "./donut-chart/donut-chart.scss";
+@import "./reviews-chart-legend.scss/reviews-chart-legend.scss";
+@import './reviews-chart-legend.scss/reviews-chart-legend__bad.scss';
+@import './reviews-chart-legend.scss/reviews-chart-legend__good.scss';
+@import "./reviews-chart-legend.scss/reviews-chart-legend__great.scss";
+@import "./reviews-chart-legend.scss/reviews-chart-legend__normal";
+@import "./donut-chart/__text/donut-chart__text.scss";
+@import "./donut-chart/__amount/donut-chart__amount";
+@import "./donut-chart/__signature/donut-chart__signature.scss";
+@import "./reviews-chart-legend.scss/reviews-chart-legend__item.scss";
+
+.reviews-chart {
+    position: relative;
+    width: 320px;
+    height: 120px;
+    box-sizing: border-box;
+
+}

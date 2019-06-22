@@ -4,12 +4,12 @@
 @import './facility__text/facility__text.scss';
 @import '../../template/template.scss';
 @import './facility__line/facility__line.scss';
+@import './facility_line.scss';
 
 .facility {
     position: relative;
-    width: 291px;
-    height: 89px;
-    padding-top: 23px;
+    width: 280px;
     @include justify-space-between;
     box-sizing: border-box;
+
 }

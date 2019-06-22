@@ -1,0 +1,10 @@
+.room-details-images__img{
+    
+    overflow: hidden;
+    & img {
+        width: 100%;
+        min-height: 100%;
+    }
+    
+}
+

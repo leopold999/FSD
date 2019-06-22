@@ -1,4 +1,9 @@
 .search-room-page-content {
+
+    min-width: 800px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
     
     display: grid;
     grid-template-columns: max-content auto;

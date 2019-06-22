@@ -1,0 +1,20 @@
+
+.room-details-information {
+    min-width: 800px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 70px 0;
+
+    display: grid;
+    grid-template-areas: 
+    "intelligence impressions booking-form"
+    "reviews      reviews     booking-form"
+    "rules        cancel      booking-form";
+    grid-column: 1fr 320px 380px;
+    grid-row: 1fr 1fr 1fr;
+    grid-row-gap: 35px;
+    grid-column-gap: 70px;
+
+
+}

@@ -1,0 +1,11 @@
+.room-details-images {
+    display: grid;
+    width: 100%;  
+    grid-template-areas: 
+    "room-details-images__img-1 room-details-images__img-2"
+    "room-details-images__img-1 room-details-images__img-3";
+    grid-template-columns: 68vw 32vw;
+    grid-template-rows: 50% 50%;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+}
