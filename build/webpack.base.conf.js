@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -10,6 +11,9 @@ const PATHS = {
   dist: path.join(__dirname, '../dist'),
   assets: 'assets/'
 }
+const PAGES_DIR = `${PATHS.src}/pug/pages/`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+
 
 module.exports = {
   // BASE config
@@ -23,6 +27,18 @@ module.exports = {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
     publicPath: '/'
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendors',
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
   },
   module: {
     rules: [{
@@ -80,43 +96,22 @@ module.exports = {
       template: `${PATHS.src}/index.pug`,
       filename: './index.html'
     }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/page/components-page1.pug`,
-      filename: './components-page1.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/page/landing-page/landing-page.pug`,
-      filename: './landing-page.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/page/search-room-page/search-room-page.pug`,
-      filename: './search-room-page.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/pug/pages/room-details.pug`,
-      filename: './room-details.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/pug/pages/registration.pug`,
-      filename: './registration.html',
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/pug/pages/sign-in.pug`,
-      filename: './sign-in.html',
-    }),
+    ...PAGES.map(page => new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/${page}`,
+      filename: `./${page.replace(/\.pug/,'.html')}`,
+    })),
+
     
     new HtmlWebpackPugPlugin(),
+    // new CopyWebpackPlugin([
+    //   { from: `${PATHS.src}/${PATHS.assets}img`}
+    // ]),
     new CopyWebpackPlugin([
-      { from: PATHS.src + '/img', to: `img` },
-      { from: PATHS.src + '/img/rooms', to: `img/rooms` },
-      { from: PATHS.src + '/img/backgrounds', to: `img/backgrounds` },
-      { from: PATHS.src + '/static' },
+      { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img` },
+      { from: `${PATHS.src}/fonts/font-files`, to: `${PATHS.assets}/fonts` },
+      // { from: PATHS.src + '/img/rooms', to: `img/rooms` },
+      // { from: PATHS.src + '/img/backgrounds', to: `img/backgrounds` },
+      { from: `${PATHS.src}/static`, to: '' },
     ]),
     new webpack.ProvidePlugin({
       $: 'jquery',
