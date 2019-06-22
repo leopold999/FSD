@@ -1,0 +1,14 @@
+extends ../layout/main.pug
+
+block variables 
+    - var title = "Sign-in page"
+    - var descriptionName = "Sign-in page"
+    - var descriptionContent = "Sign-in pagee"
+  
+    - var pageClass = "sign-in-page"
+    - var contentWrapperclass = "sign-in-page-content-wrapper"   
+    - var contentClass = "sign-in-page-content"
+block content
+    .sign-in-wrapper
+        +login-form
+    

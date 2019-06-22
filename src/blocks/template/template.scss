@@ -11,6 +11,7 @@
     box-sizing: border-box;
     &::placeholder {
         @include fontBody($color: $colorPlaceholder);
+        
     }
     &:hover, &:focus {
         border: $borderInputHover;
