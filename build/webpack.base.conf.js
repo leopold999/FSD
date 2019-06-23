@@ -101,7 +101,6 @@ module.exports = {
       filename: `./${page.replace(/\.pug/,'.html')}`,
     })),
 
-    
     new HtmlWebpackPugPlugin(),
     // new CopyWebpackPlugin([
     //   { from: `${PATHS.src}/${PATHS.assets}img`}
