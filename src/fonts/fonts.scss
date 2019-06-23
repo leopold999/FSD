@@ -7,14 +7,14 @@
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('/src/fonts/fonts-files/Quicksand-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/Quicksand-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('/src/fonts/font-files/Quicksand-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/Quicksand-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -22,14 +22,14 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/font-files/Montserrat-Bold2.ttf') format('truetype');
+    src: url('/assets/fonts/Montserrat-Bold2.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/font-files/Montserrat-Regular2.ttf') format('truetype');
+    src: url('/assets/fonts/Montserrat-Regular2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,7 +38,7 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/font-files/MaterialIcons-Regular.ttf) format('truetype');
+    src: url('/assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
 
     ///////////////////////////////////////////////////////////////////////
     display: inline-block;
@@ -66,8 +66,8 @@
     font-style: normal;
     font-weight: normal;
     font-display: auto;
-    src: url(../fonts/font-files/fa-brands-400.ttf) format('truetype'),
-    url(../fonts/font-files/fa-brands-400.svg) format('svg');
+    src: url('/assets/fonts/fa-brands-400.ttf') format('truetype'),
+    url('/assets/fonts/fa-brands-400.svg') format('svg');
 }
 
 .fab {
