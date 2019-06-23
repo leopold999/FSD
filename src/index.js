@@ -14,7 +14,7 @@ import $ from 'jquery';
 
 // import 'vue'
 // import Vue from 'vue'
-window.Vue = require('vue')
+// window.Vue = require('vue')
 // window.$ = require('jquery')
 
 
