@@ -67,13 +67,13 @@ html
     form
       +radio-button({text: "Мужчина", name: "gender", value: "male"})
       +radio-button({text: "Женщина", name: "gender", value: "female"})
-
+    br
     +toggle-button({text: "Получать спецпредложения", name: "name", value: "value"})
     br
-    +like-button({name: "name", value: "value", checked: true})
+    +like-button({name: "name", value: "12", checked: true})
     br
-    +like-button({name: "name", value: "value"})
-
+    +like-button({name: "name", value: "2"})
+    br
     +rate-button({name: "aaa"})
     br
     +rate-button({name: "bbb"})
@@ -95,33 +95,38 @@ html
       "TV-2": "Телевизор",
       "shampoo-2": "Шампунь",
     }})
-
+    br
     +rich-checkbox-button({
       title: "Широкий коридор",
       text: "Ширина коридоров в номере не менее 91см."
     })
+    br
     +rich-checkbox-button({
       title: "Помощник для инвалидов",
       text: "На 1 этаже вас встретит специалист и проводит до номера."
     })
+    br
     +facility({
       icon: "insert_emoticon",
       title: "Комфорт",
       text: "Шумопоглощающие стены"
     })
+    br
     +facility({
       icon: "location_city",
       title: "Удобство",
       text: "Окно в каждой из спален"
     })
-    
+    br
     +review({
       userName: "Мурад Сарафанов",
       timeAgo: "5 дней назад",
       text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-      img: "../img/murad_sarafanov.png"
+      img: "./assets/img/users/murad_sarafanov.png",
+      likeValue: 12,
+      likeActive: true
     })
-
+    br
     +bullet-list({
       title: "Bullet list",
       items: [
@@ -169,10 +174,11 @@ html
     br
 
     +pagination
-
+    br
     //- +datapicker
 
     +logo
+    br
     +booking-form
     
     br
@@ -191,11 +197,14 @@ html
     br
     br
     +login-form
+    br
+    br
+    .line
 
     br
     br
     +room-card({
-      pathToImg: "../img/rooms/room_888.png",
+      pathToImg: "./assets/img/rooms/room_888.png",
       roomNumber: "888",
       deLuxe: true,
       price: "9 990\u20bd",
@@ -204,13 +213,18 @@ html
     })
     br
     +room-card({
-        pathToImg: "../img/rooms/room_840.png",
+        pathToImg: "./assets/img/rooms/room_840.png",
         roomNumber: "840",
         deLuxe: false,
         price: "9 900\u20bd",
         rating: 4,
         numberReviews: "65"
       })
+    br
+    br
+    +reviews-chart
+    br
+    br
 
     br
     br
@@ -231,8 +245,9 @@ html
     +footer-clean
     br
     br
-    //- div(id="my_dataviz")
-    +reviews-chart
+    
+    
+   
       
       
    
