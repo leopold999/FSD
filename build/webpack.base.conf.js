@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin')
 const webpack = require('webpack')
 
-const PATHS = {
+const PATHS = { 
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
   assets: 'assets/'
@@ -26,7 +26,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
-    publicPath: './'
+    publicPath: ' /'
   },
   // optimization: {
   //   splitChunks: {
@@ -38,7 +38,7 @@ module.exports = {
   //         enforce: true
   //       }
   //     }
-  //   }
+  //   } 
   // },
   module: {
     rules: [{
@@ -46,10 +46,16 @@ module.exports = {
       loader: 'babel-loader',
       exclude: '/node_modules/'
     }, {
-      test: /\.(png|jpg|gif|svg|ttf|woff|woff2|eot)$/,
+      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]'
+      }
+    }, {
+      test: /\.(png|jpg|gif|svg)$/,
+      loader: 'file-loader',
+      options: {
+        name: 'fonts/[name].[ext]'
       }
     }, {
       test: /\.scss$/,
@@ -62,11 +68,20 @@ module.exports = {
         }, {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
-        }, {
+        },
+        {
+          loader: 'resolve-url-loader',
+          options: {
+            sourceMap: true
+          }
+        },
+        {
           loader: 'sass-loader',
-          options: { sourceMap: true }
+          options: { sourceMap: true
+           }
         }
       ]
+
     }, {
       test: /\.css$/,
       use: [
@@ -106,8 +121,8 @@ module.exports = {
     //   { from: `${PATHS.src}/${PATHS.assets}img`}
     // ]),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img` },
-      { from: `${PATHS.src}/fonts/font-files`, to: `${PATHS.assets}/fonts` },
+      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/fonts/font-files`, to: `${PATHS.assets}fonts` },
       // { from: PATHS.src + '/img/rooms', to: `img/rooms` },
       // { from: PATHS.src + '/img/backgrounds', to: `img/backgrounds` },
       { from: `${PATHS.src}/static`, to: '' },
