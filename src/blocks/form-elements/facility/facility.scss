@@ -2,13 +2,11 @@
 @import './facility__description/facility__description.scss';
 @import './facility__title/facility__title.scss';
 @import './facility__text/facility__text.scss';
-@import '../../template/template.scss';
-@import './facility__line/facility__line.scss';
 @import './facility_line.scss';
 
 .facility {
     position: relative;
-    width: 280px;
+    width: rem(280);
     @include justify-space-between;
     box-sizing: border-box;
 

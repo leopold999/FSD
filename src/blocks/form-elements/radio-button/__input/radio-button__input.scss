@@ -1,0 +1,15 @@
+.radio-button__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: rem(10) 0 0 rem(20);
+    &:checked + .radio-button__text:before {
+        border: $borderRadioButtonActive;
+    }
+    &:checked + .radio-button__text:after {
+        opacity: 1;
+    }
+    &:checked + .radio-button__text {
+        @include fontRadioButton;
+    }
+}

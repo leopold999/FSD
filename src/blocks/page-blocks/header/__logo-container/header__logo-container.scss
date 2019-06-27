@@ -1,0 +1,7 @@
+.header__logo-container {
+    @media screen and (max-width: 800px) {
+        position: absolute;
+        top: rem(15);
+        left: rem(15);
+    }
+}

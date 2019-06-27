@@ -1,10 +1,29 @@
 .search-form {
-    
     box-sizing: border-box;
     display: grid;
-    grid-row-gap: 30px;
-    width: 266px;
-    height: 0;
-    // padding: 28px 0 70px 0;
+    grid-row-gap: rem(30);
+    width: rem(266);
+    height: 0;  
     
+    @media screen and (max-width: 800px) {
+        position: absolute;
+        visibility: hidden;
+        // display: none;
+        grid-row-gap: rem(15);
+        width: rem(360);
+        height: rem(1000);
+        z-index: 1000;
+        right: 0;
+        top: rem(35);
+        padding: rem(40) rem(30) rem(250) rem(30);
+        border-radius: $borderRadiusCard;
+        border: $borderCard;
+        box-shadow: $cadrShadow;
+        background-color: $cardBackgroundColor;
+
+        
+
+
+
+    }
 }

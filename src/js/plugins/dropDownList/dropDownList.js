@@ -1,5 +1,5 @@
 export default class dropDounList {
-    constructor({ elem, itemsNames, classModifier, defaultValue, dataNames, alternateNames, showDropdownButtons, inputCallback }) {
+    constructor({ elem, itemsNames, defaultValue, dataNames, alternateNames, showDropdownButtons, inputCallback }) {
         if (!elem) return;
         
         this._elem = elem;
@@ -8,51 +8,37 @@ export default class dropDounList {
         this._values = new Array(this._itemsNames.length).fill(0);
         this._dataNames = dataNames;
         this._alternateNames = alternateNames;
-        // this._classModifier = classModifier;
-        // this._classModifier;
         this._elemWidth =  this._elem.offsetWidth;
+       
+        window.addEventListener('resize', () => {
+            this._elemWidth = this._elem.offsetWidth;
+            this._elemDropdownList.style.width = this._elemWidth + 'px';
+        })
+
         this._inputCallback = inputCallback;
         this._showDropdownButtons = showDropdownButtons || false;
         this._elemCheckboxLabel = this._elem.querySelector('.dropdown__list-checkbox');
-        
-
         this._elemCheckboxDropdown = this._elem.querySelector('.dropdown__checkbox-input');
-        
         this._elemDropdownList = document.createElement('div');
         this._elemDropdownList.classList.add('dropdown-list');
         this._elemDropdownList.classList.add('dropdown-list_hide');
-        // this._elemDropdownList.classList.add(this._classModifier);
         this._elemDropdownList.style.width = this._elemWidth + 'px';
         this._elem.append(this._elemDropdownList)
-
-        this._elemInput = this._elem.querySelector('.dropdown__input');  
-        
-        
-
+        this._elemInput = this._elem.querySelector('.dropdown__input'); 
         this._render();
-
         this._dataInput();
-
         this._changeValue();
-
         this._dropDownListHide();
-
-        
         this._dropDownButtons = this._elemDropdownList.querySelector('.dropdown-list-buttons');
-
         this._showDropdownlistButtons();
-
         this._elemCleanButton = this._dropDownButtons.querySelector('.dropdown-list-buttons__clean-button');
-        
         this._elemCleanButton.addEventListener('click', () => {
             this._dropDownListClean();
         });
-
         this._elemApplyButton = this._dropDownButtons.querySelector('.dropdown-list-buttons__apply-button');
         this._elemApplyButton.addEventListener('click', () => {
             this._elemDropdownList.classList.add('dropdown-list_hide');
         });
-
         this._showCleanButton();
     }
 
@@ -83,8 +69,6 @@ export default class dropDounList {
                 this._elemInput.setAttribute('value',  this._inputCallback(this._itemsNames, this._values, this._alternateNames));
             }
         }
-
-        
     }
 
     _changeValue() {
@@ -95,7 +79,6 @@ export default class dropDounList {
                 let operation = e.target.getAttribute('data-sign');
                 let elemCounterValue = e.target.closest('.dropdown-list-item').querySelector('.counter__value');
                          
-
                 if (this._values[0] === 0 && dataName != this._dataNames[0]) return false;
 
                 if (operation === 'plus' && value < 4) {
@@ -126,10 +109,8 @@ export default class dropDounList {
                 if (this._values[0] === 0) {
                     this._dropDownListClean();
                 }
-                this._dataInput();  
-                
+                this._dataInput(); 
                 this._showCleanButton();
-                
             }
         })      
     }
@@ -144,7 +125,6 @@ export default class dropDounList {
         }    
 
         this._dataInput();
-
         this._showCleanButton();
     }
 
@@ -166,8 +146,6 @@ export default class dropDounList {
             }
         })
     }
-
-    
     _showDropdownlistButtons() {
         if (this._showDropdownButtons) {
 
@@ -176,8 +154,6 @@ export default class dropDounList {
         } else {
             this._dropDownButtons.classList.add('dropdown-list-buttons_hide');
         }
-
-
     }
 
     _showCleanButton() {
@@ -187,8 +163,5 @@ export default class dropDounList {
             this._elemCleanButton.style.display = 'block';
         }
     }
-
-
-    
 }
 

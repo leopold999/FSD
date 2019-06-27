@@ -1,5 +1,6 @@
 .search-form__title {
     @include fontH3;
-    margin-bottom: 5px;
+    margin-bottom: rem(5);
+    white-space: pre-wrap;
 
 }

@@ -1,10 +1,9 @@
-@import "../../../template/template.scss";
 
 .button_type_clean {
-    @include fontH3($color: $purple);
+    @include buttonClean;
     display: inline-block;
     background-color: transparent;
     border: none;
     box-sizing: border-box;
-    height: 15px;
+    height: rem(15);
 }

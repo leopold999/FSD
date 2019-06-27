@@ -1,9 +1,8 @@
-@import '../../../../template/template.scss';
 
 .booking-form-total__line {
-    height: 1px;
+    height: rem(1);
     width: 100%;
-    margin: 0 5px 5px;
+    margin: 0 rem(5) rem(5);
     border-bottom: 1px dotted $dark25;
     align-self: flex-end;
 }

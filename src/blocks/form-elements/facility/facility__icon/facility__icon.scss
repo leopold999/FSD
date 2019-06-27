@@ -1,9 +1,7 @@
-@import '../../../template/template.scss';
-
 .facility__icon {
-    font-size: 48px;
-    line-height: 41px;
-    @include font-gradient();
+    font-size: $fontSizeFacilityIcon;
+    line-height: $lineHeightFacilityIcon;
+    @include font-gradient($colorFontFacilityIcon);
     font-family: 'Material Icons';
-    margin-right: 10px;
+    margin-right: rem(10);
 }

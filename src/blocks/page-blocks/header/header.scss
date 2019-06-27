@@ -5,18 +5,12 @@
 @import "./menu/__item/menu__item_dropdown.scss";
 @import "./menu/menu-dropdown-list/menu-dropdown-list.scss";
 @import "./menu/__login/menu__login.scss";
-@import "./header-container/header-container";
+@import "./header-content/header-content";
 @import "./menu/__button/menu__button_login.scss";
 @import "./menu/__button/menu__button_register.scss";
+@import "./menu/menu-buttons-wrapper/menu-buttons-wrapper.scss";
+@import "./header-wrapper/header-wrapper.scss";
+@import "./menu/menu-button-open/menu-button-open.scss";
 
 
-.header {
-    
 
-    width: 100%;
-    background-image: $white;
-    box-shadow: 0px 10px 20px $dark10;
-    box-sizing: border-box; 
-    margin: 0;
-    
-}

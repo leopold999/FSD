@@ -9,6 +9,9 @@ block variables
     - var pageClass = "search-room-page"
     - var contentClass = "search-room-page-content"
 block content
+    input(class="checkbox-search-form-filter__input" type="checkbox" id="checkbox-search-form-filter-input")
+    label(class="checkbox-search-form-filter" for="checkbox-search-form-filter-input") Фильтр
+
     aside.search-form
         +dropdown-filter-date({
             title: "Даты пребывания в отеле",

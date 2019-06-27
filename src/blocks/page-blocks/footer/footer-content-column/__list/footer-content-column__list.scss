@@ -2,5 +2,13 @@
     margin: 0;
     padding: 0;
     // width: 120px;
+    & a {
+        white-space: pre-wrap;
+    }
+
+    @media screen and (max-width: 800px) {
+        text-align: center;
+    
+    }
 }
 

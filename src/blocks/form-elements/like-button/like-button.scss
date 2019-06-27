@@ -1,5 +1,14 @@
-@import '../../template/template.scss';
+@import "./__input/like-button__input.scss";
+@import "./__wrapper/like-button__wrapper.scss";
+@import "./__text/like-button__text.scss";
+@import "./__icon/like-button__icon.scss";
+@import "./__icon/like-button__icon_checked.scss";
+@import "./__icon/like-button__icon_not-checked.scss";
 
 .like-button {
-    @include like-button;
+    width: rem(40);
+    height: rem(20);
+    position: relative;
+    box-sizing: border-box;
+
 }

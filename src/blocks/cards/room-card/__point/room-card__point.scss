@@ -1,8 +1,9 @@
 .room-card__point {
-    width: 7.5px;
-    height: 7.5px;
+    width: rem(7.5);
+    height: rem(7.5);
     border: 1px solid $white;
     border-radius: 50%;
-    display: inline-block;
+    // display: inline-block;
     box-sizing: border-box;
+    margin: 0;
 }

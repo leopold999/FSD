@@ -1,4 +1,3 @@
-@import "../../../template/template.scss";
 
 .pagination-container {
     
@@ -13,21 +12,20 @@
     text-decoration: none;
 }
 .J-paginationjs-page a, .paginationjs-ellipsis a {
-    @include fontH3($color: $dark50);
+    @include fontPagination;
     font-weight: normal;
 }
 
 .J-paginationjs-page, .paginationjs-prev, .paginationjs-pages .active, .paginationjs-ellipsis, .paginationjs-next  {
     float: left;
-    width: 40px;
-    height: 40px;
+    @include size(rem(40));
     list-style: none;
     box-sizing: border-box;
     @include justify-center;
 }
 .paginationjs-pages .active {
     border-radius: 50%;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);    
+    background: $backgroundPaginationActive;    
 }
 .paginationjs-pages .active a {
     color: #fff;
@@ -35,12 +33,11 @@
 }
 .paginationjs-next, .paginationjs-prev  {
     border-radius: 50%;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $backgroundPaginationNextAndPrev;
 }
 .paginationjs-next a, .paginationjs-prev a {
-    font-size: 24px;
+    font-size: rem(24);
     color: #fff;
     @include justify-center;
-    width: 40px;
-    height: 40px;
+    @include size(rem(40));
 }

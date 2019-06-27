@@ -6,11 +6,10 @@ mixin dropdown-date(options)
     - var value = options.value || ""
            
     div(class="dropdown-date")
-            span(class="dropdown-date__title")= title 
-            br
-            input(class="dropdown-date__input" + " " + classInput, type="text", placeholder=placeholder pattern=pattern value=value)
-            div(class="dropdown-date__list-checkbox")
-                span
+            div(class="dropdown-date__title")= title 
+            .input-wrapper
+                input(class="dropdown-date__input" + " " + classInput, type="text", placeholder=placeholder pattern=pattern value=value)
+                div(class="dropdown-date__list-checkbox")         
                     i.material-icon expand_more
-                
+                    
 

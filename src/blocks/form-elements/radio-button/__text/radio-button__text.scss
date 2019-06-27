@@ -1,0 +1,30 @@
+.radio-button__text {
+    position: relative;
+    padding: 0 0 0 rem(30);
+    @include fontRadioButton;
+    color: $colorFontRadioButtonTextNotActive;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border-radius: 50%;
+        border: $borderRadioButtonNotActive;
+        top: 0px;
+        left: 0;
+        @include size(rem(20));
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        @include size(rem(12));
+        border-radius: 50%;
+        background: $backgroundRadioButton;
+        left: rem(4);
+        top: rem(4);
+        border-image-slice: 1;
+        opacity: 0;
+    }
+}  

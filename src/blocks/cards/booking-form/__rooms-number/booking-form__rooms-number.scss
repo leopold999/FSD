@@ -1,13 +1,12 @@
-@import '../../../template/template.scss';
 .booking-form__rooms-number {
     @include fontH1;
-    margin-bottom: 16px;
+    margin-bottom: rem(20);
     
 
     &::before {
         content: '№';
         @include fontH3;
-        margin-right: 5px;
+        margin-right: rem(5);
     }
   
 }

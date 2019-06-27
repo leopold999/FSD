@@ -1,0 +1,16 @@
+.search-rooms-card-wrapper {
+    position: absolute;
+    top: rem(70);
+    
+    @media screen and (max-width: 800px) and (min-width: 360px) {
+        left: rem(15);
+    }
+
+    @media screen and (max-width: 360px) {
+        left: 0;
+        top: 15%;
+        position: relative;
+
+    }
+
+}

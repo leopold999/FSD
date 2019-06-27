@@ -2,7 +2,6 @@
 @import "./_type/button_type_border.scss";
 @import "./_type/button_type_clean.scss";
 @import "./_type/button_type_wide.scss";
-@import "../../template/template.scss";
 @import "./button__icon/button__icon.scss";
 @import "./_type/button_type_clean-gray.scss";
 @import "./_size/button_size_196_34.scss";
@@ -14,6 +13,6 @@
 
 
 .button {
-    border-radius: 22px;
+    border-radius: rem(22);
     cursor: pointer;   
 }

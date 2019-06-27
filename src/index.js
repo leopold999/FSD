@@ -1,9 +1,10 @@
 
 // JS - ./js/index.js
-import './js/index.js'
+import './js/common.js'
 // SCSS
 import './scss/main.scss'
 import $ from 'jquery';
+
 
 // CSS (example)
 // import './css/main.css'

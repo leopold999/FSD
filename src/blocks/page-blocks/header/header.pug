@@ -1,10 +1,13 @@
 mixin header(login)
     
-    header(class="header")
-        div(class="header-container")
+    header(class="header-wrapper")
+        div(class="header-content")
             div(class="header__logo-container")
                 a(href="index.html")
                     +logo
+            input(class="menu-button-input" type="checkbox" id="menu-checkbox")
+            label(class="menu-button-open" for="menu-checkbox")
+            
                 
             menu(class="menu")
                 li(class="menu__item") 
@@ -31,11 +34,8 @@ mixin header(login)
                     li(class="menu__item menu__login")
                         a(href="#")= login
                 else
-                    li(class="menu__item") 
+                    li.menu-buttons-wrapper
                         .menu__button_login
-                            a(href="#")
                                 +button({title: "Войти", type: "border", size: "87_34"})
-                    li(class="menu__item") 
                         .menu__button_register
-                            a(href="#")
                                 +button({title: "Зарегистрироваться", type: "background", size: "196_34"})

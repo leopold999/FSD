@@ -1,10 +1,8 @@
 .expandable-checkbox__button {
     position: absolute;
     z-index: -1;
-    // opacity: 0;
-    // margin: 0 0 0 50px;
     display: none;
-    &:checked ~ .aaa {
+    &:checked ~ .expandable-checkbox__icon {
         transform: rotate(-180deg);
 
     }

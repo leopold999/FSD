@@ -1,8 +1,7 @@
-@import '../../../template/template.scss';
-
 .calculation-item {
-    @include fontBody($line-height: 18px);
+    @include fontBody;
+    line-height: rem(18);
     @include justify-space-between;
     
-    margin-bottom: 17px;
+    margin-bottom: rem(17)
 }

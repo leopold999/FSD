@@ -17,6 +17,8 @@ block content
         .room-details-images__img.room-details-images__img-3
             img(src="./assets/img/rooms/room_888/room_888_3.png", alt="")
     .room-details-information
+        .room-details-booking-form
+                +booking-form
         .room-details-intelligence
             .room-details-intelligence__title.room-details__title Сведения о номере
             +facility({
@@ -39,8 +41,7 @@ block content
         .room-details-impressions
             .room-details-impressions__title.room-details__title Впечатления от номера
             +reviews-chart
-        .room-details-booking-form
-            +booking-form
+        
         .room-details-reviews
             .room-details-reviews__title.room-details__title Отзывы посетителей номера
             +review({

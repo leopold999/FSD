@@ -1,5 +1,5 @@
 @import "datepicker-config";
-@import '../../../template/template';
+
 
 /* -------------------------------------------------
     Navigation
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: rem(30);
 
   .-only-timepicker- & {
     display: none;
@@ -25,13 +25,12 @@
 }
 
 .datepicker--nav-action {
-  width: $datepickerDayCellSize;
+  width: rem(40);
   border-radius: $datepickerBorderRadius;
   user-select: none;
   color: $purple;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
+  font-size: rem(24);
+  @include size(rem(24), rem(24));
 
 
   &:hover {
@@ -42,16 +41,17 @@
     visibility: hidden;
   }
 
-  svg {
-    width: 32px;
-    height: 32px;
-  }
+  // svg {
 
-  path {
-    fill: none;
-    stroke: map_get($datepickerTextColor, navArrows);
-    stroke-width: 2px;
-  }
+  //   width: 32px;
+  //   height: 32px;
+  // }
+
+  // path {
+  //   fill: none;
+  //   stroke: map_get($datepickerTextColor, navArrows);
+  //   stroke-width: rem(2);
+  // }
 }
 
 .datepicker--nav-title {
@@ -59,12 +59,12 @@
 
   i {
     font-style: normal;
-    margin-left: 5px;
+    margin-left: rem(5);
   }
 
-  &:hover {
-    background: map_get($datepickerBG, hover);
-  }
+  // &:hover {
+  //   background: map_get($datepickerBG, hover);
+  // }
 
   &.-disabled- {
     cursor: default;
@@ -78,14 +78,15 @@
 .datepicker--buttons {
   display: flex;
   justify-content: space-between;
-  bottom: 20px;
+  // bottom: 20px;
+  height: rem(15);
 }
 
 .datepicker--button {
   background-color: transparent;
   border: none;
   position: absolute;
-  bottom: 20px;
+  bottom: rem(20);
   cursor: pointer;
 
   &:hover {
@@ -96,15 +97,15 @@
 
 
 .button-clear {
-  @include fontH3($color: $dark50);
+  @extend .button_type_clean-gray;
   box-sizing: border-box;
-  left: 20px;
+  left: rem(20);
 }
 
 .button-apply {
-  @include fontH3($color: $purple); 
+  @extend .button_type_clean; 
   border: none;
-  right: 20px;
+  right: rem(20);
 
 
 }

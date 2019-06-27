@@ -1,4 +1,3 @@
-@import '../../template/template.scss';
 @import './__rent-price/booking-form__rent-price.scss';
 @import './__rooms-number/booking-form__rooms-number.scss';
 @import './booking-form-button/booking-form-button.scss';
@@ -14,11 +13,18 @@
 @import './booking-form-total/__line/booking-form-total__line.scss';
 @import './booking-form-total/__amount/booking-form-total__amount.scss';
 @import './booking-form-calendar/booking-form-calendar.scss';
-
+@import './booking-form-header/booking-form-header.scss';
 
 .booking-form {
     position: relative;
-    width: 380px;
-    height: 511px;
+    width: rem(380);
+    height: rem(511);
     @include cardBorder;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 360px) {
+        width: 100%;
+    }
+
 }

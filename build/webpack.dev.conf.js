@@ -1,6 +1,7 @@
 const webpack =  require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
+// const path = require('path')
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   // DEV config
@@ -8,6 +9,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.dist,
+    // contentBase: path.join(__dirname, '../dist'),
     port: 8081,
     overlay: {
       warnings: true,

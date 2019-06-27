@@ -1,6 +1,4 @@
 .range-slider__title {
-    // position: absolute;
     @include fontH3();
-    // top: 5px;
-    margin-bottom: 22px;
+    margin-bottom: rem(22);
 }

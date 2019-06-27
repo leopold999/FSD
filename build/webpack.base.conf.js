@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin')
 const webpack = require('webpack')
+// const CssUrlRelativePlugin = require('css-url-relative-plugin')
 
 const PATHS = { 
   src: path.join(__dirname, '../src'),
@@ -26,59 +27,47 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
-    publicPath: './'
+    publicPath: '/'
+    // publicPath: '/FSD'
   },
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       vendor: {
-  //         name: 'vendors',
-  //         test: /node_modules/,
-  //         chunks: 'all',
-  //         enforce: true
-  //       }
-  //     }
-  //   } 
-  // },
   module: {
-    rules: [{
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: '/node_modules/'
-    }, {
-      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]'
+    rules: [
+      {
+        test: /\.pug$/,
+        loaders: 'pug-loader',
+        options: { pretty: true }
+      }, {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: '/node_modules/'
+      }, {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
       }
-    }, {
-      test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file-loader',
-      options: {
+      }, {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
         name: 'fonts/[name].[ext]'
       }
-    }, {
-      test: /\.scss$/,
-      use: [
-        'style-loader',
-        MiniCssExtractPlugin.loader,
-        {
-          loader: 'css-loader',
-          options: { sourceMap: true }
-        }, {
-          loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
-        },
-        {
-          loader: 'resolve-url-loader',
-          options: {
-            sourceMap: true
+      }, {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true }
+          }, {
+            loader: 'postcss-loader',
+            options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
+          },
+          {
+            loader: 'sass-loader',
+            options: { sourceMap: true
           }
-        },
-        {
-          loader: 'sass-loader',
-          options: { sourceMap: true
-           }
         }
       ]
 
@@ -95,17 +84,14 @@ module.exports = {
           options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
         }
       ]
-    }, {
-      test: /\.pug$/,
-      loaders: 'pug-loader',
-      options: { pretty: true }
     }]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].css`,
+      filename: `[name].css`,
     }),
     // Copy HtmlWebpackPlugin and change index.html for another html page
+    
     new HtmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/index.pug`,
@@ -117,24 +103,19 @@ module.exports = {
     })),
 
     new HtmlWebpackPugPlugin(),
-    // new CopyWebpackPlugin([
-    //   { from: `${PATHS.src}/${PATHS.assets}img`}
-    // ]),
+    
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/fonts/font-files`, to: `${PATHS.assets}fonts` },
-      // { from: PATHS.src + '/img/rooms', to: `img/rooms` },
-      // { from: PATHS.src + '/img/backgrounds', to: `img/backgrounds` },
+
       { from: `${PATHS.src}/static`, to: '' },
     ]),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
-    })
-
+    }),
+ 
   ],
 }
 
-// { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-// { from: `${PATHS.src}/static`, to: '' }

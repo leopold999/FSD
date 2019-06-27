@@ -1,9 +1,8 @@
 .room-card__information {
     position: absolute;
-    width: 233px;
-    height: 67px;
-    bottom: 19px;
-    left: 20px;
+    @include size(rem(233), rem(67));
+    bottom: rem(19);
+    left: rem(20);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

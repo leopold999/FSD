@@ -1,6 +1,5 @@
 .donut-chart {
-    width: 121.5px;
-    height: 122px;
+    @include size(122px, 122px);
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #fff;
@@ -8,6 +7,18 @@
     position: absolute;
     top: 0;
     left: 0;
+    
+
+    @media screen and (max-width: 1024px) and (min-width: 800px) {
+        transform: scale(calc(22/24));
+        
+    }
+
+    
+    @media screen and (max-width: 800px) {
+        transform: scale(calc(21/24));
+        
+    }
 }
 .donut-chart-gradient-color-0-1 {
     stop-color: #FFE39C;

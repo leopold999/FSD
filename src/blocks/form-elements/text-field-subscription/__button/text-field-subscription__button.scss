@@ -1,6 +1,4 @@
-@import "../../../../vars/vars.scss";
-@import "../../../template/template.scss";
 
 .text-field-subscription__button {
-    @include checkboxDropdownInput($purple);
+    @include checkboxDropdownInput($colorIconCheckboxDropdown);
 }

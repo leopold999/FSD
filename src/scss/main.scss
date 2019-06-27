@@ -5,14 +5,38 @@
 @import "./pages/registration/registration.scss";
 @import "./pages/sign-in/sign-in.scss";
 
+html {
+    font-size: 24px;
+    
+     @media screen and (max-width: 1024px) and (min-width: 800px) {
+        font-size: 22px;
+        
+    }
+
+    
+    @media screen and (max-width: 800px) {
+        font-size: 21px;
+        
+    }
+    min-width: 320px;
+}
+   
+
+
+
 
 body {
     margin: 0;
     padding: 0;
 }
+
+
+
 .wrapper {
     display: flex;
     flex-direction: column;
+    // justify-content: center;
+
     margin: 0 auto;
     min-height: 100vh;
     
@@ -30,4 +54,3 @@ body {
     // width: 100%;
     // margin: auto;
 }
-

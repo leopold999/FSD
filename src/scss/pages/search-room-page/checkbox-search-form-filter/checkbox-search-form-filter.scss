@@ -1,0 +1,28 @@
+.checkbox-search-form-filter {
+    @include fontH3;
+    color: $dark50;
+    position: absolute;
+    right: rem(15);
+    top: rem(15);
+    width: rem(70);
+    cursor: pointer;
+    display: none;
+
+    &:before {
+        content: "expand_more";
+        @extend .material-icon;
+        font-size: rem(24);
+        line-height: rem(44);
+        width: rem(44);
+        height: rem(44);
+        @include justify-center;
+        position: absolute;
+        left: rem(-35);
+        top: rem(-15);
+        cursor: pointer;   
+    }
+    @media screen and (max-width: 800px) {
+        display: block;
+    
+    }
+}

@@ -1,14 +1,19 @@
-@import '../../../template/template.scss';
-
 .booking-form__rent-price {
-    position: absolute;
-    top: 50px;
-    right: 30px;
-    @include fontBody($font-size: 14px, $line-height: 18px, $color: $dark50);
+    // position: absolute;
+    // top: rem(50);
+    // right: rem(30);
+    @include fontBody;
+    font-size: rem(14);
+    line-height: rem(18);
+    color: $dark50;
     font-weight: bold;
+    padding-bottom: rem(12);
     &::after {
         content: " в сутки";
-        @include fontBody($font-size: 12px, $line-height: 18px, $color: $dark50);
+        @include fontBody;
+        font-size: rem(12);
+        line-height: rem(18);
+        color: $dark50;
     }
 
 }

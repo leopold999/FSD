@@ -1,20 +1,35 @@
 .menu__item_dropdown {
-    @include justify-center;
-    display: inline-flex;
-    
+    position: relative;
+    padding-right: rem(24);
+
     &:hover .menu-dropdown-list {
         display: block;
     }
     &:after {
+        position: absolute;
         content: "expand_more";
         font-family: 'Material Icons';
-        width: 24px;
+        width: rem(24);
         // height: 21px;
         cursor: pointer;
         color: $dark50;
-        font-size: 24px;
-        // line-height: 20px;
-        
-
+        font-size: rem(24);
+        line-height: rem(21);
+        bottom: 0;
+        right: 0;
     }
+
+
+    @media screen and (max-width: 800px) {
+
+        .menu__item_dropdown {
+
+            padding-right: 0;
+            
+        }
+    }
+    
+    
 }
+
+

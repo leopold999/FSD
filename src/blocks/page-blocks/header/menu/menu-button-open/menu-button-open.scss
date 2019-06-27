@@ -1,0 +1,46 @@
+.menu-button-open {
+    $size: rem(40);
+    position: absolute;
+    @include size($size);
+    right: rem(15);
+    top: rem(15);
+    background-image:  $colorGradientPurple;
+    box-sizing: border-box;
+    display: none;
+
+    
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: $size / 5;
+        width:  100%;
+        height: $size / 5;
+        background-color: $white;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: $size / 5;
+        width:  100%;
+        height: $size / 5;
+        background-color: $white;
+    }
+    @media screen and (max-width: 800px) {
+        display: block;
+    }
+    
+    
+}
+
+.menu-button-input {
+    // opacity: 0;
+    position: absolute;
+    right: 10000px;
+
+    &:checked ~ .menu {
+        visibility: visible;
+
+    }
+}
+

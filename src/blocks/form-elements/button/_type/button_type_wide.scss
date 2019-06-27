@@ -1,10 +1,8 @@
-@import "../../../template/template.scss";
-
 .button_type_wide {
     position: relative;
-    background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $backgroundButton;
     @include justify-center;
-    @include fontH3($color: #FFF);
+    @include fontButtonBackground;
     border: none;
     
 }

@@ -1,11 +1,7 @@
 @import './bullet-list__item/bullet-list__item.scss';
-@import './bullet-list__title/bullet-list__title.scss';
-@import "../../template/template.scss";
-@import "./bullet-list__ul/bullet-list__ul.scss";
+@import './bullet-list__ul/bullet-list__ul.scss';
 
 .bullet-list {
-    width: 292px;
+    width: rem(292);
     position: relative;
-    
-
 }

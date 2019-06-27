@@ -1,0 +1,9 @@
+.like-button .like-button__icon {
+    @include size(rem(20), rem(20));
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include justify-center();
+    font-size: rem(10);
+    line-height: rem(9);
+}

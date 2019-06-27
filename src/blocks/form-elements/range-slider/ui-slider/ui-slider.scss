@@ -3,21 +3,21 @@
     position: relative;
     text-align: left;
     box-sizing: border-box;
-    width: 266px;
-    height: 6px;
-    border-radius: 3px;
+    width: rem(266);
+    height: rem(6);
+    border-radius: rem(3);
     border: $borderInputDefault;
 }
 
 .ui-slider-handle {
     position: absolute;
     // box-sizing: border-box;
-    top: -6px;
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    top: rem(-6);
+    width: rem(12);
+    height: rem(12);
+    background: $colorGradientGreen;
     border-radius: 50%;
-    border: 2px solid #FFFFFF;
+    border: rem(2) solid #FFFFFF;
 	z-index: 2;
 	cursor: default;
 	-ms-touch-action: none;
@@ -29,11 +29,11 @@
 .ui-slider-range {
     position: absolute;
     z-index: 1;
-    top: -1px;
+    top: rem(-1);
 	// font-size: .7em;
 	display: block;
 	border: 0;
     background-position: 0 0;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    height: 6px;
+    background: $colorGradientGreen;
+    height: rem(6);
 }

@@ -1,11 +1,9 @@
 .search-rooms-text {
     position: absolute;
     right: 0;
-    bottom: 18px;
-    width: 297px;
-    height: 48px;
+    bottom: rem(18);
+    width: rem(297);
+    height: rem(48);
     @include fontBody;
     text-align: right;
-
-
 }

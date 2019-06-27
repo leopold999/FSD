@@ -1,5 +1,10 @@
 .footer-content-column {
     list-style: none;
-    max-width: 160px;
-    min-width: 115px;
+    max-width: rem(160);
+    min-width: rem(80);
+
+    @media screen and (max-width: 1024px) {
+
+        
+    }
 }

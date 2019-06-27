@@ -7,9 +7,9 @@ mixin dropdown-filter-date(options)
     div(class="dropdown-filter-date")
         span(class="dropdown-filter-date__title")= title 
         br
-        input(class="dropdown-filter-date__input", type="text", value=value placeholder=placeholder pattern=pattern readonly)
-        div(class="dropdown-filter-date__list-checkbox")
-            span
+        .input-wrapper
+            input(class="dropdown-filter-date__input", type="text", value=value placeholder=placeholder pattern=pattern readonly)
+            div(class="dropdown-filter-date__list-checkbox")
                 i.material-icon expand_more
         .dropdown-filter-date__calendar
                 

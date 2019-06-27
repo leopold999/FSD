@@ -2,8 +2,9 @@
 
 .button__icon {
     position: absolute;
-    font-size: 24px;
+    font-size: $fontSizeIconButton;
+    line-height: $lineHeightIconButton;
     @include justify-center;
-    width: 44px;
+    width: rem(44);
     right: 0;
 }

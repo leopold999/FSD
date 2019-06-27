@@ -1,6 +1,4 @@
-@import "../../../template/template.scss";
-
 .review-text {
-    padding-left: 58px;
+    padding-left: rem(58);
     @include fontBody;
 }

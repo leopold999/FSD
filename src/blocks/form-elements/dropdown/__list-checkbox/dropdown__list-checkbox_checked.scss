@@ -1,5 +1,4 @@
-@import "../../../template/template.scss";
 
 .dropdown__list-checkbox_checked {
-    @include checkboxDropdownInput($dark75);
+    @include checkboxDropdownInput($colorIconInputDropdownChecked);
 }

@@ -1,7 +1,8 @@
-@import "../../../../fonts/fonts";
-
 .dropdown-date__title {
+    @include fontH3;
+    height: rem(20);
     
-    @include fontH3();
+    margin-bottom: rem(0);
+    
 }
 

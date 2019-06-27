@@ -1,6 +1,14 @@
 .footer__logo-container {
     // width: 260px;
     
-    margin-right: 40px;
-    margin-top: -6px;
+    margin-right: rem(40);
+    margin-top: rem(-6);
+
+    @media screen and (max-width: 1024px) {
+        margin-right: rem(15);
+    }
+
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 }

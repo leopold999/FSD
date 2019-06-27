@@ -1,11 +1,9 @@
 
-@import "../../../template/template.scss";
-
 .search-rooms__title {
     box-sizing: border-box;
-    width: 320px;
-    height: 60px;
-    margin-bottom: 16px;
+    width: rem(320);
+    height: rem(60);
+    margin-bottom: rem(20);
     
     @include fontH1;
 }

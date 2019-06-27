@@ -12,11 +12,12 @@ mixin dropdown(options)
     div(class="dropdown" + " " + classModifier + " "  + classTypeDropdown)
         span(class="dropdown__title")= title 
         br
-        input(class="dropdown__input ", type="text", value=value placeholder=placeholder readonly)
-        label(class="dropdown__list-checkbox")
-            input(class="dropdown__checkbox-input", type="checkbox", , name=name, value=value)
-            span
-                i.material-icon expand_more
+        .input-wrapper
+            input(class="dropdown__input ", type="text", value=value placeholder=placeholder readonly)
+            label(class="dropdown__list-checkbox")
+                input(class="dropdown__checkbox-input", type="checkbox", , name=name, value=value)
+                span
+                    i.material-icon expand_more
         
         //- +dropdown-list({
         //-     itemContents: itemContents,

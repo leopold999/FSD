@@ -3,10 +3,7 @@
 @import "./__title/dropdown-date__title.scss";
 
 .dropdown-date {
-    position: relative;
-    width: 150px;
     
-    
-    
-    
+    width: rem(150);
+    box-sizing: border-box;
 }

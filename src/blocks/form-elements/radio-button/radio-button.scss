@@ -1,5 +1,10 @@
-@import "../../template/template.scss";
+
+@import "./__input/radio-button__input.scss";
+@import "./__text/radio-button__text.scss";
+
 
 .radio-button {
-    @include radio-button(222px)
+    // @include radio-button(222px)
+    display: inline-block;
+    margin-right: rem(20);
 }

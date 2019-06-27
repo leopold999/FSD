@@ -1,7 +1,7 @@
 .sign-in-page-content-wrapper {
  
-    background: url('/FSD/assets/img/backgrounds/background_2.png') center;
+    background: url($path + '/assets/img/backgrounds/background_2.png') center;
     background-size: cover;
-    height: calc(100vh - 70px);
+    height: calc(100vh - rem(70));
     min-height: 400px;
 }

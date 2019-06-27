@@ -1,0 +1,15 @@
+.like-button__text {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0 0 0 rem(10);
+    @include justify-center();
+    @include fontLikeButton;
+    color: $dark25;
+    cursor: pointer;
+    background-color: #FFF;
+    border-radius: rem(10);
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    @include size(rem(40), rem(20));
+    
+}

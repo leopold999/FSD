@@ -1,20 +1,15 @@
 @import "../vars/vars";
-// @import "../fonts/font-files/font-awesome/scss/fontawesome.scss";
-// @import "../fonts/font-files/font-awesome/scss/brands.scss";
-// @import "../fonts/font-files/font-awesome/scss/solid.scss";
-
-
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('/FSD/assets/fonts/Quicksand-Regular.ttf') format('truetype');
+    src: url($path + '/assets/fonts/Quicksand-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('/FSD/assets/fonts/Quicksand-Bold.ttf') format('truetype');
+    src: url($path + '/assets/fonts/Quicksand-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -22,14 +17,14 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/FSD/assets/fonts/Montserrat-Bold2.ttf') format('truetype');
+    src: url($path + '/assets/fonts/Montserrat-Bold2.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/FSD/assets/fonts/Montserrat-Regular2.ttf') format('truetype');
+    src: url($path + '/assets/fonts/Montserrat-Regular2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,7 +33,7 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url('/FSD/assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
+    src: url($path + '/assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
 
     ///////////////////////////////////////////////////////////////////////
     display: inline-block;
@@ -61,86 +56,82 @@
     font-feature-settings: 'liga';
 }
 
+.material-icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+  //   font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
 @font-face {
     font-family: 'Font Awesome 5 Brands';
     font-style: normal;
     font-weight: normal;
     font-display: auto;
-    src: url('/FSD/assets/fonts/fa-brands-400.ttf') format('truetype'),
-    url('/FSD/assets/fonts/fa-brands-400.svg') format('svg');
+    src: url($path + '/assets/fonts/fa-brands-400.ttf') format('truetype'),
+    url($path + '/assets/fonts/fa-brands-400.svg') format('svg');
 }
 
 .fab {
     font-family: 'Font Awesome 5 Brands';
 }
 
+/*Mixins*/
 
-.material-icon {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-//   font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
-
-
-@mixin fontH1($font-size: 24px, $line-height: 30px) {
+@mixin fontH1() {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-style: normal;
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $dark100;
+    font-size: $fontSizeH1;
+    line-height: $lineHeightH1;
+    color: $colorFontH1;
     font-stretch: extra-expanded;
-    
-    // transform: scaleX(0.95)
-    // text-transform: lowercase
     letter-spacing: 1.1px;
 }
 @mixin fontH2($font-size: 19px, $line-height: 24px, $color: $dark100) {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontMontserrat;
     font-weight: bold;
     font-style: normal;
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $color;
+    font-size: $fontSizeH2;
+    line-height: $lineHeightH2;
+    color: $colorFontH2;
 }
 @mixin fontH3($font-size: 12px, $line-height: 15px, $color: $dark100) {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontMontserrat;
     font-weight: bold;
     font-style: normal;
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $color;
+    font-size: $fontSizeH3;
+    line-height: $lineheightH3;
+    color: $colorFontH3;
     text-transform: uppercase;
 }
 @mixin fontBody($font-size: 14px, $line-height: 24px, $color: $dark75) {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontMontserrat;
     font-weight: lighter;
     font-style: normal;
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $color;
+    font-size: $fontSizeBody;
+    line-height: $lineHeightBody;
+    color: $colorFontBody;
     font-stretch: ultra-expanded;
 }
-
  
 @mixin font-gradient($colorGradient: $colorGradientPurple) {
     // font-size: $font-size;
@@ -150,4 +141,112 @@
     color: transparent;
     // font-family: 'Material Icons';
 
+}
+@mixin fontButtonBackground {
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    font-style: normal;
+    font-size: $fontSizeButton;
+    line-height: $lineHeightTextButton;
+    color: $colorFontButtonBackground;
+    text-transform: uppercase;
+}
+@mixin fontButtonBorder {
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    font-style: normal;
+    font-size: $fontSizeButton;
+    line-height: $lineHeightTextButton;
+    color: $colorFontButtonBorder;
+    text-transform: uppercase;
+}
+@mixin buttonCleanGray {
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    font-style: normal;
+    font-size: $fontSizeButton;
+    line-height: $lineHeightTextButton;
+    color: $dark50;
+    text-transform: uppercase;
+}
+@mixin buttonClean {
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    font-style: normal;
+    font-size: $fontSizeButton;
+    line-height: $lineHeightTextButton;
+    color: $purple;
+    text-transform: uppercase;
+}
+@mixin fontCheckboxText {
+    font-family: $fontMontserrat;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: $fontSizeCheckboxText;
+    line-height: $lineHeightCheckboxText;
+    color: $colorFontCheckboxText;
+    font-stretch: ultra-expanded;
+}
+
+@mixin fontDatepickerCell {
+    font-family: $fontMontserrat;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: $fontSizeDatepickerCell;
+    line-height: $lineHeightDatepickerCell;
+    color: $colorFontDatepickerCell;
+    font-stretch: ultra-expanded;
+}
+@mixin fontDatepickerCellDisabled {
+    font-family: $fontMontserrat;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: $fontSizeDatepickerCell;
+    line-height: $lineHeightDatepickerCell;
+    color: $colorFontDatepickerCellDisabled;
+    font-stretch: ultra-expanded;
+}
+@mixin fontCounterButton {
+    font-family: $fontMontserrat;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: $fontSizeCounterButton;
+    line-height: $lineHeightCounterButton;
+    color: $colorFontCounterButton;
+    font-stretch: ultra-expanded;
+}
+@mixin fontLikeButton {
+    font-family: $fontMontserrat;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: $fontSizeLikeButton;
+    line-height: $lineHeightLikeButton;
+    font-stretch: ultra-expanded;
+}
+@mixin fontPagination {
+    font-family: $fontMontserrat;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: $fontSizePagination;
+    line-height: $lineHeightPagination;
+    color: $colorFontPagination;
+    font-stretch: ultra-expanded;
+}
+@mixin fontRadioButton {
+    font-family: $fontMontserrat;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: $fontSizeRadioButtonText;
+    line-height: $lineHeightRadioButtonText;
+    color: $colorFontRadioButtonText;
+    font-stretch: ultra-expanded;
+}
+@mixin fontRangeSlider {
+    font-family: $fontMontserrat;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: $fontSizeRangeSliderText;
+    line-height: $lineHeightRangeSliderText;
+    color: $colorFontRangeSliderText;
+    font-stretch: ultra-expanded;
 }

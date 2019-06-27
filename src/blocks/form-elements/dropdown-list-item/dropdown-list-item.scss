@@ -1,25 +1,21 @@
-@import "../../template/template.scss";
-
-
 .dropdown-list-item {
     width: 100%;
-    margin-top: 7px;
+    margin-top: rem(7);
     @include justify-space-between;
 }
 .dropdown-list-item__title {
     @include fontH3;
 }
 .counter {
-    width: 92px;
+    width: rem(92);
     @include justify-space-between;
 }
 .counter__button {
     border: $borderInputDefault;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    @include size(rem(30), rem(30));
     cursor: pointer;
-    @include fontBody($font-size: 18px, $line-height: 22px, $color: $dark50);
+    @include fontCounterButton;
     @include justify-center;
 }
 

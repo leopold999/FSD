@@ -1,14 +1,21 @@
 .search-room-page-content {
 
-    min-width: 800px;
-    max-width: 1200px;
+    min-width: rem(320);
+    max-width: $maxWidth;
     width: 100%;
     margin: auto;
     
     display: grid;
     grid-template-columns: max-content auto;
-    grid-column-gap: 60px;
-    padding: 30px 0 70px 0;
-    min-height: 1000px;
+    grid-column-gap: rem(60);
+    padding: rem(30) 0 rem(70);
+    min-height: calc(100vh - rem(70));
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+    
+
+
 }
 

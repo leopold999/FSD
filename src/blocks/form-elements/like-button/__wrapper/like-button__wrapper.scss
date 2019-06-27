@@ -1,0 +1,12 @@
+.like-button__wrapper {
+    position: relative;
+    box-sizing: border-box;
+    height: rem(20);
+    width: rem(40);
+    border-radius: rem(10);
+    background: $dark25;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    
+}

@@ -1,20 +1,55 @@
 
 .room-details-information {
-    min-width: 800px;
-    max-width: 1200px;
+    min-width: $minWidth;
+    max-width: $maxWidth;
     width: 100%;
     margin: auto;
-    padding: 70px 0;
+    padding: rem(70) 0;
 
     display: grid;
     grid-template-areas: 
     "intelligence impressions booking-form"
     "reviews      reviews     booking-form"
     "rules        cancel      booking-form";
-    grid-column: 1fr 320px 380px;
+    grid-column: 1fr rem(320) rem(380);
     grid-row: 1fr 1fr 1fr;
-    grid-row-gap: 35px;
-    grid-column-gap: 70px;
+    grid-row-gap: rem(35);
+    grid-column-gap: rem(70);
+
+  
+    @media screen and (max-width: 1150px) and (min-width: 700px) {
+        
+        grid-template-areas: 
+        "intelligence booking-form"
+        "impressions  booking-form"
+        "reviews      booking-form"
+        "rules        booking-form"
+        "cancel       booking-form";
+        grid-column: rem(320) 1fr;
+        grid-column-gap: rem(30);
+    }
+
+    @media screen and (max-width: 800px) and (min-width: 700px) {
+        padding: rem(30) 0;
+        grid-row-gap: rem(25);
+        grid-column-gap: rem(10);
+    }
+
+    @media screen and (max-width: 700px) {
+        // display: flex;
+        // flex-direction: column;
+        grid-template-areas: 
+        "booking-form"
+        "intelligence"
+        "impressions"
+        "reviews"
+        "rules"
+        "cancel";
+        grid-column: 100%;
+        padding: rem(15) 0;
+        // padding: rem(15);
+    }
+    
 
 
 }

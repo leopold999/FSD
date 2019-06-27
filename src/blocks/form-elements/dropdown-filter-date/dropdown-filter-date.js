@@ -1,15 +1,8 @@
-// $(".dropdown-filter-date__input").mask("99 ааа - 99 ааа");
-
-
 let elemsFilterDate = document.querySelectorAll('.dropdown-filter-date');////
      
-// let elemsDropdownDate;
-// let elemCalendar;
+
 if (elemsFilterDate.length > 0) {
-    
-    // elemsDropdownDate = document.querySelectorAll('.dropdown-filter-date') ;
-    // elemCalendar = elemsFilterDate.querySelector('.dropdown-filter-date__calendar') ;////
-    // console.log(elemsFilterDate)
+
     for (let elem of elemsFilterDate) {
         let checkbox = elem.querySelector('.dropdown-filter-date__list-checkbox');
         let elemCalendar = elem.querySelector('.dropdown-filter-date__calendar');
@@ -42,8 +35,7 @@ if (elemsFilterDate.length > 0) {
                     inputDate.value = dateArr[0].toLowerCase();
                ;
                 } else if (date.length === 2) {
-                    inputDate.value = dateArr[0].toLowerCase() + " - " + dateArr[1].toLowerCase();
-                    
+                    inputDate.value = dateArr[0].toLowerCase() + " - " + dateArr[1].toLowerCase();  
                 } 
             },
             dateFormat: "dd M",
@@ -52,17 +44,7 @@ if (elemsFilterDate.length > 0) {
         })
     
         $(elemCalendar).datepicker().data('datepicker').hide();
-
-
-
-
-
     }
-
-    
-
-
-
 } 
 
 

@@ -2,11 +2,13 @@
 .rich-checkbox-button__text {
     position: absolute;
     box-sizing: border-box;
-    @include fontBody($font-size: 12px, $line-height: 14px, $color: $dark75);
-    top: 25px;
-    left: 30px;
-    width: 236px;
-    padding-right: 10px;
+    @include fontBody;
+    font-size: rem(12);
+    line-height: rem(14);
+    top: rem(25);
+    left: rem(30);
+    width: rem(236);
+    padding-right: rem(10);
     
     
     

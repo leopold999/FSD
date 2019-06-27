@@ -1,11 +1,9 @@
 .sign-in-page-content {
-    min-width: 800px;
-    max-width: 1200px;
+    min-width: $minWidth;
+    max-width: $maxWidth;
     width: 100%;
     margin: auto;
-
     display: flex;
     justify-content: center;
-    // padding-top: 30px;
     align-items: center;
 }

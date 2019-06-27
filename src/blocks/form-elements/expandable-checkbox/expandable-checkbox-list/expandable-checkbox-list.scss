@@ -1,12 +1,12 @@
 .expandable-checkbox-list {
     position: absolute;
-    top: 33px;
-    width: 266px;
+    top: rem(33);
+    width: rem(266);
     box-sizing: border-box;
     z-index: 10;
     background-color: #fff;
     display: grid;
-    grid-row-gap: 12px;
+    grid-row-gap: rem(12);
 
     
 

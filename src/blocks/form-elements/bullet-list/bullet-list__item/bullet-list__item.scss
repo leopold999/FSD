@@ -1,22 +1,19 @@
-@import '../../../template/template';
-
 .bullet-list__item {
     display: block;
     position: relative;
     @include fontBody;
     list-style: none;
-    margin-top: 11px;
-    padding-left: 21px;
-    padding-right: 29px;
+    margin-top: rem(11);
+    padding-left: rem(21);
+    padding-right: rem(29);
     
     &::before {
         content: '';
         position: absolute;
-        width: 10px;
-        height: 10px;
+        @include size(rem(10), rem(10));
         background-color: $dark25;
         border-radius: 50%;
-        top: 7px;
+        top: rem(7);
         left: 0;
     }
 }

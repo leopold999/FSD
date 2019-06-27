@@ -1,5 +1,5 @@
 @import "datepicker-config";
-@import "../../../template/template.scss";
+
 
 /* -------------------------------------------------
     Datepicker
@@ -23,8 +23,8 @@
   box-sizing: border-box;
   padding: 20px;
   // color: map_get($datepickerTextColor, common);
-  width: 320px;
-  height: 369px;
+  width: rem(320);
+  min-height: rem(369);
   // left: -100000px;
   // display: none;
   opacity: 0;
@@ -56,7 +56,7 @@
   display: inline-flex;
   .datepicker {
     // border-color: map-get($datepickerBorderColor, inline);
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    box-shadow: $datepickerShadow;
     position: relative;
     left: auto;
     right: auto;
@@ -73,7 +73,7 @@
 .datepicker--content {
   box-sizing: border-box;
   padding: 0;
-  width: 280px;
+  width: rem(280);
   height: auto;
   margin: auto;
 
@@ -86,62 +86,62 @@
 // -------------------------------------------------
 $pointerHalfSize: $datepickerPointerSize / 2 - 1;
 
-.datepicker--pointer {
-  position: absolute;
-  background: #fff;
-  border-top: 1px solid map-get($datepickerBorderColor, default);
-  border-right: 1px solid map-get($datepickerBorderColor, default);
-  width: $datepickerPointerSize;
-  height: $datepickerPointerSize;
-  z-index: -1;
+// .datepicker--pointer {
+//   position: absolute;
+//   background: #fff;
+//   border-top: 1px solid map-get($datepickerBorderColor, default);
+//   border-right: 1px solid map-get($datepickerBorderColor, default);
+//   width: $datepickerPointerSize;
+//   height: $datepickerPointerSize;
+//   z-index: -1;
 
-  //  Main axis
-  // -------------------------
+//   //  Main axis
+//   // -------------------------
 
-  .-top-left- &, .-top-center- &, .-top-right- & {
-    top: calc(100% - #{$pointerHalfSize});
-    transform: rotate(135deg);
-  }
+//   .-top-left- &, .-top-center- &, .-top-right- & {
+//     top: calc(100% - #{$pointerHalfSize});
+//     transform: rotate(135deg);
+//   }
 
-  .-right-top- &, .-right-center- &, .-right-bottom- & {
-    right: calc(100% - #{$pointerHalfSize});
-    transform: rotate(225deg);
-  }
+//   .-right-top- &, .-right-center- &, .-right-bottom- & {
+//     right: calc(100% - #{$pointerHalfSize});
+//     transform: rotate(225deg);
+//   }
 
-  .-bottom-left- &, .-bottom-center- &, .-bottom-right- & {
-    bottom: calc(100% - #{$pointerHalfSize});
-    transform: rotate(315deg);
-  }
+//   .-bottom-left- &, .-bottom-center- &, .-bottom-right- & {
+//     bottom: calc(100% - #{$pointerHalfSize});
+//     transform: rotate(315deg);
+//   }
 
-  .-left-top- &, .-left-center- &, .-left-bottom- & {
-    left: calc(100% - #{$pointerHalfSize});
-    transform: rotate(45deg);
-  }
+//   .-left-top- &, .-left-center- &, .-left-bottom- & {
+//     left: calc(100% - #{$pointerHalfSize});
+//     transform: rotate(45deg);
+//   }
 
-  //  Secondary axis
-  // -------------------------
+//   //  Secondary axis
+//   // -------------------------
 
-  .-top-left- &, .-bottom-left- & {
-    left: $datepickerPointerOffset;
-  }
-  .-top-right- &, .-bottom-right- & {
-    right: $datepickerPointerOffset;
-  }
-  .-top-center- &, .-bottom-center- & {
-    left: calc(50% - #{$datepickerPointerSize} / 2);
-  }
+//   .-top-left- &, .-bottom-left- & {
+//     left: $datepickerPointerOffset;
+//   }
+//   .-top-right- &, .-bottom-right- & {
+//     right: $datepickerPointerOffset;
+//   }
+//   .-top-center- &, .-bottom-center- & {
+//     left: calc(50% - #{$datepickerPointerSize} / 2);
+//   }
 
-  .-left-top- &, .-right-top- & {
-    top: $datepickerPointerOffset;
-  }
-  .-left-bottom- &, .-right-bottom- & {
-    bottom: $datepickerPointerOffset;
-  }
-  .-left-center- &, .-right-center- & {
-    top: calc(50% - #{$datepickerPointerSize} / 2);
-  }
+//   .-left-top- &, .-right-top- & {
+//     top: $datepickerPointerOffset;
+//   }
+//   .-left-bottom- &, .-right-bottom- & {
+//     bottom: $datepickerPointerOffset;
+//   }
+//   .-left-center- &, .-right-center- & {
+//     top: calc(50% - #{$datepickerPointerSize} / 2);
+//   }
 
-}
+// }
 
 //  Body
 // -------------------------------------------------

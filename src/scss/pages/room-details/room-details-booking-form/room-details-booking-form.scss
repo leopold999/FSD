@@ -1,3 +1,8 @@
 .room-details-booking-form {
     grid-area: booking-form;
+
+    @media screen and (max-width: 700px) {
+        margin: auto;
+    
+    }
 }

@@ -1,0 +1,18 @@
+.menu-buttons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: rem(303);
+   
+    grid-column-gap: rem(20);
+    @media screen and (max-width: 1024px) {
+
+        @include justify-space-between;
+        // flex-wrap: wrap;
+        flex-direction: column;
+        width: rem(200);
+        height: rem(80);
+
+    }
+
+}
+

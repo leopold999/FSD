@@ -1,10 +1,14 @@
 .room-card__number-reviews {
-    @include fontBody($font-size: 14px, $line-height: 25px, $color: $dark50);
+    @include fontBody;
+    line-height: rem(25);
+    color: $dark50;
     font-weight: bold;
     &::after {
         content: "Отзывов";
-        @include fontBody($font-size: 14px, $line-height: 18px, $color: $dark50);
-        margin-left: 5px;
-        margin-right: 2px;
+        @include fontBody;
+        line-height: rem(18);
+        color: $dark50;
+        margin-left: rem(5);
+        margin-right: rem(2);
     }
 }

@@ -14,8 +14,8 @@
 
 .room-card {
     position: relative;
-    width: 270px;
-    height: 257px;
+    width: rem(270);
+    height: rem(257);
     @include cardBorder;
     padding: 0;
     border: 0;

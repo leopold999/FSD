@@ -13,8 +13,8 @@
 
 .registration-form {
     position: relative;
-    width: 380px;
-    height: 646px;
+    width: rem(380);
+    height: rem(646);
     @include cardBorder;
 
 }

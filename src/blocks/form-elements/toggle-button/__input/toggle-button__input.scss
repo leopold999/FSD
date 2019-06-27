@@ -1,0 +1,14 @@
+.toggle-button__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    // margin: 10px 0 0 10px;
+  
+    &:checked + .toggle-button__text:after {
+        left: rem(25);
+        background: $backgroundToggleButtonChecked;
+    }
+    &:checked + .toggle-button__text:before{
+        border: $borderTogglebuttonChecked;
+    }
+}

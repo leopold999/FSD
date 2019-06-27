@@ -1,9 +1,5 @@
 .room-card-slider__button {
-    width: 42px;
-    height: 151px;
+    @include size(rem(42), rem(151));
     @include justify-center;
     cursor: pointer;
-
-   
-
 }

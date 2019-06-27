@@ -19,28 +19,28 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: rem(40);
+  height: rem(40);
   z-index: 1;
-  @include fontBody(12px, 15px);
+  @include fontDatepickerCell;
 
   &.-focus- {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: #fff;
+    background: $backgroundDatepickerCellFocus;
+    color: $colorFontDatepickerFocus;
   }
 
   &.-current- {
-    color: #fff;
+    color: $colorFontDatepickerFocus;
     font-weight: bold;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $backgroundDatepickerCellCurrent;
    
 
     &.-focus- {
-      color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      color: $backgroundDatepickerCellFocus;
     }
 
     &.-in-range- {
-      color:#fff;
+      color:$colorFontDatepickerFocus;
       border-radius: 50%;
     }
   }
@@ -54,25 +54,24 @@
     &::before {
       content: '';
       position: absolute;
-      width: 40px;
-      height: 40px;
+      @include size(rem(40), rem(40));
       top: 0;
       left: 0;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $backgroundDatepickerCellFocus;
       opacity: 0.25;
       
     }
 
     &.-focus- {
-      background-color: green;
+      // background-color: green;
       border-radius: 50%;
-      color: #fff;
+      color: $colorFontDatepickerFocus;
     }
   }
 
   &.-disabled- {
     cursor: default;
-     @include fontBody(12px, 15px, $dark50);
+     @include  fontDatepickerCellDisabled ;
 
     &.-focus- {
       // color: map_get($datepickerTextColor, disabled);
@@ -91,57 +90,52 @@
 
   &.-range-from- {
     // border: 1px solid rgba(map_get($datepickerBG, selected), .5);
-    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-color: $backgroundDatepickerCellFocus;
     border-radius: 50%;
     position: relative;
     &::before {
       content: '';
       position: absolute;
-      width: 20px;
-      height: 40px;
+      @include size(rem(20), rem(40));
       top: 0;
       right: 0;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $backgroundDatepickerCellFocus;
       opacity: 0.25;
     }
  
   }
   &.-range-to- {
     // border: 1px solid rgba(map_get($datepickerBG, selected), .5);
-    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-color: $backgroundDatepickerCellFocus;
     border-radius:  50%;
 
     &::before {
       content: '';
       position: absolute;
-      width: 20px;
-      height: 40px;
+      @include size(rem(20), rem(40));
       top: 0;
       left: 0;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $backgroundDatepickerCellFocus;
       opacity: 0.25;
     }
     &.-focus- {
-      color: #fff;
+      color: $colorFontDatepickerFocus;
     }
     
   }
-
- 
-
   &.-selected- {
-    color: #fff;
+    color: $colorFontDatepickerFocus;
     font-weight: bold;
     border: none;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $backgroundDatepickerCellFocus;
 
     &.-current- {
-      color: #fff;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      color: $colorFontDatepickerFocus;
+      background: $backgroundDatepickerCellFocus;
     }
 
     &.-focus- {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $backgroundDatepickerCellFocus;
     }
   }
 
@@ -156,18 +150,17 @@
 .datepicker--days-names {
   display: flex;
   flex-wrap: wrap;
-  margin: 8px 0 3px;
+  margin: rem(8) 0 rem(3);
   justify-content: center;
-  @include fontBody(12px, 15px);
+  @include fontDatepickerCell;
 
 
 }
 
 .datepicker--day-name {
-  font-size: 12px;
+  // font-size: rem(12);
   color: $purple;
-  width: 40px;
-  height: 40px;
+  @include size(rem(40), rem(40));
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -182,12 +175,12 @@
 // -------------------------------------------------
 
 .datepicker--cell-day {
-  width: 40px;
+  width: rem(40);
   color: $dark50;
   &.-other-month- {
     color: $dark25;
     &.-focus- {
-      color: #fff;
+      color: $colorFontDatepickerFocus;
     }
 
   }
@@ -205,35 +198,33 @@
 .datepicker--months {}
 
 .datepicker--cells-months {
-  height: 200px;
+  height: rem(200);
 }
 
 //  Month cell
 // -------------------------
 
 .datepicker--cell-month {
-  width: 60px;
-  height: 60px;
+  @include size(rem(60), rem(60));
 }
 
 //  Years
 // -------------------------------------------------
 
 .datepicker--years {
-  height: 40px;
+  height: rem(40);
 }
 
 .datepicker--cells-years {
-  height: 40px;
+  height: rem(40);
 }
 //  Year cell
 // -------------------------
 
 .datepicker--cell-year {
-  width: 60px;
-  height: 60px;
+  @include size (rem(60), rem(60));
 
   &.-other-decade- {
-    @extend %otherMonth;
+    // @extend %otherMonth;
   }
 }

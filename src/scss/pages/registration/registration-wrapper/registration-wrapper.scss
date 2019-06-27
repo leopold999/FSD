@@ -1,6 +1,9 @@
 .registration-wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: rem(30);
+    @media screen and (max-width: 400px) {
+        padding-top: rem(10);
+    }
 
 }

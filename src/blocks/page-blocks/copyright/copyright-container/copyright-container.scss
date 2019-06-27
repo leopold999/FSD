@@ -1,8 +1,12 @@
 .copyright-container {
-    height: 70px;
+    height: rem(70);
     @include justify-space-between;
     // flex-wrap: wrap;
-    min-width: 800px;
-    max-width: 1200px;
+    min-width: $minWidth;
+    max-width: $maxWidth;
     margin: auto;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 rem(15);
+    }
 }

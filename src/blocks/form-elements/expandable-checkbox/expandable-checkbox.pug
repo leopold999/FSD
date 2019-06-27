@@ -1,5 +1,3 @@
-include ../../template/template.pug
-
 mixin expandable-checkbox(options)
     - let title = options.title
     - let list = options.list
@@ -8,7 +6,7 @@ mixin expandable-checkbox(options)
         div(class="expandable-checkbox__title")= title
         label(class="expandable-checkbox__label")
             input(class="expandable-checkbox__button" type="checkbox")
-            i(class="aaa material-icon") expand_more
+            i(class="expandable-checkbox__icon material-icon") expand_more
         div(class="expandable-checkbox-list expandable-checkbox-list_hide")
             - for (var key in list)
                 +checkbox-button({text: list[key], name: key})

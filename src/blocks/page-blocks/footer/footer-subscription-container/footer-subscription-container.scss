@@ -1,4 +1,7 @@
 .footer-subscription-container {
-    margin-left: 40px;
-    width: 260px;
+    margin-left: rem(40);
+    width: rem(260);
+    @media screen and (max-width: 1024px) {
+        margin-left: rem(15);
+    }
 }

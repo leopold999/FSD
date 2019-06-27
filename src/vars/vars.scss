@@ -1,6 +1,8 @@
-/*Colors*/
-$dark100: #1F2041;
-$dark75: rgba(31, 32, 65, 0.75);
+/*COLORS*/
+
+/*Color names*/
+$dark100:#1F2041;
+$dark75:rgba(31, 32, 65, 0.75);
 $dark50: rgba(31, 32, 65, 0.5);
 $dark25: rgba(31, 32, 65, 0.25);
 $dark10: rgba(31, 32, 65, 0.1);
@@ -12,21 +14,179 @@ $azureBlue: #66D2EA;
 $blue: #8BA4F9;
 
 $colorGradientPurple: linear-gradient(180deg, $purple 0%, $blue 100%);
-$cardBackgroundColor: #FFFFFF;
+$colorGradientGreen: linear-gradient(180deg, $green 0%, $azureBlue 100%);
+
+/*font colors*/
+$colorFontH1: $dark100;
+$colorFontH2: $dark100;
+$colorFontH3: $dark75;
+$colorFontBody: $dark75;
+
+$colorIconInputDropdown: $dark50;
+$colorIconInputDropdownChecked: $dark75;
+$colorIconInputSubscription: $colorGradientPurple;
+$colorIconRate: $colorGradientPurple;
+$colorIconCheckbox: $dark50;
+$colorIconCheckboxDropdown: $purple;
+$colorFontTextMenu: $dark50;
+$colorFontTextCopyrightBar: $dark75;
+$colorFontButtonBackground: $white;
+$colorFontButtonBorder: $purple;
+$colorFontTextInput: $dark75;
+$colorFontCheckboxText: $dark50;
+$colorFontFacilityText: $dark50;
+$colorFontFacilityTitle: $dark75;
+$colorFontRoomCardTitle: $dark100;
+$colorFontDatepickerCell: $dark75;
+$colorFontDatepickerCellDisabled: $dark50;
+$colorFontDatepickerFocus: $white;
+$colorFontCounterButton: $dark50;
+$colorFontFacilityIcon: $colorGradientPurple;
+$colorFontLikeButton: $purple;
+$colorFontPagination: $dark50;
+$colorFontRadioButtonText: $dark75;
+$colorFontRadioButtonTextNotActive: $dark50;
+$colorFontRangeSliderText: $dark50;
+$colorFontRangeSliderResult: $dark50;
+
+
+/*Elements color*/
+$colorLikeButton: $colorGradientPurple;
+
+
+/*FONTS*/
+
+/*font names*/
+$fontMontserrat: 'Montserrat', sans-serif;
+
+/*font-size*/
+$mainFontSize: 24px;
+
+$fontSizeH1: rem(24);
+$fontSizeH2: rem(19);
+$fontSizeH3: rem(12);
+$fontSizeBody: rem(14);
+
+$fontSizeIconInput: rem(24);
+$fontSizeIconRate: rem(24);
+$fontSizeIconButton: rem(24);
+$fontSizeCheckboxButton: rem(24);
+$fontSizeTextMenu: rem(14);
+$fontSizeTextCopyrightBar: rem(14);
+$fontSizeButton: rem(12);
+$fontSizeTextInput: rem(14);
+$fontSizeCheckboxText: rem(14);
+$fontSizeFacilityText: rem(12);
+$fontSizeFacilityTitle: rem(14);
+$fontSizeRoomCardTitle: rem(14);
+$fontSizeDatepickerCell: rem(12);
+$fontSizeCounterButton: rem(18);
+$fontSizeFacilityIcon: rem(48);
+$fontSizeLikeButton: rem(10);
+$fontSizePagination: rem(12);
+$fontSizeRadioButtonText: rem(14);
+$fontSizeRangeSliderText: rem(12);
+$fontSizeRateButton: rem(24);
+
+
+
+
+/*line-height*/
+
+$lineHeightH1: rem(30);
+$lineHeightH2: rem(24);
+$lineheightH3: rem(15);
+$lineHeightBody: rem(24);
+
+$lineHeightIconInput: rem(24);
+$lineHeightIconRate: rem(20);
+$lineHeightIconButton: rem(24);
+$lineHeightTextMenu: rem(17);
+$linHeightTextCopyrightBar: rem(17);
+$lineHeightTextButton: rem(15px);
+$lineHeightTextInput: rem(24);
+$lineHeightCheckboxText: rem(18);
+$lineHeightFacilityText: rem(14);
+$lineHeightFacilityTitle: rem(18);
+$lineHeightRoomCardTitle: rem(17);
+$lineHeightDatepickerCell: rem(15);
+$lineHeightCounterButton: rem(22);
+$lineHeightFacilityIcon: rem(41);
+$lineHeightLikeButton: rem(12);
+$lineHeightPagination: rem(15);
+$lineHeightRadioButtonText: rem(18);
+$lineHeightRangeSliderText: rem(14);
+$lineHeightRateButton: rem(20);
+
+
 
 /*border*/
 $borderCard: 1px solid rgba(0, 0, 0, 0.12);
 $borderInputDefault: 1px solid $dark25;
 $borderInputHover: 1px solid $dark50;
+
+$borderButtontypeBorder: $colorGradientPurple;
+$borderCheckboxButtonAfter: 1px solid $purple;
+$borderFacilityLine: 1px solid $dark10;
+$borderRadioButtonActive: 1px solid $purple;
+$borderRadioButtonNotActive: 1px solid $dark25;
+$borderRichCheckbox: $colorGradientPurple;
+$borderTogglebuttonNotChecked: 1px solid $dark25;
+$borderTogglebuttonChecked: 1px solid $purple;
+
+/*border radius*/
+
 $borderRadiusInput: 4px;
 $borderRadiusCard: 4px;
+$borderRadiusCheckboxButton: rem(4);
+$datepickerBorderRadius: 4px;
+
+/*backgrounds*/
+$cardBackgroundColor: #FFFFFF;
+$backgroundButton: $colorGradientPurple;
+$backgroundButtonBorder: $white;
+$backgroundDatepickerCellFocus: $colorGradientPurple;
+$backgroundDatepickerCellCurrent: $colorGradientGreen;
+$backgroundPaginationActive: $colorGradientPurple;
+$backgroundPaginationNextAndPrev: $colorGradientGreen;
+$backgroundRadioButton: $purple;
+$backgroundRangeSlider: $colorGradientGreen;
+$backgroundToggleButtonNotChecked: $dark25;
+$backgroundToggleButtonChecked: $colorGradientPurple;
 
 
-/*fonts*/
 
-/*shadow*/
 
+
+/*shadows*/
 $cadrShadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+$datepickerShadow: 0px 10px 20px $dark5;
+$headerShadow: 0px rem(10) rem(20) $dark10;
+
+/*Widths*/
+
+$maxWidth: 1160px;
+$minWidth: 320px;
+
+
+
+
+// $path: '/FSD';
+$path: '';
+
+@media screen and (max-width: 1160px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 800px) {
+    
+}
+
+
 
 
 

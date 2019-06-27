@@ -2,9 +2,9 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
-    margin: 10px 0 0 20px;
+    margin: rem(10) 0 0 rem(20);
     &:checked + .checkbox-button__text:before {
-        border: 1px solid $purple;
+        border: $borderCheckboxButtonAfter;
     }
     &:checked + .checkbox-button__text:after {
         opacity: 1;

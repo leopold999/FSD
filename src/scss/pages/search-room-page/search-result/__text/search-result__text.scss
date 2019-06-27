@@ -1,5 +1,21 @@
 .search-result__text {
     @include fontH1;
-    margin-bottom: 20px;
-    margin-top: 3px;
+    margin-bottom: rem(20);
+    margin-top: rem(3);
+    width: 100%;
+    white-space: pre-wrap;
+    
+ 
+    @media screen and (max-width: 800px) and (max-width: 480px) {
+        @include fontH2;
+        padding-left: rem(15);
+        
+    }
+
+    @media screen and (max-width: 480px) {
+        // @include fontH2;
+        // padding-left: rem(15);
+        width: rem(320);
+        
+    }
 }

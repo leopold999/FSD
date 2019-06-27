@@ -1,0 +1,9 @@
+.header-content {
+    min-width: $minWidth;
+    max-width: $maxWidth;
+    
+    @include justify-space-between;
+    margin: auto;
+    height: 100%;
+}
+

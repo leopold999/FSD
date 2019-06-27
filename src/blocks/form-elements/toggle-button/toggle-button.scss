@@ -1,5 +1,8 @@
-@import "../../template/template.scss";
+@import "./__input/toggle-button__input.scss";
+@import "./__text/toggle-button__text.scss";
 
 .toggle-button {
-    @include toggle-button(260px)
+    width: 100%;
 }
+
+

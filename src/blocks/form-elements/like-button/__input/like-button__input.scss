@@ -1,0 +1,15 @@
+.like-button__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;        
+
+    &:checked ~ .like-button__wrapper {
+        background:  $colorLikeButton;
+    }
+    &:checked ~ .like-button__icon_checked {
+        opacity: 1;
+    }
+    &:checked ~ .like-button__wrapper .like-button__text {
+        color: $colorFontLikeButton;
+    }
+}

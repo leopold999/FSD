@@ -1,8 +1,9 @@
 mixin booking-form
     div(class="booking-form")
         form
-            div(class="booking-form__rooms-number booking-form__rooms-number_de-luxe") 888
-            div(class="booking-form__rent-price") 9 990#{'\u20bd'}
+            .booking-form-header
+                div(class="booking-form__rooms-number booking-form__rooms-number_de-luxe") 888
+                div(class="booking-form__rent-price") 9 990#{'\u20bd'}
             div(class="booking-form-date")
                 +dropdown-date({
                     title: "Прибытие",

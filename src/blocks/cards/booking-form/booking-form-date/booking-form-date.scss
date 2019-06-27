@@ -1,11 +1,4 @@
-@import "../../../template/template.scss";
-
 .booking-form-date {
     @include justify-space-between;
-
-    // position: absolute;
-    // top: 90px;
-
- 
-    margin-bottom: 16px;
+    margin-bottom: rem(10);
 }

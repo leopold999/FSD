@@ -1,13 +1,15 @@
 .room-card__room-number {
-    @include fontH2($font-size: 19px, $line-height: 25px, $color: $dark100);
+    @include fontH2;
+    line-height: rem(25);
     font-weight: bold;
     
     
 
     &::before {
         content: '№';
-        @include fontBody($font-size: 14px, $line-height: 24px, $color: $dark100);
+        @include fontBody;
+        color: $dark100;
         font-weight: bold;
-        margin-right: 5px;
+        margin-right: rem(5);
     }
 }

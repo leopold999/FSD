@@ -1,25 +1,23 @@
-@import "../../../template/template.scss";
-
 .button_type_border {
     position: relative;
-    background-color: #fff;
-    $border: 2px;
+    background-color: $backgroundButtonBorder;
+    $border: rem(2);
     border: $border solid rgba(255, 253, 253, 0);
     @include justify-center;
-    @include fontH3($color: $purple);
+    @include fontButtonBorder;
     background-clip: padding-box;
     // z-index: 1;
 
     &::after {
         content: "";
         position: absolute;
-        background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background-image: $borderButtontypeBorder;
         width: inherit;
         height: inherit;
-        -webkit-top: -2px;
-        -moz-top: -1px;
+        -webkit-top: -(rem(2));
+        -moz-top: -(rem(1));
         z-index: -1;
-        border-radius: 22px;
+        border-radius: rem(22);
     }
     &:active::after {
         opacity: 0.5;

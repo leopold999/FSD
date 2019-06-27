@@ -1,0 +1,13 @@
+.checkbox-search-form-filter__input {
+    visibility: hidden;
+    position: absolute;
+    
+    &:checked ~ .checkbox-search-form-filter:before {
+        transform: rotate(180deg);
+    }
+
+    &:checked ~ .search-form {
+
+        visibility: visible;
+    }
+}

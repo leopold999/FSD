@@ -1,5 +1,6 @@
-@import "../../../template/template.scss";
-
 .registration-form__text {
-    @include fontBody($font-size: 14px, $line-height: 18px, $color: $dark100);
+    @include fontBody;
+    font-size: rem(14);
+    line-height: rem(18);
+    color: $dark100;
 }

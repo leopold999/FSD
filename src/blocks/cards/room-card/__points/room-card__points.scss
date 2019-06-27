@@ -1,8 +1,13 @@
 .room-card__points {
     position: absolute;
-    right: 15px;
-    top: 107px;
+    right: rem(15);
+    top: rem(129);
     padding: 0;
     list-style: none;
+    margin: 0;
+    width: rem(42);
+    display: flex;
+    justify-content: space-between;
+
 
 }

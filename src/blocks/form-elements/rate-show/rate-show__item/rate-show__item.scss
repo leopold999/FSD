@@ -3,7 +3,7 @@
     display: inline-flex;
     @include font-gradient();
     font-family: "Material icons";
-    font-size: 24px;
-    line-height: 20px;
+    font-size: $fontSizeRateButton;
+    line-height: $lineHeightRateButton;
 
 }

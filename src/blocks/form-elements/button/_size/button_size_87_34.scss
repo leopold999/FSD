@@ -1,4 +1,3 @@
 .button_size_87_34 {
-    width: 87px;
-    height: 34px;;
+    @include size(rem(87), rem(34));
 }

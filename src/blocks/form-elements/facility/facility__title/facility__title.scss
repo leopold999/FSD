@@ -1,6 +1,4 @@
-@import '../../../template/template.scss';
-
 .facility__title {
-    @include fontBody(14px, 24px, $dark75);
+    @include fontBody;
     font-weight: bold;
 }
