@@ -5,11 +5,11 @@
     <title>Landing page</title>
     <meta name="Landing page" content="Landing page">
     <meta name="viewport" content="width=device-width initial-scale=1">
-  <link href="/app.css" rel="stylesheet"></head>
+  <link href="/FSD/app.css" rel="stylesheet"></head>
   <body class="landing-page">
     <div class="wrapper">
-      <header class="header">
-        <div class="header-container">
+      <header class="header-wrapper">
+        <div class="header-content">
           <div class="header__logo-container"><a href="index.html">
               <div class="logo">
                 <div class="logo__img">
@@ -41,6 +41,8 @@
                   </svg>
                 </div>
               </div></a></div>
+          <input class="menu-button-input" type="checkbox" id="menu-checkbox">
+          <label class="menu-button-open" for="menu-checkbox"></label>
           <menu class="menu">
             <li class="menu__item"> <a href="#">О нас</a></li>
             <li class="menu__item menu__item_dropdown"> <a href="#">Услуги</a>
@@ -57,40 +59,48 @@
                 <li class="menu-dropdown-list__item"><a href="#">Соглашение 2</a></li>
               </ul>
             </li>
-            <li class="menu__item"> 
-              <div class="menu__button_login"><a href="#">
-                  <button class="button button_type_border button_size_87_34">Войти
-                  </button></a></div>
-            </li>
-            <li class="menu__item"> 
-              <div class="menu__button_register"><a href="#">
-                  <button class="button button_type_background button_size_196_34">Зарегистрироваться
-                  </button></a></div>
+            <li class="menu-buttons-wrapper">
+              <div class="menu__button_login">
+                <button class="button button_type_border button_size_87_34">Войти
+                </button>
+              </div>
+              <div class="menu__button_register">
+                <button class="button button_type_background button_size_196_34">Зарегистрироваться
+                </button>
+              </div>
             </li>
           </menu>
         </div>
       </header>
       <div class="content-wrapper landing-page-content-wrapper">
         <div class="content landing-page-content">
-          <div class="search-rooms-wrapper">
+          <div class="search-rooms-card-wrapper">
             <div class="search-rooms">
               <div class="search-rooms__title">Найдём номера под ваши пожелания</div>
               <div class="search-rooms-date">
-                <div class="dropdown-date"><span class="dropdown-date__title">Прибытие</span><br>
-                  <input class="dropdown-date__input arrival-date" type="text" placeholder="ДД.ММ.ГГГГ" value="">
-                  <div class="dropdown-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+                <div class="dropdown-date">
+                  <div class="dropdown-date__title">Прибытие</div>
+                  <div class="input-wrapper">
+                    <input class="dropdown-date__input arrival-date" type="text" placeholder="ДД.ММ.ГГГГ" value="">
+                    <div class="dropdown-date__list-checkbox">        <i class="material-icon">expand_more</i></div>
+                  </div>
                 </div>
-                <div class="dropdown-date"><span class="dropdown-date__title">Выезд</span><br>
-                  <input class="dropdown-date__input departure-date" type="text" placeholder="ДД.ММ.ГГГГ" value="">
-                  <div class="dropdown-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+                <div class="dropdown-date">
+                  <div class="dropdown-date__title">Выезд</div>
+                  <div class="input-wrapper">
+                    <input class="dropdown-date__input departure-date" type="text" placeholder="ДД.ММ.ГГГГ" value="">
+                    <div class="dropdown-date__list-checkbox">        <i class="material-icon">expand_more</i></div>
+                  </div>
                 </div>
               </div>
               <div class="search-rooms-guests">
                 <div class="dropdown dropdown_size_wide dropdown-guests"><span class="dropdown__title">Гости</span><br>
-                  <input class="dropdown__input " type="text" value="3 гостя" placeholder="" readonly>
-                  <label class="dropdown__list-checkbox">
-                    <input class="dropdown__checkbox-input" type="checkbox"  value="3 гостя"><span><i class="material-icon">expand_more</i></span>
-                  </label>
+                  <div class="input-wrapper">
+                    <input class="dropdown__input " type="text" value="3 гостя" placeholder="" readonly>
+                    <label class="dropdown__list-checkbox">
+                      <input class="dropdown__checkbox-input" type="checkbox"  value="3 гостя"><span><i class="material-icon">expand_more</i></span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <div class="search-rooms-button">
@@ -103,7 +113,7 @@
           <div class="search-rooms-text">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
         </div>
       </div>
-      <footer class="footer">
+      <footer class="footer-wrapper">
         <div class="footer-container">
           <div class="footer__logo-container">
             <div class="footer__logo-img">
@@ -191,5 +201,5 @@
         </div>
       </div>
     </div>
-  <script type="text/javascript" src="/assets/js/app.js"></script></body>
+  <script type="text/javascript" src="/FSD/assets/js/app.js"></script></body>
 </html>

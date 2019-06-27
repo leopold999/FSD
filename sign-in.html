@@ -5,11 +5,11 @@
     <title>Sign-in page</title>
     <meta name="Sign-in page" content="Sign-in pagee">
     <meta name="viewport" content="width=device-width initial-scale=1">
-  <link href="/app.css" rel="stylesheet"></head>
+  <link href="/FSD/app.css" rel="stylesheet"></head>
   <body class="sign-in-page">
     <div class="wrapper">
-      <header class="header">
-        <div class="header-container">
+      <header class="header-wrapper">
+        <div class="header-content">
           <div class="header__logo-container"><a href="index.html">
               <div class="logo">
                 <div class="logo__img">
@@ -41,6 +41,8 @@
                   </svg>
                 </div>
               </div></a></div>
+          <input class="menu-button-input" type="checkbox" id="menu-checkbox">
+          <label class="menu-button-open" for="menu-checkbox"></label>
           <menu class="menu">
             <li class="menu__item"> <a href="#">О нас</a></li>
             <li class="menu__item menu__item_dropdown"> <a href="#">Услуги</a>
@@ -57,15 +59,15 @@
                 <li class="menu-dropdown-list__item"><a href="#">Соглашение 2</a></li>
               </ul>
             </li>
-            <li class="menu__item"> 
-              <div class="menu__button_login"><a href="#">
-                  <button class="button button_type_border button_size_87_34">Войти
-                  </button></a></div>
-            </li>
-            <li class="menu__item"> 
-              <div class="menu__button_register"><a href="#">
-                  <button class="button button_type_background button_size_196_34">Зарегистрироваться
-                  </button></a></div>
+            <li class="menu-buttons-wrapper">
+              <div class="menu__button_login">
+                <button class="button button_type_border button_size_87_34">Войти
+                </button>
+              </div>
+              <div class="menu__button_register">
+                <button class="button button_type_background button_size_196_34">Зарегистрироваться
+                </button>
+              </div>
             </li>
           </menu>
         </div>
@@ -99,7 +101,7 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
+      <footer class="footer-wrapper">
         <div class="footer-container">
           <div class="footer__logo-container">
             <div class="footer__logo-img">
@@ -187,5 +189,5 @@
         </div>
       </div>
     </div>
-  <script type="text/javascript" src="/assets/js/app.js"></script></body>
+  <script type="text/javascript" src="/FSD/assets/js/app.js"></script></body>
 </html>

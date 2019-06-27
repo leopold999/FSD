@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
-  <link href="/app.css" rel="stylesheet"></head>
+  <link href="/FSD/app.css" rel="stylesheet"></head>
   <body>fdf
     <H1>Элементы форм</H1>
     <div class="text-field">
@@ -24,27 +24,36 @@
         <button class="text-field-subscription__button" type="submit"><i class="material-icon">arrow_forward</i></button>
       </form>
     </div><br><br>
-    <div class="dropdown-date"><span class="dropdown-date__title">Date dropdown</span><br>
-      <input class="dropdown-date__input " type="text" placeholder="ДД.ММ.ГГГГ" value="">
-      <div class="dropdown-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+    <div class="dropdown-date">
+      <div class="dropdown-date__title">Date dropdown</div>
+      <div class="input-wrapper">
+        <input class="dropdown-date__input " type="text" placeholder="ДД.ММ.ГГГГ" value="">
+        <div class="dropdown-date__list-checkbox">        <i class="material-icon">expand_more</i></div>
+      </div>
     </div><br>
     <div class="dropdown-filter-date"><span class="dropdown-filter-date__title">Filter date dropdown</span><br>
-      <input class="dropdown-filter-date__input" type="text" readonly>
-      <div class="dropdown-filter-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+      <div class="input-wrapper">
+        <input class="dropdown-filter-date__input" type="text" readonly>
+        <div class="dropdown-filter-date__list-checkbox"><i class="material-icon">expand_more</i></div>
+      </div>
       <div class="dropdown-filter-date__calendar"></div>
     </div><br>
     <div class="dropdown dropdown_size_medium dropdown-rooms"><span class="dropdown__title">Dropdown</span><br>
-      <input class="dropdown__input " type="text" readonly>
-      <label class="dropdown__list-checkbox">
-        <input class="dropdown__checkbox-input" type="checkbox" ><span><i class="material-icon">expand_more</i></span>
-      </label>
+      <div class="input-wrapper">
+        <input class="dropdown__input " type="text" readonly>
+        <label class="dropdown__list-checkbox">
+          <input class="dropdown__checkbox-input" type="checkbox" ><span><i class="material-icon">expand_more</i></span>
+        </label>
+      </div>
     </div>
     <div style="height:120px"></div>
     <div class="dropdown dropdown_size_wide dropdown-guests"><span class="dropdown__title">Dropdown</span><br>
-      <input class="dropdown__input " type="text" placeholder="Сколько гостей" readonly>
-      <label class="dropdown__list-checkbox">
-        <input class="dropdown__checkbox-input" type="checkbox" ><span><i class="material-icon">expand_more</i></span>
-      </label>
+      <div class="input-wrapper">
+        <input class="dropdown__input " type="text" placeholder="Сколько гостей" readonly>
+        <label class="dropdown__list-checkbox">
+          <input class="dropdown__checkbox-input" type="checkbox" ><span><i class="material-icon">expand_more</i></span>
+        </label>
+      </div>
     </div>
     <div style="height:150px"></div>
     <div class="checkbox-button">
@@ -100,7 +109,7 @@
     <div class="expandable-checkbox">
       <div class="expandable-checkbox__title">Expandable checkbox list</div>
       <label class="expandable-checkbox__label">
-        <input class="expandable-checkbox__button" type="checkbox"><i class="aaa material-icon">expand_more</i>
+        <input class="expandable-checkbox__button" type="checkbox"><i class="expandable-checkbox__icon material-icon">expand_more</i>
       </label>
       <div class="expandable-checkbox-list expandable-checkbox-list_hide">
         <div class="checkbox-button">
@@ -261,24 +270,34 @@
     </div><br>
     <div class="booking-form">
       <form>
-        <div class="booking-form__rooms-number booking-form__rooms-number_de-luxe">888</div>
-        <div class="booking-form__rent-price">9 990₽</div>
+        <div class="booking-form-header">
+          <div class="booking-form__rooms-number booking-form__rooms-number_de-luxe">888</div>
+          <div class="booking-form__rent-price">9 990₽</div>
+        </div>
         <div class="booking-form-date">
-          <div class="dropdown-date"><span class="dropdown-date__title">Прибытие</span><br>
-            <input class="dropdown-date__input arrival-date" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019">
-            <div class="dropdown-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+          <div class="dropdown-date">
+            <div class="dropdown-date__title">Прибытие</div>
+            <div class="input-wrapper">
+              <input class="dropdown-date__input arrival-date" type="text" placeholder="ДД.ММ.ГГГГ" value="19.08.2019">
+              <div class="dropdown-date__list-checkbox">        <i class="material-icon">expand_more</i></div>
+            </div>
           </div>
-          <div class="dropdown-date"><span class="dropdown-date__title">Выезд</span><br>
-            <input class="dropdown-date__input departure-date" type="text" placeholder="ДД.ММ.ГГГГ" value="23.08.2019">
-            <div class="dropdown-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+          <div class="dropdown-date">
+            <div class="dropdown-date__title">Выезд</div>
+            <div class="input-wrapper">
+              <input class="dropdown-date__input departure-date" type="text" placeholder="ДД.ММ.ГГГГ" value="23.08.2019">
+              <div class="dropdown-date__list-checkbox">        <i class="material-icon">expand_more</i></div>
+            </div>
           </div>
         </div>
         <div class="booking-form-guests">
           <div class="dropdown dropdown_size_wide dropdown-guests"><span class="dropdown__title">Гости</span><br>
-            <input class="dropdown__input " type="text" value="3 гостя" placeholder="" readonly>
-            <label class="dropdown__list-checkbox">
-              <input class="dropdown__checkbox-input" type="checkbox"  value="3 гостя"><span><i class="material-icon">expand_more</i></span>
-            </label>
+            <div class="input-wrapper">
+              <input class="dropdown__input " type="text" value="3 гостя" placeholder="" readonly>
+              <label class="dropdown__list-checkbox">
+                <input class="dropdown__checkbox-input" type="checkbox"  value="3 гостя"><span><i class="material-icon">expand_more</i></span>
+              </label>
+            </div>
           </div>
         </div>
         <div class="calculation">
@@ -308,21 +327,29 @@
     <div class="search-rooms">
       <div class="search-rooms__title">Найдём номера под ваши пожелания</div>
       <div class="search-rooms-date">
-        <div class="dropdown-date"><span class="dropdown-date__title">Прибытие</span><br>
-          <input class="dropdown-date__input arrival-date" type="text" placeholder="ДД.ММ.ГГГГ" value="">
-          <div class="dropdown-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+        <div class="dropdown-date">
+          <div class="dropdown-date__title">Прибытие</div>
+          <div class="input-wrapper">
+            <input class="dropdown-date__input arrival-date" type="text" placeholder="ДД.ММ.ГГГГ" value="">
+            <div class="dropdown-date__list-checkbox">        <i class="material-icon">expand_more</i></div>
+          </div>
         </div>
-        <div class="dropdown-date"><span class="dropdown-date__title">Выезд</span><br>
-          <input class="dropdown-date__input departure-date" type="text" placeholder="ДД.ММ.ГГГГ" value="">
-          <div class="dropdown-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+        <div class="dropdown-date">
+          <div class="dropdown-date__title">Выезд</div>
+          <div class="input-wrapper">
+            <input class="dropdown-date__input departure-date" type="text" placeholder="ДД.ММ.ГГГГ" value="">
+            <div class="dropdown-date__list-checkbox">        <i class="material-icon">expand_more</i></div>
+          </div>
         </div>
       </div>
       <div class="search-rooms-guests">
         <div class="dropdown dropdown_size_wide dropdown-guests"><span class="dropdown__title">Гости</span><br>
-          <input class="dropdown__input " type="text" value="3 гостя" placeholder="" readonly>
-          <label class="dropdown__list-checkbox">
-            <input class="dropdown__checkbox-input" type="checkbox"  value="3 гостя"><span><i class="material-icon">expand_more</i></span>
-          </label>
+          <div class="input-wrapper">
+            <input class="dropdown__input " type="text" value="3 гостя" placeholder="" readonly>
+            <label class="dropdown__list-checkbox">
+              <input class="dropdown__checkbox-input" type="checkbox"  value="3 гостя"><span><i class="material-icon">expand_more</i></span>
+            </label>
+          </div>
         </div>
       </div>
       <div class="search-rooms-button">
@@ -493,8 +520,8 @@
         <li class="reviews-chart-legend__item reviews-chart-legend__bad">Разочарован</li>
       </ul>
     </div><br><br><br><br>
-    <header class="header">
-      <div class="header-container">
+    <header class="header-wrapper">
+      <div class="header-content">
         <div class="header__logo-container"><a href="index.html">
             <div class="logo">
               <div class="logo__img">
@@ -526,6 +553,8 @@
                 </svg>
               </div>
             </div></a></div>
+        <input class="menu-button-input" type="checkbox" id="menu-checkbox">
+        <label class="menu-button-open" for="menu-checkbox"></label>
         <menu class="menu">
           <li class="menu__item"> <a href="#">О нас</a></li>
           <li class="menu__item menu__item_dropdown"> <a href="#">Услуги</a>
@@ -542,21 +571,21 @@
               <li class="menu-dropdown-list__item"><a href="#">Соглашение 2</a></li>
             </ul>
           </li>
-          <li class="menu__item"> 
-            <div class="menu__button_login"><a href="#">
-                <button class="button button_type_border button_size_87_34">Войти
-                </button></a></div>
-          </li>
-          <li class="menu__item"> 
-            <div class="menu__button_register"><a href="#">
-                <button class="button button_type_background button_size_196_34">Зарегистрироваться
-                </button></a></div>
+          <li class="menu-buttons-wrapper">
+            <div class="menu__button_login">
+              <button class="button button_type_border button_size_87_34">Войти
+              </button>
+            </div>
+            <div class="menu__button_register">
+              <button class="button button_type_background button_size_196_34">Зарегистрироваться
+              </button>
+            </div>
           </li>
         </menu>
       </div>
     </header><br><br>
-    <header class="header">
-      <div class="header-container">
+    <header class="header-wrapper">
+      <div class="header-content">
         <div class="header__logo-container"><a href="index.html">
             <div class="logo">
               <div class="logo__img">
@@ -588,6 +617,8 @@
                 </svg>
               </div>
             </div></a></div>
+        <input class="menu-button-input" type="checkbox" id="menu-checkbox">
+        <label class="menu-button-open" for="menu-checkbox"></label>
         <menu class="menu">
           <li class="menu__item"> <a href="#">О нас</a></li>
           <li class="menu__item menu__item_dropdown"> <a href="#">Услуги</a>
@@ -608,7 +639,7 @@
         </menu>
       </div>
     </header><br><br>
-    <footer class="footer">
+    <footer class="footer-wrapper">
       <div class="footer-container">
         <div class="footer__logo-container">
           <div class="footer__logo-img">
@@ -735,5 +766,5 @@
         </div>
       </div>
     </footer><br><br>
-  <script type="text/javascript" src="/assets/js/app.js"></script></body>
+  <script type="text/javascript" src="/FSD/assets/js/app.js"></script></body>
 </html>

@@ -5,11 +5,11 @@
     <title>Search room page</title>
     <meta name="Search room page" content="Search room page">
     <meta name="viewport" content="width=device-width initial-scale=1">
-  <link href="/app.css" rel="stylesheet"></head>
+  <link href="/FSD/app.css" rel="stylesheet"></head>
   <body class="search-room-page">
     <div class="wrapper">
-      <header class="header">
-        <div class="header-container">
+      <header class="header-wrapper">
+        <div class="header-content">
           <div class="header__logo-container"><a href="index.html">
               <div class="logo">
                 <div class="logo__img">
@@ -41,6 +41,8 @@
                   </svg>
                 </div>
               </div></a></div>
+          <input class="menu-button-input" type="checkbox" id="menu-checkbox">
+          <label class="menu-button-open" for="menu-checkbox"></label>
           <menu class="menu">
             <li class="menu__item"> <a href="#">О нас</a></li>
             <li class="menu__item menu__item_dropdown"> <a href="#">Услуги</a>
@@ -57,32 +59,38 @@
                 <li class="menu-dropdown-list__item"><a href="#">Соглашение 2</a></li>
               </ul>
             </li>
-            <li class="menu__item"> 
-              <div class="menu__button_login"><a href="#">
-                  <button class="button button_type_border button_size_87_34">Войти
-                  </button></a></div>
-            </li>
-            <li class="menu__item"> 
-              <div class="menu__button_register"><a href="#">
-                  <button class="button button_type_background button_size_196_34">Зарегистрироваться
-                  </button></a></div>
+            <li class="menu-buttons-wrapper">
+              <div class="menu__button_login">
+                <button class="button button_type_border button_size_87_34">Войти
+                </button>
+              </div>
+              <div class="menu__button_register">
+                <button class="button button_type_background button_size_196_34">Зарегистрироваться
+                </button>
+              </div>
             </li>
           </menu>
         </div>
       </header>
       <div class="content-wrapper search-room-page-content-wrapper">
         <div class="content search-room-page-content">
+          <input class="checkbox-search-form-filter__input" type="checkbox" id="checkbox-search-form-filter-input">
+          <label class="checkbox-search-form-filter" for="checkbox-search-form-filter-input">Фильтр</label>
           <aside class="search-form">
             <div class="dropdown-filter-date"><span class="dropdown-filter-date__title">Даты пребывания в отеле</span><br>
-              <input class="dropdown-filter-date__input" type="text" value="19 авг - 23 авг" readonly>
-              <div class="dropdown-filter-date__list-checkbox"><span><i class="material-icon">expand_more</i></span></div>
+              <div class="input-wrapper">
+                <input class="dropdown-filter-date__input" type="text" value="19 авг - 23 авг" readonly>
+                <div class="dropdown-filter-date__list-checkbox"><i class="material-icon">expand_more</i></div>
+              </div>
               <div class="dropdown-filter-date__calendar"></div>
             </div>
             <div class="dropdown dropdown_size_medium dropdown-guests"><span class="dropdown__title">Гости</span><br>
-              <input class="dropdown__input " type="text" placeholder="Сколько гостей" readonly>
-              <label class="dropdown__list-checkbox">
-                <input class="dropdown__checkbox-input" type="checkbox" ><span><i class="material-icon">expand_more</i></span>
-              </label>
+              <div class="input-wrapper">
+                <input class="dropdown__input " type="text" placeholder="Сколько гостей" readonly>
+                <label class="dropdown__list-checkbox">
+                  <input class="dropdown__checkbox-input" type="checkbox" ><span><i class="material-icon">expand_more</i></span>
+                </label>
+              </div>
             </div>
             <div class="range-slider">
               <div class="range-slider__title">Диапазон цены</div>
@@ -131,15 +139,17 @@
               </div>
             </div>
             <div class="dropdown dropdown_size_medium dropdown-rooms"><span class="dropdown__title">Удобства номера</span><br>
-              <input class="dropdown__input " type="text" readonly>
-              <label class="dropdown__list-checkbox">
-                <input class="dropdown__checkbox-input" type="checkbox" ><span><i class="material-icon">expand_more</i></span>
-              </label>
+              <div class="input-wrapper">
+                <input class="dropdown__input " type="text" readonly>
+                <label class="dropdown__list-checkbox">
+                  <input class="dropdown__checkbox-input" type="checkbox" ><span><i class="material-icon">expand_more</i></span>
+                </label>
+              </div>
             </div>
             <div class="expandable-checkbox">
               <div class="expandable-checkbox__title">Дополнительные удобства</div>
               <label class="expandable-checkbox__label">
-                <input class="expandable-checkbox__button" type="checkbox"><i class="aaa material-icon">expand_more</i>
+                <input class="expandable-checkbox__button" type="checkbox"><i class="expandable-checkbox__icon material-icon">expand_more</i>
               </label>
               <div class="expandable-checkbox-list expandable-checkbox-list_hide">
                 <div class="checkbox-button">
@@ -459,7 +469,7 @@
         </div>
       </div>
       <div class="line"></div>
-      <footer class="footer">
+      <footer class="footer-wrapper">
         <div class="footer-container">
           <div class="footer__logo-container">
             <div class="footer__logo-img">
@@ -547,5 +557,5 @@
         </div>
       </div>
     </div>
-  <script type="text/javascript" src="/assets/js/app.js"></script></body>
+  <script type="text/javascript" src="/FSD/assets/js/app.js"></script></body>
 </html>
